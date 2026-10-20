@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phaedrus, Three Ways</title>
+<style>
+:root {
+  --bg: #f6f3fb; --panel: #ffffff; --ink: #231c33; --muted: #6a6080; --line: #ddd5ea;
+  --accent: #6c4fc0; --accent-soft: #ebe4fa;
+  --del: #fbe0e3; --del-ink: #9b2335; --add: #dff3e6; --add-ink: #1e6b3a;
+  --fowler: #b07a2a; --en: #6c4fc0; --ko: #2a7f8f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17131f; --panel: #211b2c; --ink: #eee8f7; --muted: #a79fbb; --line: #382f48;
+    --accent: #b39cf5; --accent-soft: #2e2542;
+    --del: #45202a; --del-ink: #ffb3bf; --add: #193a28; --add-ink: #9fe3b6;
+    --fowler: #e0b468; --en: #b39cf5; --ko: #6fd0df;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+header { padding: 40px 24px 0; max-width: 1400px; margin: 0 auto; }
+h1 { margin: 0; font-size: clamp(32px, 5vw, 52px); letter-spacing: -.03em; line-height: 1.05; }
+.lede { max-width: 760px; color: var(--muted); margin: 12px 0 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+nav { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); margin-top: 24px; }
+nav .inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; gap: 4px; overflow-x: auto; }
+nav button { appearance: none; border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600; padding: 14px 14px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+main { max-width: 1400px; margin: 0 auto; padding: 24px 24px 80px; }
+section[hidden] { display: none; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 18px; font-size: 14px; }
+.controls label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+select, input[type=search] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
+.page { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 18px; overflow: hidden; scroll-margin-top: 70px; }
+.page-head { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.page-head b { color: var(--ink); font-size: 18px; }
+.cols { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+.col { padding: 14px 18px 18px; border-left: 1px solid var(--line); min-width: 0; }
+.col:first-child { border-left: 0; }
+.col h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.col p { margin: 0 0 .8em; }
+.col.greek { font-family: "Gentium Plus", "Palatino Linotype", Palatino, Georgia, serif; font-size: 17px; }
+.col.ko { word-break: keep-all; }
+.missing { color: var(--muted); font-style: italic; }
+del { background: var(--del); color: var(--del-ink); text-decoration: none; border-radius: 3px; }
+ins { background: var(--add); color: var(--add-ink); text-decoration: none; border-radius: 3px; }
+.term-hit { outline: 2px solid var(--accent); outline-offset: 1px; border-radius: 3px; background: var(--accent-soft); }
+@media (max-width: 800px) { .cols { grid-template-columns: 1fr; } .col { border-left: 0; border-top: 1px solid var(--line); } .col:first-child { border-top: 0; } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 18px; }
+.card h2 { margin: 0 0 4px; font-size: 20px; }
+.card .sub { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+.chart { width: 100%; overflow-x: auto; }
+.chart svg { display: block; min-width: 720px; }
+.chart text { fill: var(--muted); font-size: 11px; }
+.bar { cursor: pointer; }
+.bar:hover { opacity: .75; }
+.tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); padding: 6px 10px; border-radius: 8px; font-size: 13px; z-index: 20; display: none; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+td.gk { font-family: "Gentium Plus", Palatino, Georgia, serif; font-size: 16px; white-space: nowrap; }
+.chip { word-break: keep-all; display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 13px; margin: 0 4px 4px 0; border: 1px solid var(--line); }
+.chip.f { color: var(--fowler); } .chip.e { color: var(--en); } .chip.k { color: var(--ko); }
+a.pg { color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+.note { color: var(--muted); font-size: 13px; }
+.stat { display: inline-block; margin-right: 22px; }
+.stat b { display: block; font-size: 26px; color: var(--ink); letter-spacing: -.02em; }
+.warn { background: var(--del); color: var(--del-ink); padding: 10px 14px; border-radius: 10px; margin-bottom: 18px; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Phaedrus, three ways</h1>
+  <p class="lede">Plato’s dialogue (Stephanus 227–279) in Burnet’s Greek, Harold Fowler’s 1925 English, and two new translations made from the Greek in 1000-word pieces by ten Claude subagents: one into modern English, one into Korean. Compare them page by page, see where they diverge, and follow the key words.</p>
+  <div class="legend"><span><i class="dot" style="background:var(--fowler)"></i>Fowler 1925</span><span><i class="dot" style="background:var(--en)"></i>New English</span><span><i class="dot" style="background:var(--ko)"></i>Korean</span></div>
+</header>
+<nav><div class="inner" role="tablist">
+  <button role="tab" data-tab="shape" aria-selected="true">Where they differ</button>
+  <button role="tab" data-tab="read">Read side by side</button>
+  <button role="tab" data-tab="terms">Key words</button>
+  <button role="tab" data-tab="notes">Translators’ notes</button>
+</div></nav>
+<main>
+  <div id="warn"></div>
+  <section id="shape">
+    <div class="card"><div id="stats"></div></div>
+    <div class="card">
+      <h2>How much the two English versions share</h2>
+      <p class="sub">Per Stephanus page: the share of words the new English keeps in the same order as Fowler (longest common sequence). Low bars are where the new translation departs most. Click a bar to read that page.</p>
+      <div class="chart" id="simChart"></div>
+    </div>
+    <div class="card">
+      <h2>Length of each version</h2>
+      <p class="sub">Words per page for Fowler, the new English, and the Greek; Korean is counted in syllables ÷ 3 to fit the same scale. Click a group to read that page.</p>
+      <div class="chart" id="lenChart"></div>
+    </div>
+  </section>
+  <section id="read" hidden>
+    <div class="controls">
+      <label>Page <select id="pageSel"></select></label>
+      <label><input type="checkbox" data-col="greek" checked> Greek</label>
+      <label><input type="checkbox" data-col="fowler" checked> Fowler 1925</label>
+      <label><input type="checkbox" data-col="en" checked> New English</label>
+      <label><input type="checkbox" data-col="ko" checked> Korean</label>
+      <label><input type="checkbox" id="diffOn" checked> Mark differences between the English versions</label>
+    </div>
+    <p class="note" id="diffKey">In Fowler, <del>struck words</del> aren’t in the new version; in the new English, <ins>marked words</ins> aren’t in Fowler.</p>
+    <div id="pages"></div>
+  </section>
+  <section id="terms" hidden>
+    <div class="controls"><input type="search" id="termFilter" placeholder="Filter: ἔρως, soul, 영혼…" aria-label="Filter key words"></div>
+    <div class="card"><h2>How each version renders the key words</h2><p class="sub">Every key word the translators logged, grouped by Greek word. Chips count how often each rendering was used; click a page to read it with the word’s rendering highlighted.</p><div id="termSummary"></div></div>
+    <div class="term-grid" id="termCards"></div>
+  </section>
+  <section id="notes" hidden><div id="noteList"></div></section>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const DATA = /*DATA*/null;
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const words = s => (s.match(/\S+/g) || []);
+const norm = w => w.toLowerCase().replace(/[^\p{L}\p{N}']/gu, "");
+const syllables = s => (s.match(/[가-힣]/g) || []).length;
+const pages = DATA.pages;
+
+if (DATA.missing.length) $("#warn").innerHTML = `<div class="warn">Not yet translated: chunk${DATA.missing.length > 1 ? "s" : ""} ${DATA.missing.join(", ")}. Those pages show Greek and Fowler only.</div>`;
+
+// Longest common subsequence over normalized words; returns keep-flags for each side.
+function lcs(a, b) {
+  const A = a.map(norm), B = b.map(norm), n = A.length, m = B.length;
+  const dp = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    dp[i][j] = A[i] && A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const ka = new Array(n).fill(false), kb = new Array(m).fill(false);
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (A[i] && A[i] === B[j]) { ka[i] = kb[j] = true; i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+  }
+  return { ka, kb, len: dp[0][0] };
+}
+
+for (const p of pages) {
+  const f = words(p.fowler), e = words(p.en);
+  p.fw = f.length; p.ew = e.length; p.gw = words(p.greek).length; p.ks = syllables(p.ko);
+  if (e.length) { const r = lcs(f, e); p.diff = r; p.sim = 2 * r.len / (f.length + e.length); }
+}
+
+// Tabs
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => showTab(b.dataset.tab));
+function showTab(t) {
+  document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === t));
+  document.querySelectorAll("main section").forEach(s => s.hidden = s.id !== t);
+  if (t === "read") renderPages();
+}
+function goPage(n, highlight) { showTab("read"); state.highlight = highlight || null; renderPages();
+  requestAnimationFrame(() => document.getElementById("p" + n)?.scrollIntoView()); }
+
+// Stats
+const done = pages.filter(p => p.en);
+const avg = done.length ? done.reduce((s, p) => s + p.sim, 0) / done.length : 0;
+const sum = k => done.reduce((s, p) => s + p[k], 0);
+$("#stats").innerHTML = `
+  <span class="stat"><b>${done.length}/${pages.length}</b>pages translated</span>
+  <span class="stat"><b>${Math.round(avg * 100)}%</b>average word overlap, Fowler ↔ new English</span>
+  <span class="stat"><b>${sum("fw").toLocaleString()}</b>Fowler words</span>
+  <span class="stat"><b>${sum("ew").toLocaleString()}</b>new English words</span>
+  <span class="stat"><b>${sum("ks").toLocaleString()}</b>Korean syllables</span>
+  <span class="stat"><b>${DATA.terms.length}</b>key-word renderings logged</span>`;
+
+// Charts
+const tip = $("#tip");
+function tipOn(ev, html) { tip.innerHTML = html; tip.style.display = "block"; tip.style.left = ev.clientX + 12 + "px"; tip.style.top = ev.clientY + 12 + "px"; }
+function tipOff() { tip.style.display = "none"; }
+function chart(el, h, groups) {
+  const W = Math.max(720, pages.length * 22), pad = { l: 36, b: 24, t: 8 };
+  const max = Math.max(...groups.flatMap(g => g.bars.map(b => b.v)), 1);
+  const gw = (W - pad.l) / groups.length, ih = h - pad.b - pad.t;
+  let s = `<svg viewBox="0 0 ${W} ${h}" width="${W}" height="${h}" role="img">`;
+  for (const t of [0, .5, 1]) { const y = pad.t + ih * (1 - t);
+    s += `<line x1="${pad.l}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${pad.l - 6}" y="${y + 4}" text-anchor="end">${el.fmt(max * t)}</text>`; }
+  groups.forEach((g, i) => {
+    const x0 = pad.l + i * gw, bw = (gw - 4) / g.bars.length;
+    s += `<g class="bar" data-n="${g.n}" data-i="${i}">` + `<rect x="${x0}" y="${pad.t}" width="${gw}" height="${ih}" fill="transparent"/>`;
+    g.bars.forEach((b, j) => { const bh = ih * b.v / max;
+      s += `<rect x="${x0 + 2 + j * bw}" y="${pad.t + ih - bh}" width="${Math.max(bw - 1, 1)}" height="${bh}" rx="2" fill="${b.c}" opacity="${b.v ? 1 : .2}"/>`; });
+    s += `</g>`;
+    if (i % 2 === 0) s += `<text x="${x0 + gw / 2}" y="${h - 6}" text-anchor="middle">${g.n}</text>`;
+  });
+  el.innerHTML = s + "</svg>";
+  el.querySelectorAll(".bar").forEach(b => {
+    const g = groups[b.dataset.i];
+    b.onmousemove = ev => tipOn(ev, g.tip); b.onmouseleave = tipOff; b.onclick = () => { tipOff(); goPage(g.n); };
+  });
+}
+const sim = $("#simChart"); sim.fmt = v => Math.round(v * 100) + "%";
+chart(sim, 220, pages.map(p => ({ n: p.n, bars: [{ v: p.sim || 0, c: "var(--en)" }],
+  tip: `<b>${p.n}</b> · ${p.en ? Math.round(p.sim * 100) + "% shared with Fowler" : "not translated yet"}` })));
+const len = $("#lenChart"); len.fmt = v => Math.round(v);
+chart(len, 240, pages.map(p => ({ n: p.n, bars: [{ v: p.gw, c: "var(--muted)" }, { v: p.fw, c: "var(--fowler)" }, { v: p.ew, c: "var(--en)" }, { v: p.ks / 3, c: "var(--ko)" }],
+  tip: `<b>${p.n}</b> · Greek ${p.gw} · Fowler ${p.fw} · new ${p.ew} words · Korean ${p.ks} syllables` })));
+
+// Reader
+const state = { cols: { greek: true, fowler: true, en: true, ko: true }, diff: true, highlight: null };
+const sel = $("#pageSel");
+sel.innerHTML = `<option value="">All pages</option>` + pages.map(p => `<option>${p.n}</option>`).join("");
+sel.onchange = () => sel.value && goPage(sel.value);
+document.querySelectorAll("[data-col]").forEach(c => c.onchange = () => { state.cols[c.dataset.col] = c.checked; renderPages(); });
+$("#diffOn").onchange = e => { state.diff = e.target.checked; $("#diffKey").hidden = !state.diff; renderPages(); };
+
+function paras(text, cls) { return text ? text.split(/\n\s*\n/).map(t => `<p>${t}</p>`).join("") : `<p class="missing">Not translated yet.</p>`; }
+function diffed(text, keep, tag) {
+  // Re-walk the text so paragraph breaks survive; keep[] indexes the \S+ tokens in order.
+  let k = 0;
+  return text.split(/\n\s*\n/).map(par => "<p>" + par.split(/(\s+)/).map(tok => {
+    if (!tok || /^\s+$/.test(tok)) return tok;
+    const kept = keep[k++]; return kept ? esc(tok) : `<${tag}>${esc(tok)}</${tag}>`;
+  }).join("").replace(new RegExp(`</${tag}>(\\s+)<${tag}>`, "g"), "$1") + "</p>").join("");
+}
+function mark(html, needle) {
+  if (!needle) return html;
+  const parts = needle.split(/[\/,;()]/).map(s => s.trim()).filter(s => s.length > 1);
+  for (const w of parts) html = html.replace(new RegExp(`(?<=>[^<]*)(${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi"), `<span class="term-hit">$1</span>`);
+  return html;
+}
+let rendered = false;
+function renderPages() {
+  const order = ["greek", "fowler", "en", "ko"].filter(c => state.cols[c]);
+  const label = { greek: "Greek · Burnet", fowler: "Fowler 1925", en: "New English", ko: "Korean · 한국어" };
+  const color = { greek: "var(--muted)", fowler: "var(--fowler)", en: "var(--en)", ko: "var(--ko)" };
+  const h = state.highlight;
+  $("#pages").innerHTML = pages.map(p => {
+    const body = c => {
+      if (c === "greek") return mark(paras(esc(p.greek)), h && h.page === p.n && h.greek);
+      if (c === "fowler") return mark(state.diff && p.diff ? diffed(p.fowler, p.diff.ka, "del") : paras(esc(p.fowler)), h && h.page === p.n && h.fowler);
+      if (c === "en") return mark(state.diff && p.diff ? diffed(p.en, p.diff.kb, "ins") : paras(esc(p.en)), h && h.page === p.n && h.en);
+      return mark(paras(esc(p.ko)), h && h.page === p.n && h.ko);
+    };
+    return `<article class="page" id="p${p.n}"><div class="page-head"><b>${p.n}</b><span>chunk ${p.chunk}</span>
+      ${p.en ? `<span>${Math.round(p.sim * 100)}% shared with Fowler</span><span>${p.fw} → ${p.ew} words</span><span>${p.ks} Korean syllables</span>` : ""}</div>
+      <div class="cols" style="--n:${order.length || 1}">${order.map(c => `<div class="col ${c}"><h3 style="color:${color[c]}">${label[c]}</h3>${body(c)}</div>`).join("")}</div></article>`;
+  }).join("");
+}
+
+// Key words
+const byGreek = {};
+for (const t of DATA.terms) (byGreek[t.greek] ||= []).push(t);
+const tally = (list, k) => Object.entries(list.reduce((m, t) => (t[k] && (m[t[k]] = (m[t[k]] || 0) + 1), m), {})).sort((a, b) => b[1] - a[1]);
+const chips = (list, k, cls) => tally(list, k).map(([w, c]) => `<span class="chip ${cls}">${esc(w)}${c > 1 ? ` ×${c}` : ""}</span>`).join("");
+function renderTerms() {
+  const q = $("#termFilter").value.trim().toLowerCase();
+  const keys = Object.keys(byGreek).sort((a, b) => byGreek[b].length - byGreek[a].length)
+    .filter(g => !q || JSON.stringify(byGreek[g]).toLowerCase().includes(q));
+  $("#termSummary").innerHTML = `<table><thead><tr><th>Greek</th><th>Fowler 1925</th><th>New English</th><th>Korean</th></tr></thead><tbody>` +
+    keys.map(g => { const l = byGreek[g]; return `<tr><td class="gk">${esc(g)}<div class="note">${esc(l[0].translit || "")}</div></td><td>${chips(l, "fowler", "f")}</td><td>${chips(l, "en", "e")}</td><td>${chips(l, "ko", "k")}</td></tr>`; }).join("") + "</tbody></table>";
+  $("#termCards").innerHTML = keys.map(g => `<div class="card"><h2 style="font-family:Palatino,Georgia,serif">${esc(g)}</h2><p class="sub">${esc(byGreek[g][0].translit || "")} · ${byGreek[g].length} logged</p>
+    <table><tbody>${byGreek[g].sort((a, b) => a.page - b.page).map((t, i) => `<tr><td><a class="pg" data-g="${esc(g)}" data-i="${i}">${esc(t.page)}</a></td>
+    <td><span class="chip f">${esc(t.fowler)}</span><span class="chip e">${esc(t.en)}</span><span class="chip k">${esc(t.ko)}</span><div class="note">${esc(t.note)}</div></td></tr>`).join("")}</tbody></table></div>`).join("");
+  document.querySelectorAll("a.pg").forEach(a => a.onclick = () => { const t = byGreek[a.dataset.g][a.dataset.i];
+    goPage(String(t.page), { page: String(t.page), greek: t.greek, fowler: t.fowler, en: t.en, ko: t.ko }); });
+}
+$("#termFilter").oninput = renderTerms;
+renderTerms();
+
+// Notes
+$("#noteList").innerHTML = DATA.notes.map(n => `<div class="card"><h2>Chunk ${n.chunk} · pages ${n.pages}</h2><p>${esc(n.text)}</p></div>`).join("") || `<p class="missing">No notes yet.</p>`;
+</script>
+</body>
+</html>

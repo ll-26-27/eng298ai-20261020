@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nextjs-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--dir",
+        "nextjs",
+        "dev"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "phaedrus",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4310",
+        "--directory",
+        "phaedrus/app"
+      ],
+      "port": 4310
+    }
+  ]
+}

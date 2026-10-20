@@ -1,33 +1,33 @@
 :root {
-  /* Dark always (forced for this site). Print pages (.print-root) are always light.
+  /* Lavender, light (forced for this site); was a garnet-charcoal dark theme. Print pages (.print-root) are always light.
      The meeting of the two source apps: the timeline's dark ground and Inter, warmed to a garnet charcoal; the Poetry
      Gem's vermilion and brass rules, with the timeline's own type (Inter). The jewel note in the grey is there so the
      paper dolls' cream, rust, and olive read off the page. */
-  --paper: #2a2225;
-  --ink: #f7f1ed;
-  --muted: #c4b4b2;
-  --line: #4b3c41;
-  --accent: #ff7262;
-  --accent-ink: #2a0d09;
-  --wash: #33292d;
-  --hover: #3c3035;
-  --code: #221b1e;
-  --brass: #d9b874;
-  --garnet: #7d2840;
-  --garnet-deep: #4a1a29;
-  --ok: #8fd19a;
-  --error: #ff9a8a;
+  --paper: #e9e3f5;
+  --ink: #2b2140;
+  --muted: #5e5278;
+  --line: #c9bde3;
+  --accent: #7a5bc4;
+  --accent-ink: #ffffff;
+  --wash: #f3effa;
+  --hover: #ddd3f0;
+  --code: #ece6f7;
+  --brass: #8a6ab8;
+  --garnet: #6b4fa8;
+  --garnet-deep: #4a3578;
+  --ok: #2f7d32;
+  --error: #a3263a;
   --gutter: clamp(18px, 4vw, 64px);
   /* One family, as in mk-chatbot-experiments: Inter for everything (these names are kept so components can share them). */
   --font-display: "Inter Variable", Inter, system-ui, sans-serif;
   --font-deco: "Inter Variable", Inter, system-ui, sans-serif;
   --font-quote: "Inter Variable", Inter, system-ui, sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Inter Variable", Inter, system-ui, sans-serif; background-image: radial-gradient(120% 60% at 50% -10%, #3a2a30 0%, transparent 60%); background-attachment: fixed; -webkit-font-smoothing: antialiased; font-feature-settings: "cv11", "ss01"; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Inter Variable", Inter, system-ui, sans-serif; background-image: radial-gradient(120% 60% at 50% -10%, #d6c9f0 0%, transparent 60%); background-attachment: fixed; -webkit-font-smoothing: antialiased; font-feature-settings: "cv11", "ss01"; }
 a { color: inherit; text-decoration: none; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
