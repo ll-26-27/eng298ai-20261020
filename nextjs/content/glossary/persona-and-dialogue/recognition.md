@@ -22,9 +22,7 @@ For this glossary, recognition is a humanities question about how someone comes 
 
 *Frankenstein*, Volume II, chapter II, makes a hearing of the creature’s account a condition of judgment. *R.U.R.*, Epilogue, turns on Alquist’s response to laughter, protection, and mutual sacrifice. These scenes invite a comparison of criteria for recognition; they do not establish software personhood.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

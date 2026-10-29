@@ -20,9 +20,7 @@ Turing is why chatbots matter to the story of AI at all. His proposal that we ju
 
 For a course on dialogue, what stands out is that his test is a party game about passing: in its first version a man tries to convince an interrogator that he is a woman, before a machine takes his place.
 
-## Try it
 
-The [persona dial](/persona-dial) is a small imitation game: which presentation makes the same engine feel more like someone?
 
 ## See also
 

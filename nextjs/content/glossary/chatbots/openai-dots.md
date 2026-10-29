@@ -30,9 +30,7 @@ When you are not working with it, a dot does what OpenAI calls "proactive resear
 
 **Agency and memory.** Dots are OpenAI's entry in the late-summer 2026 turn to hosted always-on agents, seven weeks after xAI's [Grok Bot](grok-bot.md) and three after Meta's [Muse](muse.md): the chatbot becomes a named worker with its own computer, standing access to your apps, and work it starts without being asked. The name has no connection to New Computer's companion app [Dot](dot.md) (2024–2025).
 
-## Try it
 
-[Mini-claw](/mini-claw) builds a small always-on agent by hand, to show the parts dots package.
 
 ## See also
 

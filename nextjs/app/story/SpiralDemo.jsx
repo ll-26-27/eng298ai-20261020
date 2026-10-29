@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useBrowserLM } from "../../lib/browser-lm/useBrowserLM.js";
 
-// GPT-2 small in the panel, through the shared engine (lib/browser-lm, task A). It starts as a recorded continuation;
-// the model (about 130 MB) loads only when the reader asks, and runs on their own computer. Full version at /gpt-2.
+// GPT-2 small in the panel, through the shared engine (lib/browser-lm). It starts as a recorded continuation;
+// the model (about 130 MB) loads only when the reader asks, and runs on their own computer. Also on /gpt-2.
 
 const MODEL = "Xenova/gpt2";
 const SETTINGS = { temperature: 0.8, topK: 40, maxNewTokens: 60 };
@@ -61,7 +61,6 @@ export default function SpiralDemo({ prompt = "Who are you?\n", recorded, record
       {live ? <Live prompt={prompt} /> : (
         <button type="button" className="spiral-start" onClick={() => setLive(true)}>Run it yourself: load GPT-2 in this browser (about 130 MB)</button>
       )}
-      <p className="demo-more"><a href="/gpt-2">Open GPT-2 and inspect token probabilities →</a></p>
     </div>
   );
 }

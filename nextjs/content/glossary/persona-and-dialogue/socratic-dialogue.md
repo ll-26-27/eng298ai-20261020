@@ -24,7 +24,6 @@ In *Phaedrus*, 265dâ€“266b, Socrates discusses collection and division; at 276aâ
 
 ## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 [ELIZA](/eliza): compare a reply with the textual rule that produces it.
 

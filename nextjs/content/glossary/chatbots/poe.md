@@ -30,9 +30,7 @@ In April 2023 Poe added user-created bots: anyone could write "a short text prom
 
 **Platform and configuration.** Poe separated the chatbot from the model. The persona a user meets is a name, an avatar, and a prompt; the model behind it can be swapped. Its prompt bots are an early public version of the configuration layer that [custom GPTs](custom-gpts.md), Gems, and projects later built into each company's own app.
 
-## Try it
 
-The configuration layer in [the layers](/layers) (a system prompt, attached files, one tool on a fixed engine) is the move Poe's prompt bots made public.
 
 ## See also
 

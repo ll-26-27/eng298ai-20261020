@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { getEntry, getExperimentGroups, isAiGenerated } from "../../lib/content.mjs";
-import ExperimentGroups from "../components/ExperimentGroups.jsx";
+import { getEntry, isAiGenerated } from "../../lib/content.mjs";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
 import Markdown from "../components/Markdown.jsx";
 
@@ -67,12 +66,11 @@ export default async function EntryPage({ params }) {
   const previous = position > 0 ? siblings[position - 1] : null;
   const next = position >= 0 && position < siblings.length - 1 ? siblings[position + 1] : null;
   const folderPath = entry.source;
-  // /experiments shows the cards in groups (the same list as the home page) instead of a flat folder list.
-  const groups = entry.kind === "folder" && entry.slug === "experiments" ? await getExperimentGroups() : null;
+  const section = entry.slug.split("/")[0];
 
   return (
     <>
-      <SiteHeader />
+      <SiteHeader current={section === "history" ? "history" : ""} />
       <main id="main" className="article-shell">
         <Breadcrumbs trail={trail} title={entry.title} />
         <header className="article-heading">
@@ -81,7 +79,7 @@ export default async function EntryPage({ params }) {
           <h1>{entry.title}</h1>
           {entry.description && <p className="lede">{entry.description}</p>}
           {entry.updated && <p className="updated">Updated {entry.updated}</p>}
-          <p className="updated">In the repo: <code>{folderPath}</code> · <Link className="print-link" href={`/print${entry.href}`}>Print {entry.kind === "folder" ? "this folder" : "this page"}</Link></p>
+          <p className="updated">In the repo: <code>{folderPath}</code></p>
         </header>
         {entry.kind === "folder" ? (
           <>
@@ -103,12 +101,8 @@ export default async function EntryPage({ params }) {
               </Link>
             )}
             {entry.content.trim() && <article className="prose folder-intro"><Markdown doc={entry} /></article>}
-            {groups ? <ExperimentGroups groups={groups} /> : (
-              <>
-                {entry.listHeading && <h2 className="folder-list-heading">{entry.listHeading}</h2>}
-                <FolderList folder={entry} />
-              </>
-            )}
+            {entry.listHeading && <h2 className="folder-list-heading">{entry.listHeading}</h2>}
+            <FolderList folder={entry} />
           </>
         ) : (
           <article className="prose"><Markdown doc={entry} /></article>

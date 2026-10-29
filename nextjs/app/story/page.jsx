@@ -28,7 +28,7 @@ export default async function StoryPage() {
       <SiteHeader current="story" />
       <main id="main" className="story">
         <header className="story-hero">
-          <p className="eyebrow">ENG 298AI · Chatbot timeline</p>
+          <p className="eyebrow">A short history of the chatbot</p>
           <h1>{intro.title || "How chatbots work"}</h1>
           {intro.description && <p className="story-deck">{intro.description}</p>}
           <nav className="story-contents" aria-label="Chapters">
@@ -40,7 +40,7 @@ export default async function StoryPage() {
               ))}
             </ol>
           </nav>
-          <p className="story-how">Talk to ELIZA, run GPT-2 with and without the first assistant script, and see what a 2023 bot is made of. Today's activities are on <Link href="/">Today</Link>. <Link href="/bot-materials">Bot materials</Link> · <Link href="/glossary">Glossary</Link> · <Link href="/print/story">Print</Link></p>
+          <p className="story-how">Eleven chapters, about 4,800 words. Along the way: talk to ELIZA, run GPT-2 with and without the first assistant script, and watch a bot&rsquo;s knowledge being retrieved. Terms with a dotted underline open the <Link href="/glossary">glossary</Link>; the screenshots are from <Link href="/history">Interfaces</Link>.</p>
         </header>
         <TimelineZoom />
         {steps.length === 0 ? <p className="empty-state">No chapters yet: add Markdown files to <code>nextjs/content/story/</code>.</p> : (
@@ -76,12 +76,12 @@ export default async function StoryPage() {
             <footer className="story-end">
               <div className="story-fork">
                 <p className="eyebrow">Your turn</p>
-                <h2>Fork it</h2>
+                <h2>Build one</h2>
                 <span className="deco-rule" />
-                <p>You have seen what a Gem is made of. Now take its parts and give them an interface of your own. The next page shows the full builder, then a Reset button that strips it down to the data. Redesign that page with Claude Code, and submit your bot from your design.</p>
-                <Link className="story-fork-button" href="/build-a-bot">Fork it →</Link>
+                <p>You have seen what a bot of the configuration era is made of: instructions, knowledge, and tools. The next page shows where each one lives in ChatGPT, Gemini, and Claude, and how to test which part is speaking.</p>
+                <Link className="story-fork-button" href="/build-a-bot">How to build a bot →</Link>
               </div>
-              <p><Link href="/bot-materials">Bot materials</Link> · <Link href="/readings">Readings</Link> · <Link href="/print/story">Print</Link></p>
+              <p><Link href="/glossary">Glossary</Link> · <Link href="/history">Interfaces</Link> · <Link href="/">Home</Link></p>
             </footer>
           </StoryShell>
         )}

@@ -20,9 +20,7 @@ Claude Code’s sandboxing can constrain filesystem and network access. This dif
 
 Mini-claw exposes no shell or network tool. Its file tool permits Markdown writes only under notes/ and one-line appends to memory.md; tests cover path traversal, symlink escapes, and permission refusals. These checks constrain this tool, rather than sandboxing the entire server process.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Mini-claw exposes no shell or network tool. Its file tool permits Markdown write
 ## Sources
 
 - [Claude Code: sandboxing](https://code.claude.com/docs/en/sandboxing)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

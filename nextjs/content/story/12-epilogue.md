@@ -9,7 +9,7 @@ label: "GPTs retire; Gems become skills"
 
 # After the Gem: rules around the odds
 
-The Gem you built is already a period piece. OpenAI plans to retire custom GPTs on 11 December 2026, and Google is moving Gems into "skills" ([OpenAI FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq); [Google](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills)). The industry's attention has moved from the character to the machinery around it: harnesses, loops, tools, skills.
+The Gem is already a period piece. OpenAI plans to retire custom GPTs on 11 December 2026, and Google is moving Gems into "skills" ([OpenAI FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq); [Google](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills)). The industry's attention has moved from the character to the machinery around it: harnesses, loops, tools, skills.
 
 ```panel
 type: image
@@ -19,7 +19,7 @@ caption: "The GPT Store in October 2026, with a banner announcing that GPTs will
 cite: "Screenshot 19 Oct 2026; [OpenAI retirement FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq)"
 ```
 
-A Gem is a costume: instructions, a few texts, a name. A skill is closer to a procedure: instructions the system loads only when a task calls for them, often with scripts and files attached. An agent harness is closer still to a machine: a loop that runs the model, checks what it produced, runs a tool, and feeds the result back. The character hasn't vanished. It has been put to work inside a structure.
+A Gem is a character sheet: instructions, a few texts, a name. A skill is closer to a procedure: instructions the system loads only when a task calls for them, often with scripts and files attached. An agent harness is closer still to a machine: a loop that runs the model, checks what it produced, runs a tool, and feeds the result back. The character hasn't vanished. It has been put to work inside a structure.
 
 ```panel
 type: compare
@@ -44,7 +44,7 @@ text: "Discussion: where is the speaker now?"
 
 Questions to take into discussion:
 
-- In your Gem, which lines of the poem came from the instructions, which from the reading pack, and which from the trained assistant underneath? How could you tell?
+- In a bot you have built, which replies came from the instructions, which from the uploaded texts, and which from the trained assistant underneath? How could you tell?
 - The HHH prompt, a Gem's instructions, and OpenClaw's `SOUL.md` are all documents describing a character. What changes when the character can rewrite its own document?
 - ELIZA's rules hid a lack. A harness's rules check a model's work. Are these the same kind of rule?
 - If the future is a harness, not a character, does the humanities question "who is speaking?" lose its force, or become more pressing?

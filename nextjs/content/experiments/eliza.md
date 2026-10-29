@@ -76,5 +76,5 @@ import { elizaAdapter } from "../../lib/eliza/adapter.mjs";
 
 ## Open questions
 
-- Should the persona dial (task E) show ELIZA's replies in capitals, as here, or in sentence case, so it sits beside Claude without looking antique? The capitals are part of what made it feel like a machine.
+- Should ELIZA's replies stay in capitals, as here, or go into sentence case? The capitals are part of what made it feel like a machine.
 - Weizenbaum's papers are now viewable at MIT ([dome.mit.edu](https://dome.mit.edu/handle/1721.3/201698), per Hay); a page image of the listing itself would make a better illustration than the folder.

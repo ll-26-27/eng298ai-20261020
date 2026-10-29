@@ -1,9 +1,10 @@
 @AGENTS.md
 
-# mk-chatbot-experiments: the app
+# The app
 
-A Next app that renders the Markdown in `content/` (its README is the home page; `content/a/b.md` is `/a/b`) (`lib/content.mjs`), copied 2026-10-19 from `tdm155ai/tdm155ai-week-6` and stripped of that week's routes. Plain JavaScript and the app's own CSS (`app/globals.css`); forced dark; a light `/print` renders any page.
+A Next app. Plain JavaScript (TypeScript only under `lib/poetry-gem/`, the knowledge demo's search), the app's own CSS (`app/globals.css`, plus one CSS file beside each page); forced dark.
 
-- **Experiments:** one route per experiment (`app/<route>/page.jsx`), each wrapped in `app/components/ExperimentPage.jsx`, which reads `content/experiments/<name>.md` (frontmatter `route:` and `status:`). The home page lists them as cards (`getExperiments`). A route's own styles go in a CSS file beside it.
-- **History:** `content/history/` is one page per section of the 2026-10-19 screenshot set; the images are in `content/history/_images/` (folders starting with `_` are not listed as pages). Relative image paths in Markdown are served by `app/context-media/`.
-- **Who is building what:** `../_context/orchestration/README.md` (the board; briefs in `tasks/`, reports in `reports/`).
+- **Pages:** `app/page.jsx` (home), `app/eliza/`, `app/gpt-2/` (the two GPT-2 panels, shared with the timeline from `app/story/`), `app/build-a-bot/` (the guide), `app/timeline/` (renders `app/story/page.jsx`), `app/glossary/`. The glyphs every page uses are `app/components/Glyphs.jsx`; `app/components/activity.css` is the shared activity layout.
+- **Content:** `content/` is Markdown, read on every request (`lib/content.mjs`): `content/a/b.md` is `/a/b`, served by `app/[...slug]/`. `content/story/` is the timeline (format in its README), `content/history/` the Interfaces gallery (images in `_images/`, served by `app/context-media/`), `content/glossary/` the glossary, `content/experiments/eliza.md` the ELIZA notes.
+- **In the browser:** ELIZA is `lib/eliza/`; GPT-2 runs through `lib/browser-lm/` (Transformers.js, a worker). The HHH prompt is `app/gpt-2/hhh-prompt.txt`, byte for byte, which `tests/hhh.test.mjs` checks.
+- **Tests:** `pnpm test`.

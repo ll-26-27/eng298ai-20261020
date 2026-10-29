@@ -36,7 +36,7 @@ The LaMDA paper describes the model Bard first ran on: "a family of Transformer-
 
 ## Try it
 
-The configuration layer in [the layers](/layers) is what Gemini's Gems package. The "Course TF Assistant" built as a Gem is in the [history screenshots](../../history/README.md).
+The "Course TF Assistant" built as a Gem is in the [history screenshots](../../history/README.md).
 
 ## See also
 

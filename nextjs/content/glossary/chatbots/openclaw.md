@@ -30,9 +30,7 @@ Steinberger's own account: "Two months ago, I hacked together a weekend project,
 
 **Agency.** OpenClaw is the point where the chatbot leaves the vendor's website: the same agent loop as Claude Code, but always on, on your own machine, with your accounts and files, reachable by text message. That combination of private data, outside messages, and the power to act is what the "lethal trifecta" describes, which is why its security record drew attention: the project publishes [security advisories](https://github.com/openclaw/openclaw/security/advisories), and widely repeated counts of vulnerabilities and exposed installations have not been checked here (verify).
 
-## Try it
 
-[Mini-claw](/mini-claw) builds a small agent of this kind step by step: a loop, tools, memory, and skills.
 
 ## See also
 

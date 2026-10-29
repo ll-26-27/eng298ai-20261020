@@ -30,9 +30,7 @@ Cited by section and by the page numbers of the course copy, the 2025 reprint in
 - **§6.3, p. 181:** each turn displays its speaker's understanding of the last one, a "proof procedure" for the analyst ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/sacks-schegloff-jefferson-1974-turn-taking.md?plain=1#L688)).
 - **§7, pp. 182–183:** conversation and debate as the two poles of "speech-exchange systems," with "therapy sessions, interviews, trials" among the others ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/sacks-schegloff-jefferson-1974-turn-taking.md?plain=1#L698)).
 
-## Try it
 
-The [persona dial](/persona-dial) switches a typing indicator and callbacks on and off. In [building the assistant by hand](/by-hand), "let it write both sides" shows a base model that doesn't know whose turn it is.
 
 ## See also
 

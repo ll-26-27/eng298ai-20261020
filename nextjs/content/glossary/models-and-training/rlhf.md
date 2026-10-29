@@ -24,9 +24,7 @@ RLHF is the step most responsible for the assistant's familiar manner: complete 
 
 [Grice, "Logic and Conversation"](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/grice-1975-logic-and-conversation.md)'s maxims (be as informative as required, true, relevant, and clear) read like a rater's checklist. RLHF trains a model toward replies that look cooperative to a rater, which is close to Grice's principle and not the same thing. [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md) compares preference modeling with imitation and finds it "performs much better."
 
-## Try it
 
-Column 4 of [building the assistant by hand](/by-hand) shows a model shaped by this kind of training.
 
 ## See also
 

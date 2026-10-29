@@ -24,9 +24,7 @@ Sacks was killed in a car accident in 1975, the year after their turn-taking pap
 
 Their 1974 paper, [A Simplest Systematics](simplest-systematics.md), read October 13. The Appendix of the course copy explains Jefferson's transcript symbols ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/sacks-schegloff-jefferson-1974-turn-taking.md?plain=1#L714)).
 
-## Try it
 
-The [persona dial](/persona-dial)'s typing indicator is a small attempt to give a chat back some of conversation's timing.
 
 ## See also
 

@@ -20,9 +20,7 @@ Context engineering involves managing instructions, messages, tool descriptions,
 
 For a student using Claude Code, ask: did the agent read the assignment file, or merely see its name? Mini-claw’s trace is a way to make that question inspectable.
 
-## Try it
 
-[the layers](/layers) · [mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,5 +29,3 @@ For a student using Claude Code, ask: did the agent read the assignment file, or
 ## Sources
 
 - [Anthropic: context engineering](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)
-- [The layers experiment brief](../../experiments/layers.md)

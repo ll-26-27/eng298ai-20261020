@@ -20,9 +20,7 @@ Claude Code can inspect files, use tools, and work through a task in a loop. Its
 
 For a student’s repo, locate five parts: project instructions, a skill, a tool request, the permission governing execution, and the next step after a result. Mini-claw implements the same anatomy in a smaller form. See the product-specific documentation before assuming a feature is available in a particular installation.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ For a student’s repo, locate five parts: project instructions, a skill, a tool
 ## Sources
 
 - [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

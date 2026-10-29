@@ -24,9 +24,8 @@ Grice, p. 49, distinguishes opting out from covert violation and conspicuous flo
 
 ## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
-[Building the assistant by hand](/by-hand): compare the same question across columns and inspect the supplied text.
+[GPT-2, two ways](/gpt-2): the same question with and without the first assistant script in front of it.
 
 ## See also
 

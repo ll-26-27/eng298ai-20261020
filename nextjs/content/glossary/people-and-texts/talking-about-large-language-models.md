@@ -24,7 +24,7 @@ In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298
 
 ## Try it
 
-The [GPT-2 experiment](/gpt-2) is the step back: the bare model, predicting the next token. [The layers](/layers) shows the rest of the system.
+The [GPT-2 experiment](/gpt-2) is the step back: the bare model, predicting the next token.
 
 ## See also
 

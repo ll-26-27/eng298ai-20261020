@@ -36,7 +36,7 @@ The GPT Store opened on 10 January 2024, when OpenAI reported that users had "al
 
 ## Try it
 
-The configuration panel in [the layers](/layers) (a system prompt, attached files, one tool) is a custom GPT reduced to its parts. The "Course TF Assistant" built as a custom GPT, a Claude project, and a Gem is in the [history screenshots](../../history/README.md).
+The "Course TF Assistant" built as a custom GPT, a Claude project, and a Gem is in the [history screenshots](../../history/README.md).
 
 ## See also
 

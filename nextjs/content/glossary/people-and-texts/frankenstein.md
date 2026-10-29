@@ -31,7 +31,7 @@ The course copy is the 1818 text, whose chapters are numbered within each of thr
 
 ## Try it
 
-The [GPT-2 experiment](/gpt-2) shows a model that has only read: a base model continues whatever it is given. [Building the assistant by hand](/by-hand) shows how a character is then written for it.
+The [GPT-2 experiment](/gpt-2) shows a model that has only read: a base model continues whatever it is given.
 
 ## See also
 

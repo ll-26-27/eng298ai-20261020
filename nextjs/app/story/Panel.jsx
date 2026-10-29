@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import ElizaDemo from "./ElizaDemo.jsx";
 import SpiralDemo from "./SpiralDemo.jsx";
 import HhhDemo from "./HhhDemo.jsx";
-import GemPieces from "./GemPieces.jsx";
 
 // What the sticky panel shows for one step (see content/story/README.md for the fields). The same component draws the
 // sticky panel on wide screens (mode "sticky"), the figure above each step on phones ("inline"), and the figure in the
@@ -177,8 +176,6 @@ export default function Panel({ panel, milestones = [], mode = "sticky" }) {
         {panel.more_href && <p className="panel-link-more"><a href={panel.more_href}>{panel.more}</a></p>}
       </div>
     );
-  } else if (type === "gem") {
-    body = <figure className="panel-figure"><GemPieces show={asList(panel.show)} />{panel.caption && <figcaption className="panel-note"><Inline>{panel.caption}</Inline></figcaption>}</figure>;
   } else if (type === "compare") {
     const columns = Array.isArray(panel.columns) ? panel.columns : [];
     const rows = Array.isArray(panel.rows) ? panel.rows : [];

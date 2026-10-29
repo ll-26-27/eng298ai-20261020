@@ -22,9 +22,7 @@ A character is more than an accent or a list of adjectives: what the figure does
 
 In *Dorian Gray*, chapters VII–VIII, beauty, performance, cruelty, and the altered portrait do not line up. Read the discrepancy as a warning against treating an attractive surface as a complete account of character. This literary comparison leaves open what kinds of character a chatbot can sustain.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

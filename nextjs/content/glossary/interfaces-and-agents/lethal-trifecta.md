@@ -20,9 +20,7 @@ The dangerous combination permits a prompt injection encountered in outside mate
 
 Writing a local note and transmitting it outside the workspace are different powers. Mini-claw’s file tool has no external-communication operation, removing that direct transmission route. Its Claude engine still calls an external model provider; the whole application is not offline.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Writing a local note and transmitting it outside the workspace are different pow
 ## Sources
 
 - [Simon Willison: the lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

@@ -22,9 +22,7 @@ The paper shows how much of a believable person comes from the architecture arou
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2304.03442v2--generative-agents-interactive-simulacra-of-human-behavior.md)).
 
-## Try it
 
-[The layers](/layers) adds persistent memory to one engine; [mini-claw](/mini-claw) gives an agent a `memory.md`.
 
 ## See also
 

@@ -24,7 +24,6 @@ Sacks, Schegloff, and Jefferson, §4.14, discuss repair of overlap and other tro
 
 ## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 [ELIZA](/eliza): compare a reply with the textual rule that produces it.
 

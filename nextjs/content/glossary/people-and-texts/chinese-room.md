@@ -18,9 +18,7 @@ updated: 2026-10-19
 
 It is the classic reply to the imitation game. Searle imagines himself locked in a room with a rulebook for matching Chinese symbols to Chinese symbols; questions come in under the door, and his answers are good enough to pass for a native speaker's, yet he understands none of it. So, he argues, a computer that passes by following a program understands nothing either. The [ELIZA](/eliza) experiment's "show the rule" view puts students inside a very small Chinese room. With language models the room has changed shape (no one wrote the rules; they were learned from text), and the course asks whether the argument still applies, and whether role play is a better description than either understanding or its absence.
 
-## Try it
 
-[ELIZA](/eliza) with "show the rule" on; then column 1 of [building the assistant by hand](/by-hand), where there is no rulebook to show.
 
 ## See also
 

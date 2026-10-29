@@ -36,9 +36,7 @@ The company’s [12 October 2026 announcement](https://blog.character.ai/an-upda
 
 Shanahan, McDonell, and Reynolds's "Role Play with Large Language Models" describes dialogue agents "in terms of role-play," using "familiar folk psychological terms, without ascribing human characteristics to language models they in fact lack" ([abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2305.16367v1--role-play-with-large-language-models.md#L42)). Character.AI is that description made into a product: the same model, cast in millions of roles.
 
-## Try it
 
-The [persona dial](/persona-dial) changes only the name, avatar, and presentation around a fixed engine, which is all that separates one Character.AI character from another, and then shows the text the model actually received.
 
 ## See also
 

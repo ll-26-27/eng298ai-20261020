@@ -34,9 +34,7 @@ The characters did not last. By 1 August 2024 their accounts were gone, and Meta
 
 Gilbert's line in Wilde's "The Critic as Artist" is a fair motto for the celebrity AIs, and also a question about them: "Man is least himself when he talks in his own person. Give him a mask, and he will tell you the truth" ([*Intentions*, "The Critic as Artist," part II](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-intentions.md#L575)). Meta's version reversed the terms: the mask was a famous face, and what spoke behind it was a language model.
 
-## Try it
 
-The [persona dial](/persona-dial) changes a name and an avatar while the engine stays fixed, which is what Meta's celebrity AIs did with famous faces.
 
 ## See also
 

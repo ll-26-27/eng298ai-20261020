@@ -21,7 +21,7 @@ Running locally makes the base model something students can poke at directly, at
 
 ## Try it
 
-[The GPT-2 experiment](/gpt-2). [Building the assistant by hand](/by-hand).
+[GPT-2, two ways](/gpt-2).
 
 ## See also
 

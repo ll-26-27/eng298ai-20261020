@@ -22,9 +22,7 @@ Two explanations can carry similar information while differing in ambiguity and 
 
 Grice, p. 46, distinguishes manner—how something is said—from the other categories. On pp. 55–56, an elaborate description in place of a simple verb can itself invite an implicature. Style is therefore part of meaning in an exchange, not just decoration.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

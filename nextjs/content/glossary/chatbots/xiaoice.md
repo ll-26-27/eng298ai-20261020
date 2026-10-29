@@ -28,9 +28,7 @@ The design goal was engagement, measured as "conversation-turns per session": th
 
 **Persona and companionship.** Xiaoice was the large-scale proof that a chatbot designed as a friend, with a consistent personality and an eye on long-term relationships, could hold hundreds of millions of people. It was also the model for Microsoft's English-language experiment, [Tay](tay.md), which went very differently.
 
-## Try it
 
-The [persona dial](/persona-dial) switches on a name, feelings language, and callbacks to earlier remarks, the presentation Xiaoice was built on, and asks how alive the result feels.
 
 ## See also
 

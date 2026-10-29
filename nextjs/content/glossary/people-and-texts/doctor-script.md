@@ -22,7 +22,7 @@ That split is the ancestor of the system prompt and of the Course TF Assistant b
 
 ## Try it
 
-[ELIZA](/eliza) runs DOCTOR in the browser with a "show the rule" view; the [persona dial](/persona-dial) puts it behind a chat interface beside Claude. The original MAD-SLIP listing, found in Weizenbaum's archives, is in the [history screenshots](../../history/README.md).
+The original MAD-SLIP listing, found in Weizenbaum's archives, is in the [history screenshots](../../history/README.md).
 
 ## See also
 

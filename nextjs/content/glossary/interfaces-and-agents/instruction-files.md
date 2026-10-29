@@ -24,9 +24,7 @@ In this app, nextjs/CLAUDE.md begins with @AGENTS.md. A student can inspect that
 
 [*Phaedrus*, 275d–e](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/plato-phaedrus.md) asks what happens when writing travels beyond its author and audience. A repository instruction file gives the course a concrete comparison: who is addressed, who interprets it, and who can correct a misreading?
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -36,4 +34,3 @@ In this app, nextjs/CLAUDE.md begins with @AGENTS.md. A student can inspect that
 
 - [Claude Code: project instructions and memory](https://code.claude.com/docs/en/memory)
 - [AGENTS.md specification and examples](https://agents.md/)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

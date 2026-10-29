@@ -12,8 +12,8 @@ Each entry is one short file: a one-line definition in bold, "In plain terms" wi
 
 - **"Men are all alike."** The opening of the exchange in Weizenbaum's 1966 ELIZA paper, run by the DOCTOR script ([ELIZA](/eliza)).
 - **A question put to GPT-2 that spirals.** A base model asked "Who are you?" doesn't answer; it continues the text, and keeps going ([the GPT-2 experiment](/gpt-2)).
-- **The "Course TF Assistant."** The same teaching assistant built three times, as a custom GPT, a Claude project, and a Gem, with the same instructions ([History](../history/README.md), [the layers](/layers)).
-- **Claude Code in a student's repo.** An agent that reads the folder's `CLAUDE.md`, loads skills, uses tools, and loops until the task is done ([mini-claw](/mini-claw)).
+- **The "Course TF Assistant."** The same teaching assistant built three times, as a custom GPT, a Claude project, and a Gem, with the same instructions ([Interfaces](../history/README.md), [How to build a bot](/build-a-bot)).
+- **Claude Code in a student's repo.** An agent that reads the folder's `CLAUDE.md`, loads skills, uses tools, and loops until the task is done ([the agents chapter](/timeline#agents)).
 
 Every date, launch, number, and quotation links to a source that was checked. Anything that couldn't be confirmed is marked "(verify)".
 
@@ -29,7 +29,7 @@ Every date, launch, number, and quotation links to a source that was checked. An
 
 ## For anyone writing entries
 
-The entry format, the rules, and the starting lists for each category are in the task board's shared glossary brief, `_context/orchestration/tasks/L-glossary.md`. In short:
+The entry format, in short:
 
 - **One file per entry**, named by its slug (`base-model.md`), in its category's folder. Frontmatter: `term`, `slug`, `short`, `aliases`, `category`, `see_also` (slugs, any category), `readings` (ids below), `experiments` (route names), `updated`. Chatbots add `year`, `maker`, `status`, and `screenshot`.
 - **Body:** `# Term`, the `short` line in bold, then `## In plain terms`, and where they apply `## In the readings`, `## Try it`, `## See also`, `## Sources`. Chatbots add `## Where it fits` after "In plain terms".

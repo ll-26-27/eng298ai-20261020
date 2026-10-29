@@ -24,9 +24,7 @@ Mini-claw makes persistence tangible: a memory.md file is read at the start and 
 
 In [*Phaedrus*, 274c–275b](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/plato-phaedrus.md), the story of Theuth distinguishes external written reminders from cultivated memory. A saved memory file makes that distinction useful to revisit; the dialogue is not describing software memory.
 
-## Try it
 
-[the layers](/layers) · [mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -35,5 +33,3 @@ In [*Phaedrus*, 274c–275b](https://github.com/ll-26-27/eng-298ai-context/blob/
 ## Sources
 
 - [Claude Code: project instructions and memory](https://code.claude.com/docs/en/memory)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)
-- [The layers experiment brief](../../experiments/layers.md)

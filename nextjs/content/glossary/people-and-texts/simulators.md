@@ -16,13 +16,13 @@ updated: 2026-10-19
 
 ## Why it matters here
 
-Written about base models before ChatGPT, it gives the experiments their key distinction: the model is not the character. "I use the generic term 'simulator' to refer to models trained with predictive loss on a self-supervised dataset"; such a model "can simulate agentic and non-agentic simulacra." The question-asker, the forum poster, the helpful assistant, and the sardonic monk in [building the assistant by hand](/by-hand) are all simulacra of one simulator. Shanahan, McDonell, and Reynolds build their role-play paper on it and cite it, and the "shoggoth with a smiley face" meme of December 2022 is a cartoon of the same idea: a vast simulator wearing one friendly mask.
+Written about base models before ChatGPT, it gives the experiments their key distinction: the model is not the character. "I use the generic term 'simulator' to refer to models trained with predictive loss on a self-supervised dataset"; such a model "can simulate agentic and non-agentic simulacra." The question-asker, the forum poster, and the helpful assistant in [GPT-2, two ways](/gpt-2) are all simulacra of one simulator. Shanahan, McDonell, and Reynolds build their role-play paper on it and cite it, and the "shoggoth with a smiley face" meme of December 2022 is a cartoon of the same idea: a vast simulator wearing one friendly mask.
 
 The concept itself has its own entry, [simulator](../persona-and-dialogue/simulator.md); this one is the essay.
 
 ## Try it
 
-[Building the assistant by hand](/by-hand), with "let it write both sides": the simulator plays the human as readily as the assistant. The [GPT-2 experiment](/gpt-2) shows the simulator with no character set.
+The [GPT-2 experiment](/gpt-2) shows the simulator with no character set.
 
 ## See also
 

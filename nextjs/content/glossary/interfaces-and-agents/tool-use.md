@@ -20,9 +20,7 @@ Tools extend an assistant beyond producing text: a host can execute a requested 
 
 In mini-claw, follow the single file tool from its description to the request to the returned result. In Claude Code, use a file-reading task as the same running example.
 
-## Try it
 
-[the layers](/layers) · [mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,5 +29,3 @@ In mini-claw, follow the single file tool from its description to the request to
 ## Sources
 
 - [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)
-- [The layers experiment brief](../../experiments/layers.md)

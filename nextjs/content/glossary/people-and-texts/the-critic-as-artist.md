@@ -29,9 +29,7 @@ Recommended for September 22. In *Intentions* (1891; the course copy is the 1913
 - "To arrive at what one really believes, one must speak through lips different from one's own" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-intentions.md?plain=1#L585)).
 - Part I: criticism as "a creation within a creation" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-intentions.md?plain=1#L433)) and "the record of one's own soul" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-intentions.md?plain=1#L437)).
 
-## Try it
 
-In [building the assistant by hand](/by-hand), rewrite the preamble so the assistant is someone else and watch the same model speak through different lips. The [persona dial](/persona-dial) changes only the mask.
 
 ## See also
 

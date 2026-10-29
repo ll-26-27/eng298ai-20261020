@@ -34,9 +34,7 @@ The public website came with Claude 2 on 11 July 2023: "anyone in the US and UK 
 
 Askell et al. set the goal: "a general-purpose, text-based assistant that is aligned with human values, meaning that it is helpful, honest, and harmless" ([Askell et al. 2021, abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md#L59)). Bai et al. describe training "a harmless AI assistant through self-improvement," where "the only human oversight is provided through a list of rules or principles," aiming for an assistant that "engages with harmful queries by explaining its objections to them" ([Bai et al. 2022, abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2212.08073v1--constitutional-ai-harmlessness-from-ai-feedback.md#L89)).
 
-## Try it
 
-The [persona dial](/persona-dial) changes a chatbot's presentation while the engine stays fixed. [The layers](/layers) adds configuration, memory, and tools around one engine, as Claude's projects do; the "Course TF Assistant" built as a Claude project is in the [history screenshots](../../history/README.md). [Mini-claw](/mini-claw) is a small version of an agent loop like Claude Code's.
 
 ## See also
 

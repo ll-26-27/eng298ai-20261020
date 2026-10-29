@@ -22,9 +22,7 @@ A character may seem to have thoughts it has not said. In a chatbot, first-perso
 
 *Frankenstein*, Volume II, chapter III, gives the creature a retrospective account of sensation and becoming aware. *Dorian Gray*, chapter VII, separates public appearance from a concealed moral record in the portrait. These literary devices provide ways to study how an inside becomes imaginable, not models of a chatbot’s architecture.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

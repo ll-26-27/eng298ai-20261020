@@ -22,9 +22,7 @@ If the student asks for a chapter number, a long biography may supply more infor
 
 Grice, pp. 45–46, distinguishes being sufficiently informative from being excessively informative, while questioning the second maxim’s independent status. His deliberately thin recommendation letter on p. 52 shows how too little information can communicate a negative judgment.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

@@ -20,9 +20,7 @@ Claude Code includes conversation history in its working context. Saving a trans
 
 In the Course TF Assistant example, compare asking a follow-up in the same conversation with starting a new one. Which earlier details are supplied this time?
 
-## Try it
 
-[the layers](/layers). Inspect the built configuration panels and assembled prompt; live replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ In the Course TF Assistant example, compare asking a follow-up in the same conve
 ## Sources
 
 - [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works)
-- [The layers experiment brief](../../experiments/layers.md)

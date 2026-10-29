@@ -24,9 +24,7 @@ The fake-dialogue preamble in the four columns is in-context learning at work: t
 
 [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md) (section 1.2, verify) cites GPT-3's few-shot learning as the reason a long prompt of example conversations can "generically elicit" assistant behavior.
 
-## Try it
 
-Column 2 of [building the assistant by hand](/by-hand); edit the preamble's examples and watch the character change.
 
 ## See also
 

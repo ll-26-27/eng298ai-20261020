@@ -2,12 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { useBrowserLM } from "../../lib/browser-lm/useBrowserLM.js";
-import { HHH_SOURCE, buildPrompt, cutText, parsePreamble, planPreamble, questionTurn, splitHeader, unitsOf } from "../by-hand/preamble.mjs";
+import { HHH_SOURCE, buildPrompt, cutText, parsePreamble, planPreamble, questionTurn, splitHeader, unitsOf } from "../gpt-2/preamble.mjs";
 
 // The same GPT-2 twice: first given the question alone, then given the question after the HHH prompt of Askell et al.
-// 2021 (app/by-hand/hhh-prompt.txt, the paper's own file, byte for byte). GPT-2's window is 1,024 tokens and the prompt
+// 2021 (app/gpt-2/hhh-prompt.txt, the paper's own file, byte for byte). GPT-2's window is 1,024 tokens and the prompt
 // is about 6,800 GPT-2 tokens, so the opening paragraph is always kept and whole exchanges are kept from the end until the
-// window is full (the planning code is /by-hand's, in app/by-hand/preamble.mjs). The reader is told exactly what was cut.
+// window is full (the planning code is app/gpt-2/preamble.mjs). The reader is told exactly what was cut.
 
 const MODEL = "Xenova/gpt2";
 const SETTINGS = { temperature: 0.7, topK: 40 };
@@ -146,7 +146,6 @@ export default function HhhDemo({ preambleFile, recorded = [] }) {
       )}
       <p className="demo-more">
         The prompt is the paper&rsquo;s own file (<a href={HHH_SOURCE.gist} target="_blank" rel="noreferrer">gist</a>, <a href={HHH_SOURCE.paper} target="_blank" rel="noreferrer">paper</a>).
-        {" "}<a href="/by-hand">Run the whole prompt on a model with a longer window →</a>
       </p>
     </div>
   );

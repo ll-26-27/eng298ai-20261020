@@ -20,9 +20,7 @@ Claude Code’s permission system governs tool execution; written instructions i
 
 A student might authorize reading an essay while withholding permission to publish it. Look for that boundary in the host’s checks, rather than expecting a polite sentence in CLAUDE.md to enforce it.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ A student might authorize reading an essay while withholding permission to publi
 ## Sources
 
 - [Claude Code: permissions](https://code.claude.com/docs/en/permissions)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

@@ -26,7 +26,7 @@ A language model is a very large table of guesses, computed rather than stored: 
 
 ## Try it
 
-[The GPT-2 experiment](/gpt-2) shows a language model with nothing around it. [Building the assistant by hand](/by-hand) puts the same kind of model in four different settings.
+[The GPT-2 experiment](/gpt-2) shows a language model with nothing around it.
 
 ## See also
 

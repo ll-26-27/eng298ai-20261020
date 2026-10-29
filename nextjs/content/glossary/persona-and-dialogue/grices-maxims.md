@@ -22,9 +22,7 @@ Quantity concerns how much is supplied; quality concerns truth and evidence; rel
 
 Grice, pp. 45–47, presents the four categories, and pp. 49–50 distinguishes covert violation, opting out, clashes, and conspicuous flouting. That distinction matters: not every unhelpful response is an indirect message waiting to be decoded.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

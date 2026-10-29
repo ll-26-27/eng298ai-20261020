@@ -24,9 +24,7 @@ It differs from prompting in a useful way. A prompt asks a model to continue a p
 
 [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md) (section 2.1) puts the difference with a counting example: show a model "1, 2, ..., 63" and it expects 64 next; fine-tune on the same list and it "will not expect to immediately see the token 64," though it will "catch on to the counting pattern" if you continue it.
 
-## Try it
 
-[The fine-tune notebook](/fine-tune).
 
 ## See also
 

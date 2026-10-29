@@ -24,7 +24,7 @@ Askell et al. make these goals central to the assistant investigated in their pa
 
 ## Try it
 
-[Building the assistant by hand](/by-hand): compare the same question across columns and inspect the supplied text.
+[GPT-2, two ways](/gpt-2): the same question with and without the first assistant script in front of it.
 
 ## See also
 

@@ -24,9 +24,7 @@ To the model these are just tokens it has seen many times in training, in the sa
 
 [Sacks, Schegloff, and Jefferson 1974](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/sacks-schegloff-jefferson-1974-turn-taking.md) describe the end of a turn as a "transition-relevance place," a point where "transfer of speakership" can happen. In a chat model, that point is not inferred from the talk: it is a token.
 
-## Try it
 
-Column 3 of [building the assistant by hand](/by-hand) shows the instruct model's input with its special tokens visible.
 
 ## See also
 

@@ -22,9 +22,7 @@ For this course, compare a Course TF Assistant that helps locate a passage with 
 
 In *Frankenstein*, Volume II, chapter II, the creature appeals to his creator’s obligations and describes exclusion from human company. In *R.U.R.*, Epilogue, mutual protection matters to Alquist’s recognition of Primus and Helena. These are literary questions to bring to companion designs, not evidence that a chatbot experiences loneliness.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

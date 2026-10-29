@@ -24,9 +24,7 @@ He has also worked on the fiction side: he was a scientific adviser to Alex Garl
 
 The two papers above; the course copies are abstracts and notes in `LL-readings/papers-on-ai-md/`.
 
-## Try it
 
-[Building the assistant by hand](/by-hand) puts his role-play account to work.
 
 ## See also
 

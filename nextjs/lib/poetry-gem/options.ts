@@ -93,7 +93,7 @@ export type SentPartKind =
   | "bot-now"; // text the model wrote this turn before searching
 export type SentPart = { kind: SentPartKind; label: string; text: string };
 
-// Jewel tones sampled from the paper-doll plates (median of the most saturated pixels per hue family).
+// Jewel tones for the parts of a request (the knowledge demo's colors).
 export const JEWELS = {
   sapphire: "#182953",
   emerald: "#225519",

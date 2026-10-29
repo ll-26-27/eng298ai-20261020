@@ -24,9 +24,7 @@ He is also a frequent candidate for a historical chatbot, which raises his own q
 
 *The Picture of Dorian Gray* (required, September 22) first appeared in *Lippincott's Monthly Magazine* for July 1890 in thirteen chapters; the course reads the twenty-chapter book of April 1891 (Ward, Lock), which added the Preface. "The Critic as Artist" (recommended) first appeared as "The True Function and Value of Criticism" in *The Nineteenth Century* (July and September 1890) and was collected in *Intentions* (May 1891). See the entries for passages.
 
-## Try it
 
-The [persona dial](/persona-dial) changes only the mask.
 
 ## See also
 

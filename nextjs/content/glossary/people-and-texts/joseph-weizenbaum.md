@@ -16,7 +16,7 @@ updated: 2026-10-19
 
 ## Why it matters here
 
-Weizenbaum is the first person in the history to see the whole problem: a very simple program, given the right persona, is treated as someone. He built ELIZA to show that apparent understanding could be produced by rules, and his 1966 paper says so plainly. What shocked him was that knowing this didn't help. Ten years later, in *Computer Power and Human Reason*, he wrote that his secretary, who had watched him build it "and therefore surely knew it to be merely a computer program," asked him to leave the room after a few exchanges. That story opens the [ELIZA](/eliza) experiment and the anthropomorphization thread of the [persona dial](/persona-dial).
+Weizenbaum is the first person in the history to see the whole problem: a very simple program, given the right persona, is treated as someone. He built ELIZA to show that apparent understanding could be produced by rules, and his 1966 paper says so plainly. What shocked him was that knowing this didn't help. Ten years later, in *Computer Power and Human Reason*, he wrote that his secretary, who had watched him build it "and therefore surely knew it to be merely a computer program," asked him to leave the room after a few exchanges. That story opens the [ELIZA](/eliza) page and the timeline's [ELIZA chapter](/timeline#eliza).
 
 Born in Berlin, he fled Nazi Germany with his parents in the mid-1930s, worked on computers at Wayne University in Detroit and then at General Electric before joining MIT, where he became professor emeritus of computer science. He died near Berlin in 2008.
 

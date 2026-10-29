@@ -20,9 +20,7 @@ It is the strongest statement of the skeptical position the course has to weigh.
 
 The paper is also part of the history: the conflict over it at Google ended with co-author Timnit Gebru's departure in December 2020 (Google called it a resignation; she has said she was fired). "Shmargaret Shmitchell," on the published byline, is Margaret Mitchell (verify).
 
-## Try it
 
-The [GPT-2 experiment](/gpt-2) shows form running on without a destination; the [persona dial](/persona-dial) shows how much coherence the presentation lends.
 
 ## See also
 

@@ -28,5 +28,4 @@ The course’s history collection includes announcement-page screenshots present
 
 ## Sources
 
-- [The layers experiment brief](../../experiments/layers.md)
 - [Course screenshot collection](../../history/README.md); captions describe the archived image, not verified launch dates or future product plans.

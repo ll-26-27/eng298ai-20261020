@@ -32,7 +32,7 @@ The October 2026 settings in the screenshot show how far the idea has grown: bes
 
 ## Try it
 
-[The layers](/layers) builds the same Course TF Assistant as a custom GPT, a Claude project, and a Gem.
+[How to build a bot](/build-a-bot) shows the same Course TF Assistant as a custom GPT, a Claude project, and a Gem.
 
 ## See also
 

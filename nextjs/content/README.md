@@ -1,9 +1,6 @@
 ---
-print_set: [experiments/gpt-2, experiments/by-hand, experiments/persona-dial]
+title: "Who is speaking?"
+description: "The Markdown behind the site: the timeline, the Interfaces gallery, the glossary, and the notes on ELIZA."
 ---
 
-These prototypes turn a sequence of chatbots into an argument about where the assistant came from. A base model, trained only to continue text, answers a question with more questions. A few pages of invented dialogue turn it into a character called "Assistant". Post-training makes that character permanent. After that, the presentation (a name, an avatar, a typing indicator) supplies the warmth people feel, and the layers added around the model (memory, tools, a computer of its own) turn the character into an agent.
-
-Each card below is one experiment, with its own route. The notes for each are in `nextjs/content/experiments/`, and the readings that go with them are under [Readings](readings/README.md).
-
-These are Marlon's working prototypes for ENG 298AI (the AI Humanities Lab). They are not the course repo: what students eventually see will be selected and copied out later.
+Every folder here is a page. `story/` is the timeline (one file per chapter, rendered at `/timeline`), `history/` is the Interfaces gallery (43 screenshots with sourced captions, at `/history`), `glossary/` is the glossary (at `/glossary`), and `experiments/eliza.md` is the note on how the ELIZA engine was built (shown under the chat at `/eliza`). `_poetry-gem/` holds the *Frankenstein* pack and its vectors for the timeline's knowledge demo.

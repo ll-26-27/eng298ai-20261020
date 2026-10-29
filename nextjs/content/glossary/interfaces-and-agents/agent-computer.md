@@ -24,6 +24,4 @@ Imagine moving the Course TF Assistant from a student’s laptop to a dedicated 
 
 [Computer use](computer-use.md) · [Always-on agent](always-on-agent.md) · [Workspace](workspace.md) · [Sandbox](sandbox.md)
 
-## Sources
 
-- [The layers experiment brief](../../experiments/layers.md)

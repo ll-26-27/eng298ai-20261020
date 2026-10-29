@@ -19,9 +19,7 @@ Fine-tuning every weight of a large model needs as much memory as training it. L
 
 The result is a small "adapter" file that can be added to the original model or merged into it. That is what makes fine-tuning possible on a free Colab GPU, as in the fine-tune notebook.
 
-## Try it
 
-[The fine-tune notebook](/fine-tune) trains a LoRA adapter for SmolLM2-135M.
 
 ## See also
 

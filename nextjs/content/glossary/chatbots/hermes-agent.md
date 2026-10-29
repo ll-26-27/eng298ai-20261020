@@ -32,9 +32,7 @@ Hermes Agent is distinct from Nous Research's older Hermes language models: it i
 
 **Agency and memory.** Hermes Agent arrived as OpenClaw's open-source neighbor and made one part of the agent explicit: the agent writing down what it learns, as memory and as skills, so the next session starts further along. It is the clearest example of "learning" in this story that happens in text files rather than in training.
 
-## Try it
 
-[Mini-claw](/mini-claw) builds a small agent with the same parts: a loop, tools, memory, and skills.
 
 ## See also
 

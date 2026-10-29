@@ -26,7 +26,6 @@ Sacks, Schegloff, and Jefferson, §3.1, describe word-, phrase-, clause-, and se
 
 [ELIZA](/eliza): compare a reply with the textual rule that produces it.
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

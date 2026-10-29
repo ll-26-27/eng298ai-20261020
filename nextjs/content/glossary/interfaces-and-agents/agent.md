@@ -20,9 +20,7 @@ Anthropic distinguishes agents, which direct their own process, from workflows w
 
 “Explain this bug” can end with prose. “Find and fix this bug” might require Claude Code to inspect files, edit, and check the result. Mini-claw isolates that structure in a small implemented loop.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Anthropic distinguishes agents, which direct their own process, from workflows w
 ## Sources
 
 - [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

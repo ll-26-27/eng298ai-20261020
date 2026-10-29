@@ -19,9 +19,7 @@ Model releases often come in pairs: the base model and the instruct (or "chat", 
 
 A small instruct model is a useful thing to see: it has the assistant's manners without much knowledge behind them, so it will confidently answer in the right format and get the facts wrong. The manner and the knowledge come from different stages.
 
-## Try it
 
-Column 3 of [building the assistant by hand](/by-hand).
 
 ## See also
 

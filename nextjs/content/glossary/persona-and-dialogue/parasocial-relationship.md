@@ -24,7 +24,7 @@ For a course discussion, compare this distinction with [recognition](recognition
 
 ## Try it
 
-In the [persona dial](/persona-dial), compare the same reply presented as an assistant and as a companion. Record which cues invite attachment; this is a proposed reading exercise.
+Record which cues invite attachment; this is a proposed reading exercise.
 
 ## See also
 

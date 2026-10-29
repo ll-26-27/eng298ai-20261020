@@ -22,9 +22,7 @@ After a failed answer, an invented “Excellent work” may be praise or critici
 
 Grice, p. 53, explains a case of irony through a conspicuous departure from quality. In Wilde’s *Dorian Gray*, chapter VII, Lord Henry’s remarks about acting and love also demand attention to speaker, occasion, and audience. Neither passage licenses treating every false statement as ironic.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

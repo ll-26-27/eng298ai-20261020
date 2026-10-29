@@ -1,9 +1,0 @@
-.venv/
-outputs/
-.cache/
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
-*.safetensors
-*.onnx
-*.onnx_data

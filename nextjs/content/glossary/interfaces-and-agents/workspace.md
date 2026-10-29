@@ -20,9 +20,7 @@ For this glossary’s mini-claw example, the workspace is the mini-claw/ directo
 
 Ask which part of the host rejects a path outside that directory. This separates “the agent was told where to work” from “the software limits where it can write.”
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -30,5 +28,4 @@ Ask which part of the host rejects a path outside that directory. This separates
 
 ## Sources
 
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)
 - [Claude Code: sandboxing](https://code.claude.com/docs/en/sandboxing)

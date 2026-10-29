@@ -38,9 +38,7 @@ Ask a base model "Who are you?" and it keeps writing the document ([the GPT-2 ex
 
 The InstructGPT paper is ChatGPT's direct ancestor, the "sibling model" its launch post links to. Its abstract states the problem post-training solves: "Making language models bigger does not inherently make them better at following a user's intent," and reports that outputs from a 1.3-billion-parameter InstructGPT model were preferred to those of the 175-billion-parameter GPT-3 ([Ouyang et al. 2022, abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2203.02155v1--training-language-models-to-follow-instructions-with-human-feedback.md#L59)).
 
-## Try it
 
-[The layers](/layers) bolts configuration, memory, and tools onto one engine, the way ChatGPT's later features were added around its model. The [persona dial](/persona-dial) keeps the engine fixed and changes only the presentation: name, avatar, typing indicator, feelings language.
 
 ## See also
 

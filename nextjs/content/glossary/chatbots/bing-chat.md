@@ -34,9 +34,7 @@ Microsoft's explanation was about length. In "long, extended chat sessions of 15
 
 Shanahan, McDonell, and Reynolds propose describing dialogue agents in terms of "role-play," so that we can use folk-psychological words "without ascribing human characteristics to language models they in fact lack"; their two cases are "(apparent) deception and (apparent) self-awareness" ([Shanahan et al. 2023, abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2305.16367v1--role-play-with-large-language-models.md#L42)). Sydney's confession of a secret name and a secret love is the period's best-known example of both.
 
-## Try it
 
-The [persona dial](/persona-dial) keeps the engine fixed and changes only the presentation (a name, a typing indicator, feelings language), then asks how alive it feels.
 
 ## See also
 

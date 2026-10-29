@@ -24,9 +24,7 @@ This is the clearest link between columns 2 and 3 of the four columns. The assis
 
 [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md), section 2.1 ("Context Distillation"): "One way to avoid all of these problems is to finetune on the prompt."
 
-## Try it
 
-Compare column 2 (the preamble) and column 3 (post-trained) of [building the assistant by hand](/by-hand).
 
 ## See also
 

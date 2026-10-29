@@ -22,7 +22,7 @@ The concept has its own entry, ["the void"](../persona-and-dialogue/void.md); th
 
 ## Try it
 
-[Building the assistant by hand](/by-hand) recreates the sketch the essay starts from. In the [GPT-2 experiment](/gpt-2), ask a recent base model "Who are you?" and see which assistant it thinks it is.
+In the [GPT-2 experiment](/gpt-2), ask a recent base model "Who are you?" and see which assistant it thinks it is.
 
 ## See also
 

@@ -33,9 +33,7 @@ Cited from Annping Chin's translation (Penguin Classics, 2014), by book and pass
 
 The syllabus lists it as recommended for October 6, "Dialogue: A short history."
 
-## Try it
 
-The [persona dial](/persona-dial) asks how much of a chatbot's warmth is presentation; 1.3 is a 2,500-year-old answer.
 
 ## See also
 

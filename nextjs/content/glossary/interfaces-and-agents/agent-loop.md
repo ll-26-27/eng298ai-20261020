@@ -20,9 +20,7 @@ Claude Code describes its work as gathering context, taking action, and verifyin
 
 Mini-claw exposes each iteration in its trace. If a requested note is missing, does the next step acknowledge the error, choose another action, or stop? Read the sequence rather than judging only the final answer.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Mini-claw exposes each iteration in its trace. If a requested note is missing, d
 ## Sources
 
 - [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

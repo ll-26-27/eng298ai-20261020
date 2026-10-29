@@ -28,9 +28,7 @@ On 19 March 2024 Microsoft announced that Suleyman and Simonyan were "joining Mi
 
 **Persona and companionship.** Pi made the persona the product: not an assistant that also chats but a conversational partner whose temperament is the selling point. In 2024 Microsoft, which was already calling [Copilot](copilot.md) "your everyday AI companion," brought two of Pi's founders in to run the organization behind it.
 
-## Try it
 
-The [persona dial](/persona-dial) toggles a name, an avatar, a typing indicator, and feelings language on a fixed engine, and asks how alive the result feels: the presentation Pi was built around.
 
 ## See also
 

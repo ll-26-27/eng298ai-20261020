@@ -20,9 +20,7 @@ Lemoine is the persona dial's 2022 stop on the anthropomorphization thread, betw
 
 The episode made "is it conscious?" the public question about chatbots months before ChatGPT launched.
 
-## Try it
 
-The [persona dial](/persona-dial): turn on feelings language and see what it does to your rating.
 
 ## See also
 

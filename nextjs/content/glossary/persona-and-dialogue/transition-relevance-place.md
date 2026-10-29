@@ -22,9 +22,7 @@ When a question sounds complete, another person may begin. That opportunity need
 
 Sacks, Schegloff, and Jefferson, §3.1–3.4, locate turn transfer at possible completions of turn-constructional units. The point is projected within an unfolding interaction, not mechanically equated with every period on a page.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

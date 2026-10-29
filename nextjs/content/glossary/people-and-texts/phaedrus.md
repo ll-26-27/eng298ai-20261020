@@ -30,9 +30,7 @@ Jowett's translation, cited by the standard Stephanus numbers (Jowett's text has
 - **275d–e:** writing is "like painting"; written words seem to "have intelligence, but if you want to know anything and put a question to one of them, the speaker always gives one unvarying answer," and they cannot tell "to whom they should reply, to whom not" ([275d](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/plato-phaedrus.md?plain=1#L906)).
 - **276a:** the better word is "an intelligent word graven in the soul of the learner, which can defend itself, and knows when to speak and when to be silent," of which "the written word is properly no more than an image" ([276a](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/plato-phaedrus.md?plain=1#L914)).
 
-## Try it
 
-[ELIZA](/eliza) varies its answers, but only by rule: put a question to it twice and watch for the "unvarying answer." In [building the assistant by hand](/by-hand), the column 2 preamble is a written dialogue that a model then performs.
 
 ## See also
 

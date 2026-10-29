@@ -201,18 +201,6 @@ html:has(.story) { scroll-padding-top: calc(var(--bar, 64px) + 24px); }
 .hhh-read pre { max-height: 260px; margin: 8px 0 0; padding: 14px 16px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--code); font-family: ui-monospace, Menlo, monospace; font-size: 12px; line-height: 1.5; white-space: pre-wrap; }
 .hhh-read .hhh-cut { color: var(--muted); text-decoration: line-through; text-decoration-color: #ff726266; }
 
-/* The Poetry Gem's figure, dressed one band at a time (GemPieces.jsx) */
-.gem-pieces { display: grid; grid-template-columns: minmax(140px, 220px) 1fr; align-items: center; gap: 20px 28px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: radial-gradient(90% 80% at 30% 40%, var(--garnet-deep), transparent 75%), var(--wash); }
-.gem-figure img { transition: opacity .6s ease, filter .6s ease; }
-.gem-off-head img:nth-of-type(3), .gem-off-torso img:nth-of-type(2), .gem-off-legs img:nth-of-type(1) { opacity: .13; filter: grayscale(1) brightness(1.6) !important; }
-.gem-legend { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.gem-legend li { display: grid; gap: 2px; padding-left: 14px; border-left: 1px solid var(--line); color: var(--muted); opacity: .55; }
-.gem-legend li.is-on { border-left-color: var(--brass); color: var(--ink); opacity: 1; }
-.gem-legend span { color: var(--brass); font-family: var(--font-deco); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; }
-.gem-legend strong { font-size: 20px; font-weight: 750; letter-spacing: -.02em; }
-.gem-legend em { font-size: 13px; font-style: normal; }
-@media (max-width: 520px) { .gem-pieces { grid-template-columns: 120px 1fr; padding: 12px; } }
-
 /* A comparison table panel (type: compare) */
 .panel-compare table { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.45; }
 .panel-compare th, .panel-compare td { padding: 10px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }

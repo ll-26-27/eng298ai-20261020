@@ -22,9 +22,7 @@ For the Course TF Assistant, the useful question is: what is carried into a new 
 
 ![ChatGPT project settings in the course screenshot collection; compare the scopes of instructions and memory.](../../history/_images/10-chatgpt-project-settings-instructions.png)
 
-## Try it
 
-[the layers](/layers). Inspect the built configuration panels and assembled prompt; live replies require the configured Claude connection.
 
 ## See also
 
@@ -33,5 +31,4 @@ For the Course TF Assistant, the useful question is: what is carried into a new 
 ## Sources
 
 - [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
-- [The layers experiment brief](../../experiments/layers.md)
 - [Course screenshot collection](../../history/README.md); captions describe the archived image, not verified launch dates or future product plans.

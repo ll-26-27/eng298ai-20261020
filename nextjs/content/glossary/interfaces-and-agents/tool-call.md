@@ -20,9 +20,7 @@ A call is an event, not just an available capability. Tool calling supports stru
 
 In an invented mini-claw trace, distinguish “read_note exists” from “read_note was requested with path memory.md.” The second gives you something concrete to inspect.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ In an invented mini-claw trace, distinguish “read_note exists” from “read_
 ## Sources
 
 - [Anthropic: advanced tool use](https://www.anthropic.com/engineering/advanced-tool-use)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

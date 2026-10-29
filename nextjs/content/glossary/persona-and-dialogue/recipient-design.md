@@ -22,9 +22,7 @@ An invented Course TF Assistant might explain the same passage differently to a 
 
 Sacks, Schegloff, and Jefferson, §5, locate recipient design in word choice, topics, sequences, and the organization of turns. Plato, *Phaedrus*, 271a–272b, similarly requires the rhetorician to connect kinds of speech with kinds of hearers. The traditions differ, but both make the recipient consequential.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

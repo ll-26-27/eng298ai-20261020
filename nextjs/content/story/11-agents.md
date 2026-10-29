@@ -31,7 +31,7 @@ caption: "The agents add the last context rung: tools, files, and a computer to 
 
 The products followed. In 2024 came computer use, in which a model reads screenshots and drives a mouse, and the [Model Context Protocol](../glossary/interfaces-and-agents/mcp.md), a standard way to plug models into other software. In February 2025 Anthropic released [Claude Code](../glossary/interfaces-and-agents/claude-code.md), an agent that works in a folder on your computer and reads a file of standing instructions there before it starts.
 
-The software that runs the loop and decides what the model may touch is the [harness](../glossary/interfaces-and-agents/harness.md). In speech-act terms, the harness is where saying becomes doing: an utterance performs an act only under the right conventions and with the right authority, and the harness supplies both as [permissions](../glossary/interfaces-and-agents/permissions.md). This page was rebuilt that way, by agents working in this project's folder. To see a loop with one tool and a memory file, try [mini-claw](/mini-claw).
+The software that runs the loop and decides what the model may touch is the [harness](../glossary/interfaces-and-agents/harness.md). In speech-act terms, the harness is where saying becomes doing: an utterance performs an act only under the right conventions and with the right authority, and the harness supplies both as [permissions](../glossary/interfaces-and-agents/permissions.md). This site was built that way, by agents working in its folder.
 
 ```panel
 type: quote

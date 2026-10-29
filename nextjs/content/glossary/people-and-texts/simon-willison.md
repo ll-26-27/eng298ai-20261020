@@ -16,11 +16,9 @@ updated: 2026-10-19
 
 ## Why it matters here
 
-His two terms are why [mini-claw](/mini-claw) has one safe tool and students aren't asked to install a real personal agent. On 12 September 2022, after Riley Goodside showed GPT-3 could be made to ignore its instructions by text in its input, Willison wrote, "I propose that the obvious name for this should be prompt injection." On 16 June 2025 he described "the lethal trifecta for AI agents: private data, untrusted content, and external communication": an agent with all three can be tricked by something it reads into sending your data somewhere. The mini-claw brief cites the trifecta directly. His blog is also a running, dated record of the tools in the history pages, which makes it a useful primary source for when things happened.
+His two terms are why [How to build a bot](/build-a-bot) says to turn on only the tools a bot needs. On 12 September 2022, after Riley Goodside showed GPT-3 could be made to ignore its instructions by text in its input, Willison wrote, "I propose that the obvious name for this should be prompt injection." On 16 June 2025 he described "the lethal trifecta for AI agents: private data, untrusted content, and external communication": an agent with all three can be tricked by something it reads into sending your data somewhere. His blog is also a running, dated record of the tools in the history pages, which makes it a useful primary source for when things happened.
 
-## Try it
 
-[Mini-claw](/mini-claw): one tool, no network, writes only inside its own folder; that is one leg of the trifecta removed.
 
 ## See also
 

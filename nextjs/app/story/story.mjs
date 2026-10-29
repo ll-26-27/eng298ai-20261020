@@ -114,9 +114,9 @@ export async function getStory() {
     }
   }
 
-  // demo: hhh needs the HHH prompt itself (app/by-hand/hhh-prompt.txt, byte for byte) and its recorded samples.
+  // demo: hhh needs the HHH prompt itself (app/gpt-2/hhh-prompt.txt, byte for byte) and its recorded samples.
   if (steps.some((step) => step.panel.demo === "hhh")) {
-    const preambleFile = await readFile(path.join(/* turbopackIgnore: true */ process.cwd(), "app", "by-hand", "hhh-prompt.txt"), "utf8");
+    const preambleFile = await readFile(path.join(/* turbopackIgnore: true */ process.cwd(), "app", "gpt-2", "hhh-prompt.txt"), "utf8");
     const recorded = await readFile(path.join(storyDir, "samples", "hhh-gpt2.json"), "utf8").then(JSON.parse).catch(() => []);
     for (const step of steps) if (step.panel.demo === "hhh") Object.assign(step.panel, { preambleFile, recorded });
   }

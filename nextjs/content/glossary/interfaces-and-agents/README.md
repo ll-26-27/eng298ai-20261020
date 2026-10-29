@@ -9,7 +9,7 @@ updated: 2026-10-19
 
 What gets wrapped around a model: the screen, saved context, reference files, tools, and the software that lets an agent act. Read the table from a chat window outward to an agent with its own computer. The Course TF Assistant and Claude Code in a student’s repository are recurring examples; invented scenarios are labeled. Product profiles belong in [Chatbots](../chatbots/README.md), while [Persona and dialogue](../persona-and-dialogue/README.md) covers roles, system prompts, and conversational interpretation.
 
-[The layers](/layers) makes configuration and memory visible; [mini-claw](/mini-claw) implements a loop, a memory file, skills, one file tool, and a trace. Mini-claw can run with a scripted stand-in without a key. The first-wave reports did not verify live Claude replies in either experiment; a built interface is not evidence that the model path has been tested. Retrieval, MCP, subagents, hooks, and computer use explain the larger systems around these small experiments; their inclusion does not imply that either experiment implements them. Sources were checked on 2026-10-19. Screenshot captions identify interface evidence; unconfirmed product promises remain marked “(verify).”
+[How to build a bot](/build-a-bot) shows the configuration layer (instructions, knowledge, tools) in ChatGPT, Gemini, and Claude; the timeline's [agents chapter](/timeline#agents) describes the loop, the memory file, and the harness. Retrieval, MCP, subagents, hooks, and computer use explain the larger systems around them. Sources were checked on 2026-10-19. Screenshot captions identify interface evidence; unconfirmed product promises remain marked “(verify).”
 
 | Term | Gist |
 | --- | --- |

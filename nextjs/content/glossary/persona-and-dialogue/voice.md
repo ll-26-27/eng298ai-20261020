@@ -22,9 +22,7 @@ Voice can mean audible sound or a recognizable textual manner. Here, compare wor
 
 In *Dorian Gray*, chapter VII, Sibyl’s beautiful voice does not rescue her unconvincing performance. *The Critic as Artist*, Part I’s opening scene, also stages a move from music to talk. These scenes separate verbal content, delivery, and the audience’s impression of a speaker.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

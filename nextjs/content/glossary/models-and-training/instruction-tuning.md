@@ -24,9 +24,7 @@ A base model given "Translate into French: the cat sleeps" may continue with ano
 
 [Grice, "Logic and Conversation"](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/grice-1975-logic-and-conversation.md) states the Cooperative Principle: "Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose or direction of the talk exchange." Instruction tuning trains a model to treat the user's request as the accepted purpose.
 
-## Try it
 
-Column 3 of [building the assistant by hand](/by-hand) is an instruct model.
 
 ## See also
 

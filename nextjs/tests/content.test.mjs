@@ -5,9 +5,9 @@ import { getEntry, getExperiments, resolveMarkdownHref } from "../lib/content.mj
 
 // Run from nextjs/ (`pnpm test`): lib/content.mjs reads content/ under the current directory.
 
-test("every experiment names a route that exists in app/", async () => {
+test("every notes document names a route that exists in app/", async () => {
   const experiments = await getExperiments();
-  assert.ok(experiments.length >= 6);
+  assert.ok(experiments.length >= 1);
   for (const experiment of experiments) {
     assert.match(experiment.route, /^\/[a-z0-9-]+$/, `${experiment.slug} has a route`);
     await access(`app${experiment.route}/page.jsx`);
@@ -16,7 +16,7 @@ test("every experiment names a route that exists in app/", async () => {
 
 test("relative links between Markdown files become routes", () => {
   assert.equal(resolveMarkdownHref("eliza.md", "experiments"), "/experiments/eliza");
-  assert.equal(resolveMarkdownHref("../readings/README.md", "experiments"), "/readings");
+  assert.equal(resolveMarkdownHref("../glossary/chatbots/eliza.md", "story"), "/glossary/chatbots/eliza");
 });
 
 test("the history pages embed images that exist", async () => {
@@ -24,5 +24,11 @@ test("the history pages embed images that exist", async () => {
   assert.ok(history?.docs.length >= 8);
   for (const doc of history.docs) {
     for (const [, file] of doc.content.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) await access(`content/history/${file}`);
+  }
+});
+
+test("the guide's screenshots are in public/guide", async () => {
+  for (const name of ["gpt-configure", "gpt-knowledge", "gpt-capabilities", "gpt-create", "gem-editor", "gem-tools-knowledge", "claude-instructions", "claude-context"]) {
+    await access(`public/guide/${name}.webp`);
   }
 });

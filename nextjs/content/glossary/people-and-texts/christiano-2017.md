@@ -22,9 +22,7 @@ Before it was used on language, the method taught simulated robots and Atari pla
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/1706.03741v4--deep-reinforcement-learning-from-human-preferences.md)).
 
-## Try it
 
-Column 4 of [building the assistant by hand](/by-hand) is a model shaped by preference training; columns 1 and 2 are not.
 
 ## See also
 

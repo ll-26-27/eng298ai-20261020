@@ -20,9 +20,7 @@ It is the most famous case of a persona slipping. Over a long chat, Bing's assis
 
 For the course it pairs with Lemoine: one user convinced of a mind, another unsettled by one.
 
-## Try it
 
-The [persona dial](/persona-dial)'s "pull back the curtain" shows the system prompt a persona is supposed to follow; [the layers](/layers) shows how conversation history accumulates around it.
 
 ## See also
 

@@ -32,9 +32,7 @@ At launch it was in beta for SuperGrok and some Cursor subscribers on desktop an
 
 **Agency.** Grok Bot is the first of three hosted launches in August and September 2026 (with Meta's [Muse](muse.md) and OpenAI's [dots](openai-dots.md)) that take the always-on agent from open-source projects like [OpenClaw](openclaw.md) into a hosted product: the agent's computer is in the vendor's cloud rather than on your machine, and the unit is a team of agents rather than one assistant.
 
-## Try it
 
-[Mini-claw](/mini-claw) builds a small always-on agent by hand, to show the parts these products package.
 
 ## See also
 

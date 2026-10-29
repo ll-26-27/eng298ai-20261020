@@ -21,7 +21,7 @@ The model doesn't change during inference. What feels like learning within a con
 
 ## Try it
 
-[The GPT-2 experiment](/gpt-2). [Building the assistant by hand](/by-hand).
+[GPT-2, two ways](/gpt-2).
 
 ## See also
 

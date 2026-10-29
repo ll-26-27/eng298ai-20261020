@@ -22,9 +22,7 @@ ReAct is the short answer to "what is an agent?" A model writes a thought, choos
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2210.03629v3--react-synergizing-reasoning-and-acting-in-language-models.md)); the collection notes say it "helped define the modern agent pattern."
 
-## Try it
 
-[Mini-claw](/mini-claw)'s trace view shows each step of the loop: what the model received, the tool it asked for, what came back.
 
 ## See also
 

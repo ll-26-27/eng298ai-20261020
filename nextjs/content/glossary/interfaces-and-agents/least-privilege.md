@@ -20,9 +20,7 @@ Permission and sandbox controls can narrow an agent’s reach. For this course, 
 
 Imagine a note-taking exercise: access to an entire home directory would add power unrelated to the task. Evaluate the available operations alongside the written instructions.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -32,4 +30,3 @@ Imagine a note-taking exercise: access to an entire home directory would add pow
 
 - [Claude Code: sandboxing](https://code.claude.com/docs/en/sandboxing)
 - [Claude Code: permissions](https://code.claude.com/docs/en/permissions)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

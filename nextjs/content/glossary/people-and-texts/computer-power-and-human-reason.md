@@ -20,9 +20,7 @@ The book's introduction is the source of the story that frames the ELIZA experim
 
 The rest of the book is an argument about judgment and calculation: that the question is not what computers *can* do but what they *ought* to be given, with therapy as his first example. It reads now as the earliest serious case against companion chatbots, written by the person who built the first one.
 
-## Try it
 
-[ELIZA](/eliza) and the [persona dial](/persona-dial): notice when you start talking to it as someone.
 
 ## See also
 

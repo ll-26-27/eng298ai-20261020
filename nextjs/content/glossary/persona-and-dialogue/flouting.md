@@ -22,9 +22,7 @@ An obviously inadequate answer can invite the hearer to search for an indirect m
 
 Grice, p. 49, explicitly separates these possibilities. His p. 52 recommendation-letter example exploits insufficient information to convey an unfavorable assessment. The distinction gives a more precise reading of an odd reply than simply calling it “uncooperative.”
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

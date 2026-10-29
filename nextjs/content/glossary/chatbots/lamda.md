@@ -34,9 +34,7 @@ In June 2022 Blake Lemoine, an engineer on Google's Responsible AI team, publish
 
 The LaMDA paper is in the course collection ([abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2201.08239v3--lamda-language-models-for-dialog-applications.md#L97)); the Mount Everest experiment is in section 8, "Domain grounding," and section 9.6, "Impersonation and anthropomorphization," warns that people may end up "anthropomorphizing the system by ascribing some form of personality to it." Shanahan, McDonell, and Reynolds's "Role Play with Large Language Models" offers a frame for reading the Lemoine transcript: it treats a dialogue agent's "(apparent) self-awareness" as role-play, a way to use "familiar folk psychological terms, without ascribing human characteristics to language models they in fact lack" ([abstract](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2305.16367v1--role-play-with-large-language-models.md#L42)).
 
-## Try it
 
-[Building the assistant by hand](/by-hand) puts a short script of invented dialogue in front of a base model, the same move as the Everest greeting. The [persona dial](/persona-dial) adds feelings language to a fixed engine and asks how alive it feels.
 
 ## See also
 

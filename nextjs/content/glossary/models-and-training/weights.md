@@ -19,9 +19,7 @@ The architecture is the recipe; the weights are the cooked dish. Two models with
 
 A "checkpoint" is the weights saved at some point in training. When a company releases a model's weights, anyone can run it; when it doesn't, you can only reach it through the company's service (see [open weights](open-weights.md)).
 
-## Try it
 
-Columns 1 and 3 of [building the assistant by hand](/by-hand) are the same architecture with different weights.
 
 ## See also
 

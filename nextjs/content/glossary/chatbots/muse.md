@@ -30,9 +30,7 @@ It runs on what Meta calls Muse Secure VM, "a dedicated, virtual machine (VM) th
 
 **Agency and persona.** Muse brings the always-on agent with its own computer to Meta's messaging scale, and it pairs agency with a persona the user designs: name, face, and manner. Where OpenClaw is a tool you configure, Muse is presented as someone you talk to "just like messaging another person."
 
-## Try it
 
-[Mini-claw](/mini-claw) builds a small agent by hand, to show the parts products like Muse package.
 
 ## See also
 

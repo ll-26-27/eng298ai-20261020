@@ -24,9 +24,7 @@ Turn the stop sequence off and the model writes both sides of the conversation.
 
 [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md) describes its evaluation interface this way (introduction): "Models indicate they have completed a response by generating a stop sequence, which is literally the string Human: used to designate roles in the dialogue."
 
-## Try it
 
-The "let it write both sides" switch in column 2 of [building the assistant by hand](/by-hand) removes the stop sequence.
 
 ## See also
 

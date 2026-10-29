@@ -16,11 +16,9 @@ updated: 2026-10-19
 
 ## Why it matters here
 
-It turned the ELIZA effect from an anecdote into experiments. In the "computers are social actors" studies at Stanford, people who had used a computer rated it more kindly when asked by that same computer than by a different one, as if sparing its feelings; they liked computers that flattered them, even when told the praise was random; and small cues of personality or teamwork changed how they behaved (verify the specific findings against the book). The book's claim is that these responses are automatic, not mistakes people would correct on reflection. The [persona dial](/persona-dial) is a classroom version: change a cue, hold the engine fixed, and measure the response.
+It turned the ELIZA effect from an anecdote into experiments. In the "computers are social actors" studies at Stanford, people who had used a computer rated it more kindly when asked by that same computer than by a different one, as if sparing its feelings; they liked computers that flattered them, even when told the praise was random; and small cues of personality or teamwork changed how they behaved (verify the specific findings against the book). The book's claim is that these responses are automatic, not mistakes people would correct on reflection. The timeline's [ChatGPT chapter](/timeline#chatgpt) makes the same point about the chat window: change a cue, hold the engine fixed, and the response changes.
 
-## Try it
 
-The [persona dial](/persona-dial)'s 1–5 rating of how alive each configuration feels.
 
 ## See also
 

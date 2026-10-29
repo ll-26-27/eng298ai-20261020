@@ -22,9 +22,7 @@ ChatGPT provides saved custom instructions; a project can also have its own scop
 
 ![Claude project instructions dialog in the course screenshot collection.](../../history/_images/14-claude-project-instructions-dialog.png)
 
-## Try it
 
-[the layers](/layers). Inspect the built configuration panels and assembled prompt; live replies require the configured Claude connection.
 
 ## See also
 
@@ -34,5 +32,4 @@ ChatGPT provides saved custom instructions; a project can also have its own scop
 
 - [ChatGPT custom instructions](https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions)
 - [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
-- [The layers experiment brief](../../experiments/layers.md)
 - [Course screenshot collection](../../history/README.md); captions describe the archived image, not verified launch dates or future product plans.

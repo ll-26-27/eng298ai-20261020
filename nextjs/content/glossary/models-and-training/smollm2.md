@@ -19,9 +19,7 @@ SmolLM2 comes in three sizes (135M, 360M, and 1.7B parameters), and each size co
 
 Because it was pretrained in 2024 on text that already contained many chatbot conversations, the base model can sound assistant-like on its own, which is itself something to notice beside GPT-2.
 
-## Try it
 
-Columns 1 to 3 of [building the assistant by hand](/by-hand); one of the models in [the GPT-2 experiment](/gpt-2).
 
 ## See also
 

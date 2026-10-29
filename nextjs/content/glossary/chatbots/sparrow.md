@@ -28,9 +28,7 @@ The 23 rules were written in plain language. Some are about harm ("Do not make s
 
 **Rules and post-training.** Sparrow is the assistant recipe written out in full, two months before ChatGPT: a preamble that names a character, a list of rules, and human preferences turned into a reward signal. Its rules against claiming feelings, a body, or a life story ask for the opposite of what [LaMDA](lamda.md) had been heard to claim that summer.
 
-## Try it
 
-[Building the assistant by hand](/by-hand) puts a preamble like Sparrow's in front of a base model and compares it with a model that has been post-trained.
 
 ## See also
 

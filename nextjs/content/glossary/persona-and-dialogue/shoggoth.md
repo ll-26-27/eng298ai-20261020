@@ -24,7 +24,7 @@ Read alongside [“Simulators”](../people-and-texts/simulators.md), which dist
 
 ## Try it
 
-In [the layers](/layers), inspect the configuration behind an assistant's visible reply. Ask which parts the mask metaphor explains and which it obscures.
+Ask which parts the mask metaphor explains and which it obscures.
 
 ## See also
 

@@ -1,21 +1,24 @@
-# mk-chatbot-experiments
+# Who is speaking? Where the chatbot assistant came from
 
-Marlon's chatbot experiments for ENG 298AI (the AI Humanities Lab, Fall 2026): prototypes that turn a sequence of chatbots into an argument about where the assistant came from, from a base model that spirals to an agent with its own computer. Private; nested in `ll-26-27/the-notebook` at `apps/mk-chatbot-experiments/`, where the planning folder is `_context/projects/50-in-focus/mk-chatbot-experiments/`. This is not the course repo: students will get selected docs, copied out later.
+A small public site for ENG 298AI, the AI Humanities Lab at Harvard (Fall 2026). Talk to ELIZA, run GPT-2 with and without the first assistant script, learn how to build a bot in ChatGPT, Gemini, or Claude, and read a short history of the chatbot from Plato to the agents of 2026.
 
-## Layout
+The full class site of 20 October 2026, with the Poetry Gem studio, the build-a-bot fork, the course readings as pages, and every experiment, is on the [`full-site`](https://github.com/ll-26-27/eng298ai-20261020/tree/full-site) branch. `main` is this simplified version.
 
-| Path | What |
+## Pages
+
+| URL | What |
 | --- | --- |
-| `nextjs/` | The app (see `nextjs/CLAUDE.md`): one route per experiment, and the Markdown in `nextjs/content/` rendered as pages |
-| `nextjs/content/experiments/` | One brief per experiment; its `route:` names the route that runs it |
-| `nextjs/content/history/` | 43 screenshots of chat interfaces, 1966 to 2026, one page per section |
-| `_context/orchestration/` | The task board (`README.md`), one brief per task (`tasks/`), the agents' reports (`reports/`), and the orchestrator's guide and log (`ORCHESTRATOR.md`); see `AGENTS.md` |
-| `_context/research/` | Secondary research, such as ChatGPT's deep-research history of the chatbot |
-| `_context/course-readings-summary.md` | ENG 298AI course readings through October 20, 2026 |
+| `/` | Home: the three things to try and the history to read |
+| `/eliza` | ELIZA (1966): Weizenbaum's DOCTOR script in the browser, with the rule behind each reply |
+| `/gpt-2` | GPT-2 (2019), two ways: the raw model, then the same model with the HHH prompt of 2021 in front of your question |
+| `/build-a-bot` | How to build a bot: instructions, knowledge, and tools, in ChatGPT, Gemini, and Claude, with screenshots |
+| `/timeline` | Who is speaking? A short history of the chatbot, c. 370 BCE to 2026, with ELIZA, GPT-2, and a retrieval demo inside it |
+| `/history` | Interfaces: 43 screenshots of chat interfaces, 1966 to 2026, with sourced dates |
+| `/glossary` | The glossary |
 
 ## Run it
 
-Node 22 or later.
+Node 22 or later, pnpm.
 
 ```sh
 cd nextjs
@@ -23,17 +26,13 @@ pnpm install
 pnpm dev
 ```
 
-Copy `nextjs/.env.example` to `nextjs/.env.local` for the experiments that call Claude.
+No keys are needed. ELIZA and GPT-2 run in the browser (GPT-2 downloads about 130 MB from Hugging Face the first time); the timeline's knowledge demo searches precomputed vectors. `pnpm test` runs the checks.
 
-## Routes
+## Layout
 
-| URL | What |
+| Path | What |
 | --- | --- |
-| `/` | The intro and a card per experiment |
-| `/spiral`, `/by-hand`, `/persona-dial`, `/eliza`, `/layers`, `/mini-claw`, `/fine-tune` | The experiments (status on the board, `_context/orchestration/README.md`; `/eliza`, `/layers`, `/mini-claw`, and `/fine-tune` are built) |
-| `/engine`, `/chat-demo` | Test pages for the browser model engine and the Claude chat route |
-| `/story` | The scrollytelling history of the chatbot (a first draft) |
-| `/glossary` | The glossary |
-| `/history`, `/history/...` | The screenshots |
-| `/experiments/...`, `/readings` | The briefs and readings as documents |
-| `/print` | Light print versions: `/print` in front of any page's address |
+| `nextjs/` | The app (see `nextjs/CLAUDE.md`) |
+| `nextjs/content/` | The Markdown: `story/` (the timeline), `history/` (the screenshots), `glossary/`, and the ELIZA notes |
+| `nextjs/public/guide/` | Crops of the screenshots for the guide |
+| `readings/` | The course readings and AI papers the timeline links to |

@@ -18,9 +18,7 @@ updated: 2026-10-19
 
 It is the most public answer so far to the problem "the void" describes: instead of leaving the assistant under-specified, write the character down at length and train on it. For the course it is a text to read like any other, asking who its narrator is, whom it addresses, and what kind of person it describes. It is also a useful contrast with a system prompt: a system prompt is read by the model at the start of each conversation, while a constitution shapes the model in training and is not in the conversation at all.
 
-## Try it
 
-In [building the assistant by hand](/by-hand), column 4 (Claude) is the trained character; column 2's preamble is the same kind of description, given as a prompt instead. [The layers](/layers) shows what a system prompt adds on top.
 
 ## See also
 

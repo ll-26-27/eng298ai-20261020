@@ -20,9 +20,7 @@ The harness supplies the machinery around the model: context handling, tools, an
 
 Mini-claw’s implemented loop, workspace, and trace provide a small example. Changing which files the host permits is a change to that surrounding system, even if the same model keeps generating requests.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Mini-claw’s implemented loop, workspace, and trace provide a small example. Ch
 ## Sources
 
 - [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

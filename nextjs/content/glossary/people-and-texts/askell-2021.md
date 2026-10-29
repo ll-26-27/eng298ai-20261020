@@ -18,15 +18,13 @@ updated: 2026-10-19
 
 The October 20 workshop description singles it out, because it shows the assistant being made. The paper sets the target in three words: "We will define an AI as 'aligned' if it is, in three words, helpful, honest, and harmless or 'HHH'." Then, before any fine-tuning, it gets that behavior from a base model with a prompt: "fourteen human-assistant conversations, where the assistant is always polite, helpful, and accurate," about 4,600 words, which the authors call the "HHH prompt." The assistant begins as a character in a written script that a model learns to continue. Later the paper compares training methods and finds that learning from ranked preferences beats imitation.
 
-That is the move column 2 of [building the assistant by hand](/by-hand) repeats with a much smaller model, and the starting point for nostalgebraist's ["the void"](the-void.md), which asks what happens when models are trained on a character first sketched this way.
+That is the move [GPT-2, two ways](/gpt-2) repeats with a much smaller model, and the starting point for nostalgebraist's ["the void"](the-void.md), which asks what happens when models are trained on a character first sketched this way.
 
 ## In the readings
 
 The course copy is an abstract and notes ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md)). In the full paper: the HHH definition is in §1.1; the prompt in §1.2 and §2; "context distillation" (training the model to behave as if the prompt were there) in §2.1; prompt details in Appendix B and the full HHH criteria in Appendix E. The prompt itself was published as a [gist](https://gist.github.com/jareddk/2509330f8ef3d787fc5aaac67aab5f11).
 
-## Try it
 
-[Building the assistant by hand](/by-hand), column 2: edit the preamble (an HHH-style script, a sardonic assistant, a medieval monk) and the same base model plays the new part.
 
 ## See also
 

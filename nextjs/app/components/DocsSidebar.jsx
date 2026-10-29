@@ -37,7 +37,7 @@ export function DocsArticle({ entry, eyebrow, children }) {
         {entry.description && <p className="lede">{entry.description}</p>}
         <p className="updated">
           {entry.updated && <>Updated {entry.updated} · </>}
-          In the repo: <code>{entry.source}</code> · <Link className="print-link" href={`/print${entry.href}`}>Print {entry.kind === "folder" ? "this folder" : "this page"}</Link>
+          In the repo: <code>{entry.source}</code>
         </p>
       </header>
       {hasIntro && <article className="prose"><Markdown doc={entry} /></article>}

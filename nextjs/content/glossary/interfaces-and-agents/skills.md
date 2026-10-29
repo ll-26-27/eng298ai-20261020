@@ -20,9 +20,7 @@ In Claude Code, a skill is organized around a SKILL.md file and may include supp
 
 An invented “review an essay” skill might tell the agent to identify the thesis before proposing edits. It guides tool use; it does not itself grant file access. Mini-claw implements the smaller equivalent: a folder of Markdown procedures.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ An invented “review an essay” skill might tell the agent to identify the the
 ## Sources
 
 - [Claude Code: skills](https://code.claude.com/docs/en/skills)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

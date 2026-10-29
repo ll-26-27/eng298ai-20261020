@@ -22,9 +22,7 @@ It documents the recipe that made the assistant ordinary. Hired labelers wrote e
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2203.02155v1--training-language-models-to-follow-instructions-with-human-feedback.md)), whose notes say it "documents the technical construction of the cooperative assistant behavior that users now tend to mistake for the natural behavior of an LLM."
 
-## Try it
 
-Column 3 of [building the assistant by hand](/by-hand) is an instruction-tuned model beside its base model. [Fine-tune your own assistant](/fine-tune) does the first step of the recipe on fifty dialogues.
 
 ## See also
 

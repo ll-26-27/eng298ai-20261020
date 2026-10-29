@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nextjs",
+      "runtimeExecutable": "zsh",
+      "runtimeArgs": ["-c", "cd nextjs && eval \"$(fnm env)\" && fnm use 22.13.0 && pnpm dev"],
+      "port": 3000
+    }
+  ]
+}

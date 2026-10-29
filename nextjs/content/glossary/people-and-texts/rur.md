@@ -30,9 +30,7 @@ The course copy is Paul Selver and Nigel Playfair's English version (1923 acting
 - **Act Three:** Radius: "Robots of the world— ... the power of man has fallen" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/capek-rur.md?plain=1#L2492)).
 - **Epilogue:** Alquist, as Primus and Helena leave together: "Go. ... Adam—Eve" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/capek-rur.md?plain=1#L2722)).
 
-## Try it
 
-The [persona dial](/persona-dial) is Helena's test made into a toy: the same engine, presented more or less like a person. [Mini-claw](/mini-claw) is a small worker built to act, with the safety limits Domin didn't build in.
 
 ## See also
 

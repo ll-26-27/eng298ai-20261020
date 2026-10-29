@@ -32,9 +32,7 @@ Replika became a companion app: a "Rep" you customize, who texts, calls, and rem
 
 The creature in *Frankenstein* asks his maker for a companion made to order: "You must create a female for me, with whom I can live in the interchange of those sympathies necessary for my being" (vol. II, ch. IX; [1818 text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/shelley-frankenstein-1818.md#L1031)). Replika sells that request: a made companion for the lonely, whose maker keeps the power to change it.
 
-## Try it
 
-The [persona dial](/persona-dial) adds a name, an avatar, feelings language, and callbacks to earlier remarks to a fixed engine, the features a companion app is built from, and then pulls back the curtain on the text the model actually received.
 
 ## See also
 

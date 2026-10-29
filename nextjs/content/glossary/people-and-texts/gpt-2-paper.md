@@ -22,7 +22,7 @@ Its release is also part of the story. OpenAI's February 2019 announcement led w
 
 ## Try it
 
-The [GPT-2 experiment](/gpt-2) runs GPT-2 small (`Xenova/gpt2`) in the browser; try the unicorn prompt. Column 1 of [building the assistant by hand](/by-hand) shows a base model's non-answer.
+The [GPT-2 experiment](/gpt-2) runs GPT-2 small (`Xenova/gpt2`) in the browser; try the unicorn prompt.
 
 ## See also
 

@@ -26,7 +26,7 @@ This is a large part of why a base model spirals. Ask GPT-2 "Who are you?" and a
 
 ## Try it
 
-[The GPT-2 experiment](/gpt-2) shows the probability of ending at each step, and its "never stops" mode ignores it. Column 1 of [building the assistant by hand](/by-hand) shows a base model that rarely chooses to stop.
+[The GPT-2 experiment](/gpt-2) shows the probability of ending at each step, and its "never stops" mode ignores it.
 
 ## See also
 

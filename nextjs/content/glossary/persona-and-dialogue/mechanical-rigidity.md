@@ -26,7 +26,6 @@ Bergson, *Laughter*, chapter I, §II, moves from stumbling and practical jokes t
 
 [ELIZA](/eliza): compare a reply with the textual rule that produces it.
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

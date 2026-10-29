@@ -16,15 +16,13 @@ updated: 2026-10-19
 
 ## Why it matters here
 
-GPT-3 was still a base model, but big enough that writing the start of a document was a way of programming it: give it three question-and-answer pairs and it answers the fourth. That is the move behind the assistant. Before any chat training, the way to get a conversation out of a base model was to write the beginning of a transcript of one, which is exactly what column 2 of [building the assistant by hand](/by-hand) does and what Askell et al. did at scale. The paper also reported that people had difficulty telling its generated news articles from human-written ones.
+GPT-3 was still a base model, but big enough that writing the start of a document was a way of programming it: give it three question-and-answer pairs and it answers the fourth. That is the move behind the assistant. Before any chat training, the way to get a conversation out of a base model was to write the beginning of a transcript of one, which is exactly what the second column of [GPT-2, two ways](/gpt-2) does and what Askell et al. did at scale. The paper also reported that people had difficulty telling its generated news articles from human-written ones.
 
 ## In the readings
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2005.14165v4--language-models-are-few-shot-learners.md)); the collection notes say it "made in-context learning visible as a powerful general interface."
 
-## Try it
 
-Column 2 of [building the assistant by hand](/by-hand): a few written exchanges in front of a base model.
 
 ## See also
 

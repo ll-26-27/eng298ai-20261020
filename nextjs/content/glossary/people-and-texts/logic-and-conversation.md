@@ -33,7 +33,7 @@ Cited by page from *Syntax and Semantics 3* (1975):
 
 ## Try it
 
-In [ELIZA](/eliza), notice how much of the sense you supply. In [building the assistant by hand](/by-hand), compare how informative each column's answer is: the base model breaks every maxim at once.
+In [ELIZA](/eliza), notice how much of the sense you supply.
 
 ## See also
 

@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: { default: "Chatbot Experiments", template: "%s · Chatbot Experiments" },
-  description: "Prototypes for ENG 298AI: how the chatbot assistant was made, from base model to agent.",
+  title: { default: "Who is speaking?", template: "%s · Who is speaking?" },
+  description: "Where the chatbot assistant came from: talk to ELIZA, give GPT-2 its first assistant script, learn how to build a bot, and read a short history of the chatbot.",
 };
 
 export const viewport = {

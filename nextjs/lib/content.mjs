@@ -3,12 +3,12 @@ import path from "node:path";
 import matter from "gray-matter";
 
 export const site = {
-  title: "Chatbot Experiments",
+  title: "Who is speaking?",
   label: "ENG 298AI",
-  term: "AI Humanities Lab · Fall 2026",
-  // The home page's heading and the line under it.
+  term: "The AI Humanities Lab · Harvard · Fall 2026",
+  // The content root's heading and the line under it (the home page itself is app/page.jsx).
   heading: "Where the assistant came from",
-  deck: "Prototypes for ENG 298AI: from a base model that spirals to an agent with its own computer.",
+  deck: "Talk to ELIZA, give GPT-2 its first assistant script, learn how to build a bot, and read a short history of the chatbot.",
 };
 
 // One folder of Markdown, nextjs/content/, is the whole site: content/a/b.md is /a/b and content/README.md is the
@@ -187,60 +187,16 @@ export function resolveMarkdownHref(href, dir = "") {
   return `${hrefFor(target)}${hash ? `#${hash}` : ""}`;
 }
 
-// The experiments, grouped for the home page and /experiments. Each is content/experiments/<slug>.md, whose
-// frontmatter gives `route:` (the app route that runs it), `status:` (idea, building, working), `group:` (one of
-// experimentGroups below), and `order:` (its place within its group). A document with no `group:` gets the one
-// listed for its slug in defaultGroups, so a page lands in the right section the moment its document exists; any
-// other document goes under "Works in progress". Unbuilt experiments (status idea) sort last within their group; building ones keep their place.
-export const experimentGroups = [
-  { name: "Today", blurb: "The path through today's session, October 20." },
-  { name: "Build your bot", blurb: "Claim a key, write a bot file, run it, submit it to the Ensemble." },
-  { name: "Before the assistant", blurb: "Four machines that answer without being an assistant: rules, counts, a base model, and a script." },
-  { name: "Under the hood", blurb: "What a chatbot assembles around your message before the model sees it." },
-  { name: "Readings", blurb: "Course texts made tangible." },
-  { name: "Where agents are going", blurb: "From a chat persona to a thing with a loop, a memory, and a job." },
-  { name: "Works in progress", blurb: "Prototypes and ideas, not part of today's path." },
-];
-
-const defaultGroups = {
-  "get-ready": "Today",
-  "bot-lab": "Build your bot", "chat-ui": "Build your bot", ensemble: "Build your bot", keys: "Build your bot", 
-  eliza: "Before the assistant", markov: "Before the assistant", "gpt-2": "Before the assistant", spiral: "Before the assistant", "by-hand": "Before the assistant",
-  retrieval: "Under the hood", rag: "Under the hood", layers: "Under the hood", "knowledge-voice": "Under the hood", engine: "Under the hood", "chat-demo": "Under the hood",
-  "reading-rooms": "Readings", tics: "Readings",
-  "rosie-roomba": "Where agents are going", "mini-claw": "Where agents are going", "bot-room": "Where agents are going",
-};
-
-const statusRank = { working: 0, building: 0, idea: 1 };
-
+// The notes behind an activity: content/experiments/<name>.md, whose frontmatter `route:` names the app route that
+// runs it (the generic reader redirects the document to that route). Only ELIZA has one now.
 export async function getExperiments() {
   const folder = (await getEntry(["experiments"]))?.entry;
   if (!folder) return [];
-  const known = new Set(experimentGroups.map((group) => group.name));
-  return folder.docs.map((doc) => {
-    const name = doc.slug.replace(/^experiments\//, "");
-    const group = typeof doc.data.group === "string" && known.has(doc.data.group) ? doc.data.group : defaultGroups[name] || "Works in progress";
-    return {
-      ...doc,
-      name,
-      group,
-      route: typeof doc.data.route === "string" ? doc.data.route : doc.href,
-      status: typeof doc.data.status === "string" ? doc.data.status : "idea",
-    };
-  });
-}
-
-// The groups in order, each with its experiments (built first, then by `order:`). Empty groups are left out.
-export async function getExperimentGroups() {
-  const experiments = await getExperiments();
-  return experimentGroups
-    .map((group) => ({
-      ...group,
-      experiments: experiments
-        .filter((experiment) => experiment.group === group.name)
-        .sort((a, b) => (statusRank[a.status] ?? 1) - (statusRank[b.status] ?? 1) || byOrder(a, b)),
-    }))
-    .filter((group) => group.experiments.length || group.name === "Today");
+  return folder.docs.map((doc) => ({
+    ...doc,
+    name: doc.slug.replace(/^experiments\//, ""),
+    route: typeof doc.data.route === "string" ? doc.data.route : doc.href,
+  }));
 }
 
 export async function getExperiment(name) {

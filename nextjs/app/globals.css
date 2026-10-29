@@ -1,8 +1,5 @@
 :root {
-  /* Dark always (forced for this site). Print pages (.print-root) are always light.
-     The meeting of the two source apps: the timeline's dark ground and Inter, warmed to a garnet charcoal; the Poetry
-     Gem's vermilion and brass rules, with the timeline's own type (Inter). The jewel note in the grey is there so the
-     paper dolls' cream, rust, and olive read off the page. */
+  /* Dark always (forced for this site): a garnet charcoal ground, Inter, a vermilion accent, and brass rules. */
   --paper: #2a2225;
   --ink: #f7f1ed;
   --muted: #c4b4b2;

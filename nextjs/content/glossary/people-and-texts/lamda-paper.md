@@ -22,9 +22,7 @@ LaMDA was built for conversation, and the paper shows what that meant in practic
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2201.08239v3--lamda-language-models-for-dialog-applications.md)).
 
-## Try it
 
-The [persona dial](/persona-dial) asks the question the Lemoine episode raised: how much of "alive" is in the engine?
 
 ## See also
 

@@ -20,9 +20,7 @@ An agent needs boundaries such as completion criteria, a maximum number of itera
 
 For an invented mini-claw exercise, “stop after saving the note” is clearer than “keep improving it.” If the tool fails repeatedly, a run limit can prevent the same unsuccessful operation from continuing indefinitely.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ For an invented mini-claw exercise, “stop after saving the note” is clearer 
 ## Sources
 
 - [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

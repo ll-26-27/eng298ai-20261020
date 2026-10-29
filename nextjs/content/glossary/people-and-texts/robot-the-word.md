@@ -24,9 +24,7 @@ Karel Čapek said the word was his brother's. In a 1933 newspaper note, "O slov�
 
 *R.U.R.*, the course copy's "Story of the Play" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/capek-rur.md?plain=1#L50)). The Czech title is *Rossumovi univerzální roboti*.
 
-## Try it
 
-[Mini-claw](/mini-claw) is a small worker: a model in a loop with one tool.
 
 ## See also
 

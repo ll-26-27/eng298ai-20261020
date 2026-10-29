@@ -22,7 +22,7 @@ The course reads the test as a theory of persona before it is a theory of mind: 
 
 ## Try it
 
-The [persona dial](/persona-dial): rate how alive each configuration feels. Then try [ELIZA](/eliza) and see how long it passes.
+Then try [ELIZA](/eliza) and see how long it passes.
 
 ## See also
 

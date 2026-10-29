@@ -19,9 +19,7 @@ A chat model still reads one long string. The chat template is the rule that wri
 
 Seeing the template takes away some of the chat window's magic. Your message arrives as a labeled line in a script, and "the assistant" is the next speaker's name the model has been trained to write lines for.
 
-## Try it
 
-Column 3 of [building the assistant by hand](/by-hand) shows the templated string. [The layers](/layers) show what else is added to it.
 
 ## See also
 

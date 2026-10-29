@@ -30,9 +30,7 @@ Cited from the 1891 book text (20 chapters, with the Preface) by chapter:
 - **Ch. VII:** Sibyl: "before I knew you, acting was the one reality of my life" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-picture-of-dorian-gray-1891.md?plain=1#L1277)); Dorian: "You have killed my love" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-picture-of-dorian-gray-1891.md?plain=1#L1279)).
 - **Ch. VIII:** the portrait "would be to him the most magical of mirrors" ([text](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/wilde-picture-of-dorian-gray-1891.md?plain=1#L1477)).
 
-## Try it
 
-The [persona dial](/persona-dial) changes only the surface (a name, an avatar, a typing indicator) and asks how alive the result feels; "pull back the curtain" shows the picture in the attic. [The layers](/layers) shows what sits behind the face of a product.
 
 ## See also
 

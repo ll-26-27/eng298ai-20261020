@@ -163,7 +163,7 @@ export default function KnowledgeDemo({ data }) {
                 ? "Keyword search matches words: a passage is found only if it uses yours."
                 : "Meaning-based search matches nearby ideas, so it can find a passage that shares no words with the query."}
           </p>
-          <p className="kd-builder">In the <a href="/poetry-gem">Poetry Gem</a> (Activity C), these are the bot&rsquo;s Knowledge and Delivery settings.</p>
+          <p className="kd-builder">In a GPT, a Gem, or a Project, this is the Knowledge setting: see <a href="/build-a-bot#knowledge">How to build a bot</a>.</p>
         </div>
       </footer>
     </section>

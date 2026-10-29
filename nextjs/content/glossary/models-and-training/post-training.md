@@ -24,9 +24,7 @@ Post-training uses far less data and computation than pretraining but changes th
 
 [Askell et al. 2021](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/2112.00861v3--a-general-language-assistant-as-a-laboratory-for-alignment.md) studies the first steps: prompting, then training the prompt in ("context distillation"), then preference modeling. In [Čapek, *R.U.R.*](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/course-readings/course-readings-md/capek-rur.md), Domin describes young Rossum's method: man "wants to do a whole lot of things that are really unnecessary," so Rossum "had to simplify him." Post-training also cuts away most of what a base model might say; what's kept is decided by what the product is for.
 
-## Try it
 
-Columns 1, 3, and 4 of [building the assistant by hand](/by-hand) show a base model, a small post-trained model, and a heavily post-trained one.
 
 ## See also
 

@@ -18,7 +18,7 @@ updated: 2026-10-19
 
 It is the required reading for the October 20 workshop, and it gives the experiments their working vocabulary. The paper's problem is how to talk about a chatbot that sounds like a person without either believing it is one or pretending it isn't doing anything. Its answer is role play: the underlying model is "a non-deterministic simulator capable of role-playing an infinity of characters," and a given conversation draws one character (or a cloud of possible ones) out of it. That lets us say "it's lying" or "it says it's afraid" as descriptions of a character, while keeping open what, if anything, is behind it.
 
-Two analogies from the paper are worth having to hand. In twenty questions, the agent never really commits to one object; it keeps every answer consistent with the questions so far "in superposition." And the agent is "more like a performer in improvisational theatre than an actor in a conventional, scripted play." Both describe what the [GPT-2 experiment](/gpt-2) and [building the assistant by hand](/by-hand) show directly.
+Two analogies from the paper are worth having to hand. In twenty questions, the agent never really commits to one object; it keeps every answer consistent with the questions so far "in superposition." And the agent is "more like a performer in improvisational theatre than an actor in a conventional, scripted play." Both describe what [GPT-2, two ways](/gpt-2) shows directly.
 
 ## In the readings
 
@@ -29,9 +29,7 @@ The course copy is an abstract and notes for the May 2023 preprint ([notes](http
 
 Its debt to janus's ["Simulators"](simulators.md) is explicit. Compare Wilde's "Give him a mask, and he will tell you the truth" in ["The Critic as Artist"](the-critic-as-artist.md), and Lord Henry's "an actor of a part that has not been written for him" in [*Dorian Gray*](the-picture-of-dorian-gray.md).
 
-## Try it
 
-[Building the assistant by hand](/by-hand): the same base model plays a helpful assistant, a sardonic one, or a medieval monk depending on the preamble, and with "let it write both sides" it plays the human too. The [persona dial](/persona-dial) changes how the role is presented.
 
 ## See also
 

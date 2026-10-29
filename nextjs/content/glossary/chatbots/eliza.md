@@ -38,7 +38,7 @@ Socrates' complaint about writing in the *Phaedrus* (275d) fits ELIZA closely: w
 
 ## Try it
 
-[ELIZA](/eliza) runs the DOCTOR script with a "show the rule" view beside each reply. The [persona dial](/persona-dial) puts ELIZA behind the same chat interface as Claude.
+[ELIZA](/eliza) runs the DOCTOR script with a "show the rule" view beside each reply.
 
 ## See also
 

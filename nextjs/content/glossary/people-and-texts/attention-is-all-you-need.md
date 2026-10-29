@@ -22,9 +22,7 @@ It was a paper about machine translation, and its claim was architectural: a net
 
 In the course's AI paper collection ([notes](https://github.com/ll-26-27/eng-298ai-context/blob/24df8b8/_context/LL-readings/papers-on-ai-md/1706.03762v7--attention-is-all-you-need.md)); the collection's notes call it "the central architectural landmark."
 
-## Try it
 
-Every model in the [GPT-2 experiment](/gpt-2) and [building the assistant by hand](/by-hand) is a Transformer.
 
 ## See also
 

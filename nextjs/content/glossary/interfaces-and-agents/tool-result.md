@@ -20,9 +20,7 @@ A tool result feeds observations back into the next model step. It may contain u
 
 Imagine Claude Code asking to read an assignment. The result is the file’s contents or an error, rather than the agent’s intention to read it. Mini-claw’s trace should let students distinguish all three.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ Imagine Claude Code asking to read an assignment. The result is the file’s con
 ## Sources
 
 - [Anthropic: building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)

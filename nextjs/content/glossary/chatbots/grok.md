@@ -30,9 +30,7 @@ What sets Grok apart is where it talks. On X, people tag the @grok account in a 
 
 **Public presence and persona.** Earlier chatbots talked to one person at a time. Grok answers inside a public conversation among many people, where its replies are quoted, argued with, and used as evidence. Its persona is set by its makers in a system prompt, and the July 2025 episode showed how directly a change to that layer reaches millions of readers. In 2026 xAI added [Grok Bot](grok-bot.md), always-on agents with their own computer.
 
-## Try it
 
-[The layers](/layers) lists public presence, "@grok on X," as one of the layers wrapped around a model.
 
 ## See also
 

@@ -30,9 +30,7 @@ Google announced Gems at I/O on 14 May 2024 ("customized versions of Gemini"), r
 
 **Configuration.** Gems are Google's version of the configuration layer that OpenAI opened with custom GPTs in November 2023: a persona and a job written in plain language, laid over the same model. Their planned conversion into skills, reusable instructions the model can call when relevant, is one sign of the shift from configured chatbots to agents that load instructions as needed.
 
-## Try it
 
-[The layers](/layers) builds the same Course TF Assistant as a custom GPT, a Claude project, and a Gem, and puts the three side by side.
 
 ## See also
 

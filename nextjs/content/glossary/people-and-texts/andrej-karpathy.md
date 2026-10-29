@@ -18,9 +18,7 @@ updated: 2026-10-19
 
 The third section of the course is "Vibe-coding for Humanists," so the phrase is on the syllabus. Karpathy's post of 2 February 2025 began: "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists." The course takes the term and argues with it: the syllabus says the point is "exposing assumptions that implementation forces us to specify," which is the opposite of forgetting the code exists. Karpathy, a founding member of OpenAI and later head of AI at Tesla (verify), has also written and taught widely about how language models work from the bottom up.
 
-## Try it
 
-[Mini-claw](/mini-claw) is the anatomy of the coding agents students vibe-code with: a loop, a memory file, skills, and a tool.
 
 ## See also
 

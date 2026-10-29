@@ -22,9 +22,7 @@ A single word can be enough: after “Who wants to go first?”, “Me” may co
 
 Sacks, Schegloff, and Jefferson, §3.1 and §4.13, describe the unit-types and their projectability. Their account gives a way to compare a student’s brief reply with a Course TF Assistant’s multi-paragraph answer without treating both merely as one bubble.
 
-## Try it
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

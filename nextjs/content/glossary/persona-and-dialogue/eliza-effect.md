@@ -26,7 +26,6 @@ Weizenbaum’s ELIZA paper, pp. 36–37, presents the exchange and the problem o
 
 [ELIZA](/eliza): compare a reply with the textual rule that produces it.
 
-[Persona dial](/persona-dial): hold the model fixed, change a presentation or prompt setting, and compare the exchange.
 
 ## See also
 

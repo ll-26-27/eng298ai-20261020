@@ -32,7 +32,7 @@ In the screenshot, the project's instructions say to answer only from the syllab
 
 ## Try it
 
-[The layers](/layers) builds the same Course TF Assistant as a custom GPT, a Claude project, and a Gem.
+[How to build a bot](/build-a-bot) shows the same Course TF Assistant as a custom GPT, a Claude project, and a Gem.
 
 ## See also
 

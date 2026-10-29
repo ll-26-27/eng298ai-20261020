@@ -20,9 +20,7 @@ A tool definition tells the model what operation exists and which inputs it acce
 
 For an invented read_note tool, the arguments might be {"path":"memory.md"}. Check the requested path before treating the call as authorized.
 
-## Try it
 
-[mini-claw](/mini-claw). Inspect the built interface and its current notes. Mini-claw offers a scripted stand-in; live model replies require the configured Claude connection.
 
 ## See also
 
@@ -31,4 +29,3 @@ For an invented read_note tool, the arguments might be {"path":"memory.md"}. Che
 ## Sources
 
 - [Anthropic: advanced tool use](https://www.anthropic.com/engineering/advanced-tool-use)
-- [The mini-claw experiment brief](../../experiments/mini-claw.md)
