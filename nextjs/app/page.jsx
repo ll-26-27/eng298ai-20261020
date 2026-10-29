@@ -42,10 +42,6 @@ export default function HomePage() {
           ))}
         </ol>
 
-        <p className="home-more">
-          <Link href="/history">Interfaces: 43 screenshots, 1966 to 2026</Link>
-          <Link href="/glossary">Glossary</Link>
-        </p>
         <p className="home-about">
           Built for ENG 298AI, the AI Humanities Lab at Harvard, Fall 2026. Nothing here needs an account or a key: ELIZA and GPT-2 run in your own browser. <a href={REPO}>Source on GitHub</a>.
         </p>
