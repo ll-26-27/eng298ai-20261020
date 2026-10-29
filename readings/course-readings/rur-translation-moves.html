@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R.U.R. in Translation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#fff; --ink:#141414; --muted:#5d5d5d; --line:#e2e2e2; --wash:#f6f5f2; --red:#c8102e; --redwash:#fbeaed; }
+@media (prefers-color-scheme: dark) { :root { --paper:#161415; --ink:#f3efec; --muted:#a9a19e; --line:#3a3436; --wash:#211d1f; --red:#ff5a6e; --redwash:#3a1d23; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 17px/1.55 Inter,system-ui,sans-serif; }
+.wrap { max-width:1080px; margin:0 auto; padding:56px 20px 96px; }
+.eyebrow { color:var(--red); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:13px; margin:0; }
+h1 { font-size:clamp(40px,6vw,72px); font-weight:800; letter-spacing:-.045em; line-height:1; margin:12px 0 18px; }
+.lede { font-size:20px; max-width:760px; margin:0; }
+.lede + .lede { margin-top:12px; color:var(--muted); font-size:17px; }
+.stats { display:flex; gap:32px; flex-wrap:wrap; margin:32px 0; padding:20px 0; border-block:2px solid var(--ink); }
+.stats div b { display:block; font-size:40px; font-weight:800; letter-spacing:-.04em; line-height:1; }
+.stats div span { color:var(--muted); font-size:14px; font-weight:600; }
+.toc { list-style:none; padding:0; margin:0 0 28px; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:6px 24px; }
+.toc a { color:inherit; text-decoration:none; font-weight:600; } .toc a:hover { color:var(--red); }
+.toc span { display:inline-block; width:32px; color:var(--red); font-weight:800; } .toc em { color:var(--muted); font-style:normal; font-size:14px; }
+.filters { position:sticky; top:0; z-index:2; background:var(--paper); padding:12px 0; border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px; }
+.chip { font:600 14px Inter,system-ui,sans-serif; border:1.5px solid var(--line); background:var(--paper); color:var(--ink); border-radius:999px; padding:6px 12px; cursor:pointer; text-transform:capitalize; }
+.chip b { color:var(--muted); } .chip[aria-pressed=true] { background:var(--red); border-color:var(--red); color:#fff; } .chip[aria-pressed=true] b { color:#fff; }
+.sec { padding-top:48px; }
+.sec-head { display:flex; gap:18px; align-items:flex-start; }
+.num { flex:none; display:grid; place-items:center; width:52px; height:52px; border-radius:50%; background:var(--red); color:#fff; font-weight:800; font-size:20px; }
+h2 { font-size:28px; font-weight:800; letter-spacing:-.03em; line-height:1.15; margin:4px 0 4px; }
+.cov { margin:0; color:var(--muted); font-size:15px; }
+.overall { font-size:18px; margin:16px 0 8px 70px; max-width:820px; }
+.move { margin:18px 0 0 70px; padding:20px 22px; border:1px solid var(--line); border-radius:12px; background:var(--wash); }
+.move header { display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; }
+.tag { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--red); background:var(--redwash); padding:3px 8px; border-radius:4px; }
+h3 { margin:0; font-size:20px; letter-spacing:-.02em; }
+.pair { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:14px 0 10px; }
+.lab { display:block; font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+blockquote { margin:0; padding-left:12px; border-left:3px solid var(--ink); font-size:16px; }
+.is-cut blockquote { border-left-color:var(--red); color:var(--red); font-weight:600; }
+.gloss { margin:6px 0 0 15px; color:var(--muted); font-size:14px; font-style:italic; }
+.note { margin:0; font-size:16px; }
+.hidden { display:none; }
+footer { margin-top:72px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+footer a { color:inherit; }
+@media (max-width:720px) { .pair { grid-template-columns:1fr; } .overall,.move { margin-left:0; } .wrap { padding:36px 16px 72px; } }
+</style></head><body><main class="wrap">
+<p class="eyebrow">ENG 298AI · Readings · Čapek</p>
+<h1>R.U.R. in translation</h1>
+<p class="lede">The 1923 English acting edition (Paul Selver, adapted by Nigel Playfair) set against Čapek’s Czech of 1920: the cuts, additions and quiet changes of meaning, read 1,000 words at a time by ten readers.</p>
+<p class="lede">The English renumbers the play. Čapek’s <i>Předehra</i> (prologue) becomes Act One, his three acts become Acts Two and Three, and his Act Three survives only as a shortened “Epilogue.”</p>
+<div class="stats"><div><b>101</b><span>translation moves</span></div><div><b>10</b><span>sections read</span></div><div><b>23</b><span>cuts</span></div><div><b>16</b><span>meaning shifts</span></div></div>
+<ol class="toc"><li><a href="#s01"><span>01</span>Předehra part 1/3 ↔ English Act One</a> <em>10</em></li><li><a href="#s02"><span>02</span>Předehra part 2/3 ↔ English Act One</a> <em>11</em></li><li><a href="#s03"><span>03</span>Předehra part 3/3 ↔ English Act One</a> <em>10</em></li><li><a href="#s04"><span>04</span>Dějství první part 1/3 ↔ English Act Two</a> <em>9</em></li><li><a href="#s05"><span>05</span>Dějství první part 2/3 ↔ English Act Two</a> <em>10</em></li><li><a href="#s06"><span>06</span>Dějství první part 3/3 ↔ English Act Two</a> <em>10</em></li><li><a href="#s07"><span>07</span>Dějství druhé part 1/2 ↔ English Act Three</a> <em>11</em></li><li><a href="#s08"><span>08</span>Dějství druhé part 2/2 ↔ English Act Three</a> <em>10</em></li><li><a href="#s09"><span>09</span>Dějství třetí part 1/2 ↔ English Epilogue</a> <em>10</em></li><li><a href="#s10"><span>10</span>Dějství třetí part 2/2 ↔ English Epilogue</a> <em>10</em></li></ol>
+<div class="filters" role="group" aria-label="Filter by type"><button class="chip" data-type="*" aria-pressed="true">all <b>101</b></button><button class="chip" data-type="cut" aria-pressed="false">cut <b>23</b></button><button class="chip" data-type="addition" aria-pressed="false">addition <b>19</b></button><button class="chip" data-type="meaning shift" aria-pressed="false">meaning shift <b>16</b></button><button class="chip" data-type="stage direction" aria-pressed="false">stage direction <b>11</b></button><button class="chip" data-type="politics/religion" aria-pressed="false">politics/religion <b>11</b></button><button class="chip" data-type="tone/register" aria-pressed="false">tone/register <b>8</b></button><button class="chip" data-type="wordplay/names" aria-pressed="false">wordplay/names <b>5</b></button><button class="chip" data-type="reassignment" aria-pressed="false">reassignment <b>4</b></button><button class="chip" data-type="mistranslation" aria-pressed="false">mistranslation <b>2</b></button><button class="chip" data-type="other" aria-pressed="false">other <b>2</b></button></div>
+<section class="sec" id="s01">
+  <div class="sec-head"><span class="num">01</span><div><h2>Section 01: Předehra part 1/3 ↔ English Act One</h2><p class="cov">Czech from the cast list &quot;OSOBY&quot; through Domin&#x27;s &quot;výrobek inženýra je technicky vytříbenější než výrobek přírody&quot;; English from &quot;Description of Characters&quot; through Domin&#x27;s &quot;The product of an engineer _is_ technically at a higher pitch of perfection than a product of Nature.&quot;</p></div></div>
+  <p class="overall">The acting edition keeps Domin&#x27;s history-of-the-invention monologue largely intact but turns the scene into a flirtation, adding stage business (flowers, candy, a cushion, a hand-kiss) that the Czech never has. It cuts the sexual and the most irreverent material, drops Čapek&#x27;s jokes about age, names and form of address, and recasts the cast list as a set of casting notes, removing Busman&#x27;s description as a Jew altogether.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Busman&#x27;s antisemitic tag and the whole Czech cast description replaced</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Busman: tlustý, plešatý, krátkozraký žid</blockquote><p class="gloss">“Busman: fat, bald, short-sighted Jew”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Busman has no entry at all in the English &quot;Description of Characters&quot;, even though he enters later in the act. The English list is rewritten as casting notes (&quot;A handsome man of 35. Forceful, efficient and humorous at times.&quot;), and the Czech remark that everyone is ten years older in the play proper is dropped.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Robots are humanised in the cast note; Sulla is &quot;pathetic&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Sulla: Robotka … Roboti v předehře oblečeni jako lidé. Jsou úsečná v pohybech i výslovnosti, bezvýrazných tváří, upřeného pohledu.</blockquote><p class="gloss">“Sulla: a female Robot (&quot;Robotka&quot;) … The Robots in the prologue are dressed like people. They are curt in movement and speech, with expressionless faces and a fixed stare.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">SULLA: _A pathetic figure. Young, pretty and attractive._ … _with the exception of_ SULLA, HELENA _and_ PRIMUS, _who convey a touch of humanity._</blockquote></div>
+  </div>
+  <p class="note">In the Czech, Sulla is just &quot;Robotka&quot;, and every Robot moves mechanically. The English exempts Sulla, Helena and Primus and makes Sulla sentimental and sexualised (&quot;pretty and attractive&quot;). This telegraphs the play&#x27;s ending from the first page.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Domin&#x27;s lecture turned into a courtship with added props and a hand-kiss</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Tak tedy mladý Rossum si řekl: Člověk, to je něco, co dejme tomu cítí radost, hraje na housle, chce jít na procházku</blockquote><p class="gloss">“So young Rossum said to himself: Man is something that, let&#x27;s say, feels joy, plays the violin, wants to go for a walk”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">&quot;A man is something that feels happy, plays the piano, likes going for a walk…&quot; … Do you play the piano? HELENA. Yes. DOMIN. That&#x27;s good. (_Kisses her hand. She lowers her head._)</blockquote></div>
+  </div>
+  <p class="note">The violin becomes a piano so that Domin can ask about it and kiss her hand. Throughout this stretch the English adds flowers, candy, a cigarette case, a phone call (&quot;I&#x27;m in conference&quot;), cushion-fixing, laughter, and a distracted Helena who doesn&#x27;t hear his question (&quot;_Absently_ What?&quot;). None of this is in the Czech. Domin&#x27;s rapture is in the Czech (&quot;uchvácen&quot;), but only in what he says, never in what he does.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Sex glands and the inventory of useless organs cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Slepé střevo, mandle, pupek, samé zbytečnosti. Dokonce i--hm--i pohlavní žlázy. / Helena: Ale ty přece--ty přece-- / Domin:--nejsou zbytečné, já vím.</blockquote><p class="gloss">“Appendix, tonsils, navel, nothing but superfluities. Even--hm--even the sex glands. / But surely those--those-- / --aren&#x27;t superfluous, I know.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">This is the scene&#x27;s only sexual joke, and the edition removes all of it. That includes Domin&#x27;s hint that the Robots are deliberately made without sex, which matters later in the play. Only &quot;he then decided to manufacture everything as in the human body&quot; is left.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>&quot;Dethrone God&quot; softened to &quot;substitute for God&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Víte, chtěl jaksi vědecky sesadit Boha. … Nešlo mu o nic víc než podat důkaz, že nebylo žádného Pánaboha zapotřebí.</blockquote><p class="gloss">“You know, he wanted, in a way, to scientifically depose God. … All he wanted was to prove that there had been no need for any Lord God.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">He wanted to become a sort of scientific substitute for _God_. … His sole purpose was nothing more or less than to prove that God was no longer necessary.</blockquote></div>
+  </div>
+  <p class="note">&quot;Sesadit&quot; (to depose, to dethrone) is an act of overthrowing; &quot;substitute&quot; makes Rossum a rival rather than a regicide. The colloquial, slightly mocking &quot;Pánbůh&quot; becomes plain &quot;God&quot;, and &quot;there had been no need&quot; becomes &quot;no longer necessary&quot;. Both changes take some of the sting out of the atheism.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Young Rossum&#x27;s &quot;new age&quot; slogan and the Indians/docents/idiots joke cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Myslel, že udělá skutečné lidi, tedy snad nějaké nové Indiány, docenty nebo idioty, víte? … Mladý Rossum, slečno, to byl nový věk. Věk výroby po věku poznání.</blockquote><p class="gloss">“He thought he&#x27;d make real people, perhaps some new Indians, lecturers or idiots, you know? … Young Rossum, miss, was a new age. The age of production after the age of knowledge.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Two pointed lines go: the satirical list (the Indians/docents/idiots joke, which sounds the same in Czech) and the thesis of the speech, production replacing knowledge. The edition also drops &quot;the old man would have done well at a university&quot; and &quot;starý Rossum neměl trochy vkusu&quot;.</p>
+</article><article class="move" data-type="wordplay/names">
+  <header><span class="tag">wordplay/names</span><h3>Domin&#x27;s slips with Helena&#x27;s name and the &quot;nedůvěřujete / neobyčejně&quot; pun lost</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Vy mi nedůvěřujete? / Domin: Neobyčejně, slečno hele--pardon, slečno Gloryová. Vskutku neobyčejně potěšen--</blockquote><p class="gloss">“You don&#x27;t trust me? / Extraordinarily, Miss Hele--pardon, Miss Glory. Truly extraordinarily pleased--”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. But what is it? What&#x27;s the matter? / DOMIN. I&#x27;m remarkably pleased.</blockquote></div>
+  </div>
+  <p class="note">In the Czech, &quot;Neobyčejně&quot; first sounds like an answer to &quot;you don&#x27;t trust me?&quot; (extraordinarily!), and Domin nearly calls her by her first name. Later he does say &quot;Přibližně, slečno Heleno&quot;, and the English makes that &quot;Approximately--Miss Glory&quot;. The English removes both the comic misfire and every sign of his growing familiarity in how he addresses her.</p>
+</article><article class="move" data-type="reassignment">
+  <header><span class="tag">reassignment</span><h3>Helena&#x27;s comeback in the interruption game cut and replaced</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Slečno Gloryová, je pro nás neobyčejnou ctí, že--že-- / Helena:--že vám nemůžeme ukázat dveře.</blockquote><p class="gloss">“Miss Glory, it is an extraordinary honour for us that--that-- / --that we can&#x27;t show you the door.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. If you only knew how enormously that-- / DOMIN. Interests you. Europe&#x27;s talking about nothing else.</blockquote></div>
+  </div>
+  <p class="note">In the Czech, Helena once turns Domin&#x27;s habit of finishing her sentences back on him with a sharp joke. The English cuts her retort and adds another sentence that Domin finishes for her, so he keeps the upper hand and she loses her one witty line.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Added explanations: &quot;thirst for life&quot;, &quot;sown&quot;, and &quot;what a Robot looks like inside&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Ale protože neměl kousku humoru, vzal si do hlavy, že udělá normálního obratlovce nebo snad člověka. A tak se do toho pustil.</blockquote><p class="gloss">“But because he hadn&#x27;t a scrap of humour, he took it into his head to make a normal vertebrate or perhaps a man. And so he set about it.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">This artificial living _matter_ of his had a raging thirst for life. It didn&#x27;t mind being sown or mixed together. That couldn&#x27;t be done with natural albumen.</blockquote></div>
+  </div>
+  <p class="note">These lines aren&#x27;t in this Czech text. They may come from the earlier Czech edition Selver worked from, and &quot;sown&quot; looks like a slip for &quot;sewn&quot; (sešívat). After &quot;no soul&quot; the English also adds an exchange the Czech doesn&#x27;t have (&quot;How do you know they have no soul?&quot; / &quot;Have you ever seen what a Robot looks like inside?&quot;), which sets up Domin&#x27;s closing line.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Smaller shifts: philosopher → physiologist, rotifer → beetle, diesel → gasoline</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">starý Rossum veliký filozof … počínajíc vířníkem … Naftový motor nemá mít třapce a ornamenty</blockquote><p class="gloss">“old Rossum, the great philosopher … beginning with the rotifer … A diesel (oil) motor must not have tassels and ornaments”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">old Rossum, the great physiologist … beginning with some sort of a beetle … A gasoline motor must not have tassels or ornaments</blockquote></div>
+  </div>
+  <p class="note">Making Rossum a &quot;physiologist&quot; loses the irony of a philosopher turned materialist. The rotifer, a microscopic animal at the bottom of the tree of life, becomes an imprecise beetle. &quot;Gasoline&quot; and &quot;yards&quot; Americanise the speech. Also cut: the &quot;tečka&quot; (full stop) that Domin says aloud in his breathless recitation, the abbreviation &quot;Patnáct tisíc R.&quot;, and most of the poster slogans (&quot;Každý si kup svého Robota!&quot;).</p>
+</article>
+</section>
+<section class="sec" id="s02">
+  <div class="sec-head"><span class="num">02</span><div><h2>Section 02: Předehra part 2/3 ↔ English Act One</h2><p class="cov">Czech from &quot;Helena: Říká se, že člověk je výrobek boží.&quot; to Domin&#x27;s &quot;co je na světě církví a bláznů.&quot;; English Act One from &quot;But man is supposed to be the product of God.&quot; to &quot;...churches and idiots there are in the world.&quot;</p></div></div>
+  <p class="overall">The acting edition keeps the dialogue skeleton but cuts most of Domin&#x27;s factory exposition (the assembly line, &quot;school&quot;, the daily output) and adds visual business of its own: a parade of labour Robots, a longer comic ship-spec routine for Sulla, and a lot of flirtation (flowers, kissed hands, candy, arm-in-arm). The result is lighter and more romantic, and Čapek&#x27;s satire of mass production is thinner.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Factory tour and Robot &quot;schooling&quot; cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Pak je montovna, kde se to dává dohromady, víte, jako automobily. Každý dělník přidělá jen jednu součást [...] Mohli by docela dobře učit na univerzitách.</blockquote><p class="gloss">“Then there&#x27;s the assembly room where it&#x27;s put together, you know, like automobiles. Each worker adds just one part [...] They could quite well teach at universities.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">The English stops at the spinning mill and drops the Fordist assembly line, the &quot;drying room where fresh products work&quot;, the &quot;finishing&quot; that equals human &quot;school&quot;, the parrot memory (&quot;never invent anything new&quot;), the jibe about university teaching, and &quot;fifteen thousand pieces a day&quot; with the defective ones sent to the stamping mill. Most of the play&#x27;s industrial and academic satire in this scene goes with it.</p>
+</article><article class="move" data-type="reassignment">
+  <header><span class="tag">reassignment</span><h3>Helena&#x27;s apology becomes her request to change the subject</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Zlobíte se na mne? / Domin: Ale chraň bůh! Myslím jen, že .. že jsme mohli mluvit o jiných věcech.</blockquote><p class="gloss">“Helena: Are you angry with me? / Domin: Heaven forbid! I only think that... that we could have talked about other things.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. (_Watching his gestures_) Mayn&#x27;t we talk about something else? / DOMIN. Perhaps it would be better.</blockquote></div>
+  </div>
+  <p class="note">In Czech, Domin himself breaks off his recital and wishes they had talked about something else. The English hands that wish to Helena as a request, which makes him less self-aware and her more squeamish, and it covers the cut above.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Added demonstration of &quot;manual labor&quot; Robots</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Máme jemnější a hrubší Roboti. Ti lepší budou snad žít dvacet let.</blockquote><p class="gloss">“We have finer and coarser Robots. The better ones will live perhaps twenty years.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Marius, bring in samples of the manual labor Robot. [...] There you are, as powerful as a small tractor. Guaranteed to have average intelligence.</blockquote></div>
+  </div>
+  <p class="note">The acting edition adds a whole piece of stage business, &quot;specimens of the two extremes&quot;, with Marius leading in two labour Robots that grind to &quot;a mechanical standstill&quot;. It then tags Sulla as &quot;a Robot, best grade&quot; so she becomes the other extreme. Čapek&#x27;s Robots stay offstage until Sulla appears.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Sulla&#x27;s ship patter inflated into a comic routine</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Sulla: Dvacet uzlů za hodinu. Tonáž dvanáct tisíc.</blockquote><p class="gloss">“Twenty knots an hour. Tonnage twelve thousand.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">SULLA. Forty knots an hour. Fifty thousand tons. One of the latest vessels, Miss Glory. [...] A crew of fifteen hundred, Captain Harpy, eight boilers--</blockquote></div>
+  </div>
+  <p class="note">The figures are doubled or more, and the English adds a crew count, an invented &quot;Captain Harpy&quot; and boilers. The barometer reading &quot;705&quot; is dropped. Sulla&#x27;s mechanical recall becomes a running gag that Domin has to cut off, and the English adds a showy &quot;Oui! Madame!&quot; before the four-language letter openings, where &quot;Ctěný pane&quot; loses its diacritics as &quot;Cteny pane&quot;.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;Just as good people as we are&quot; loses &quot;people&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Roboti jsou stejně dobří lidé jako my.</blockquote><p class="gloss">“Robots are just as good people as we are.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Robots are just as good as we are.</blockquote></div>
+  </div>
+  <p class="note">Helena&#x27;s Czech claim is that Robots are *people* (&quot;lidé&quot;), which sets up the irony a few lines later. The English drops the noun and turns an ontological claim into a vague one about worth.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;You are people like us&quot; becomes &quot;living creatures&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Proboha, vždyť jste lidé jako my, jako celá Evropa, jako celý svět!</blockquote><p class="gloss">“For God&#x27;s sake, you are people just like us, like all Europe, like the whole world!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Good heavens, you are living creatures, just like us, like the whole of Europe, like the whole world.</blockquote></div>
+  </div>
+  <p class="note">The joke depends on Helena telling the human directors &quot;you are people like us&quot; while she thinks they are Robots, and on Domin answering in the same words (&quot;lidé jako vy. Jako celá Evropa&quot;). The English keeps Domin&#x27;s &quot;human beings just like us&quot; but changes Helena&#x27;s half to &quot;living creatures&quot;, which blunts the echo.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Helena&#x27;s defiance and Gall&#x27;s protective outburst cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Ne, nedomluvila. Leda byste mi násilím zavřel ústa. / Dr. Gall: Harry, opovažte se! / Helena: Děkuji vám. Věděla jsem, že mne budete chránit.</blockquote><p class="gloss">“Helena: No, I haven&#x27;t finished. Unless you shut my mouth by force. / Dr. Gall: Harry, don&#x27;t you dare! / Helena: Thank you. I knew you would protect me.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DOMIN. Just a minute. I&#x27;m afraid that Miss Glory is of the opinion she has been talking to Robots. / HELEN. Of course.</blockquote></div>
+  </div>
+  <p class="note">The English cuts Helena&#x27;s challenge to Domin and Gall&#x27;s use of Domin&#x27;s first name. Domin also states her mistake outright, where in Czech he asks it as a question (&quot;Jste si tím jista, že mluvíte s Roboty?&quot;). Helena loses a moment of spirit and gets an easy laugh line instead.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Flirtation added in stage directions</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(Fabry, Busman a Dr. Gall přitahují lenošky)</blockquote><p class="gloss">“(Fabry, Busman and Dr. Gall pull up armchairs)”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(_As they are introduced they rise and come C. to kiss her hand [...]_) BUSMAN. (_Handing flowers_) Allow me, Miss Glory. [...] FABRY. (_Handing candy_) Please, Miss Glory. DOMIN. Will you have a cigarette, Miss Glory?</blockquote></div>
+  </div>
+  <p class="note">Typical of the 1923 acting edition, it adds courtship business that has no basis in the Czech: Helena gives Domin a flower for his buttonhole, he takes her hand and walks her arm-in-arm, the men tidy their trousers and ties, kiss her hand, and offer flowers, candy and a cigarette. The romance comes much earlier and Helena&#x27;s mission matters less.</p>
+</article><article class="move" data-type="mistranslation">
+  <header><span class="tag">mistranslation</span><h3>Directors&#x27; titles altered; Gall becomes a psychologist</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">inženýr Fabry, generální technický ředitel [...] Doktor Gall, přednosta fyziologického a výzkumného oddělení.</blockquote><p class="gloss">“engineer Fabry, general technical director [...] Doctor Gall, head of the physiological and research department.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">this is Doctor Fabry, General Technical Manager; [...] Doctor Gall, head of the Psychological and Experimental Department; and Alquist, head of the Building Department, R. U. R.</blockquote></div>
+  </div>
+  <p class="note">Gall&#x27;s department changes from &quot;physiological&quot; to &quot;Psychological&quot;, which duplicates Hallemeier&#x27;s psychology institute and muddles who later alters the Robots&#x27; physiology. Engineer Fabry becomes &quot;Doctor&quot;. The order of introductions changes, and Alquist gets a self-deprecating added line, &quot;Just a builder.&quot;</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Helena&#x27;s rolled &quot;hrrozné&quot; and the god-oaths flattened</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: To je hrrozné! [...] Busman: Jemináčku, to je sláva! [...] Busman: Ale božíčku, pročpak ne?</blockquote><p class="gloss">“That&#x27;s terrrible! [...] Busman: Jeepers (lit. &quot;little Jesus-Mary&quot;), what a glory! [...] Busman: Oh, little God, why ever not?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. How dreadful! [...] BUSMAN. By Jove, that&#x27;s fine. [...] BUSMAN. Why not?</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s spelling &quot;hrrozné/hrrozní&quot; marks Helena&#x27;s affected, girlish emphasis, and it disappears. Busman&#x27;s homely diminutive oaths (&quot;Jemináčku&quot;, &quot;božíčku&quot;) become stock English &quot;By Jove&quot; or vanish. A pun may also be lost: &quot;to je sláva&quot; (&quot;what glory&quot;) next to the name Glory.</p>
+</article><article class="move" data-type="other">
+  <header><span class="tag">other</span><h3>Lines reordered around the &quot;saviours and prophets&quot; speech</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Jsem hloupé děvče. Teď--teď mne pošlete první lodí zpátky. [...] Helena: Protože už víte--protože--protože bych vám bouřila Roboty.</blockquote><p class="gloss">“I&#x27;m a silly girl. Now--now you&#x27;ll send me back on the first ship. [...] Because now you know--because--because I&#x27;d stir up your Robots against you.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. (_Seriously_) But you know I&#x27;ve come to disturb your Robots for you. [...] HELENA. I&#x27;m a stupid girl. Send me back by the first ship.</blockquote></div>
+  </div>
+  <p class="note">The English moves Helena&#x27;s self-reproach after Domin&#x27;s mocking speech, and the line about inciting the Robots to before it. &quot;Bouřit&quot; (to rouse to revolt) softens to &quot;disturb&quot;. Domin&#x27;s &quot;hundreds&quot; (&quot;na sta&quot;) of saviours shrinks to &quot;close upon a hundred&quot;, and a stage direction, &quot;Mocking her serious tone&quot;, spells out his condescension.</p>
+</article>
+</section>
+<section class="sec" id="s03">
+  <div class="sec-head"><span class="num">03</span><div><h2>Section 03: Předehra part 3/3 ↔ English Act One</h2><p class="cov">Czech from &quot;Helena: A vy je necháte mluvit k Robotům?&quot; to &quot;OPONA&quot; (end of the prologue); English Act One from &quot;HELENA. And yet you let them speak to the Robots.&quot; to &quot;*The curtain falls quickly*&quot;.</p></div></div>
+  <p class="overall">The acting edition follows the debate line by line but trims Domin&#x27;s utopian speech of its Communist slogan, its biblical Adam apostrophe and its warning of &quot;terrible things&quot;, while adding a Christ-like image, a liturgical &quot;Amen&quot; and a speech giving Helena the idea of robot revolt. The proposal scene is turned into a conventional romantic curtain: Helena&#x27;s insults and comic rolled r&#x27;s go, and stage directions supply the kiss and the congratulations.</p>
+  <article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Domin&#x27;s utopia loses its slogan, its Adam and its warning, and gains a Gospel image</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nyní ber každý, kolik potřebuješ. Není bídy. ... Předtím snad přijdou strašlivé věci, slečno Gloryová. ... Adame, Adame! už nebudeš jíst chléb svůj v potu tváře</blockquote><p class="gloss">“Now let each take as much as he needs. There is no want. ... Before that, terrible things may come, Miss Glory. ... Adam, Adam! no more shalt thou eat thy bread in the sweat of thy brow”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">There will be no poverty. ... Nobody will get bread at the cost of life and hatred. The Robots will wash the feet of the beggar and prepare a bed for him in his house.</blockquote></div>
+  </div>
+  <p class="note">The quasi-Marxist &quot;from each/to each&quot; line, the foreshadowing of catastrophe, and the Genesis apostrophe (with &quot;you will return to paradise, where the Lord&#x27;s hand fed you&quot;) are all cut. In their place comes a feet-washing image found nowhere in the Czech. The politics come out milder, and the old Testament curse is swapped for a New Testament picture of charity.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>&quot;Amen. So be it.&quot; added as a response</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: ... Budeš pánem stvoření. / Helena: Zmátl jste mne.</blockquote><p class="gloss">“Thou shalt be lord of creation. / Helena: You have confused me.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">He will be _Lord_ of creation. / BUSMAN. Amen. / FABRY. So be it. / HELENA. (_Rises_) You have bewildered me.</blockquote></div>
+  </div>
+  <p class="note">Two invented responses make Domin&#x27;s speech into a creed with a congregation. This plays up its religious overtones even though the Adam passage has been cut.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Helena is handed the revolt idea</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Ne, ne, to je duše! / Fabry: Myslíte, že duše začíná skřípáním zubů? / Domin: To se odstraní, slečno Gloryová.</blockquote><p class="gloss">“Helena: No, no, that&#x27;s the soul! / Fabry: Do you think the soul begins with gnashing of teeth? / Domin: That will be removed, Miss Glory.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. Perhaps it&#x27;s just a sign that there&#x27;s a struggle within. Perhaps it&#x27;s a sort of revolt. Oh, if you could infuse them with it.</blockquote></div>
+  </div>
+  <p class="note">The English adds a whole speech that names &quot;revolt&quot; and has Helena wish the robots had it. This spells out the uprising to come, which Čapek leaves implicit in &quot;Robot&#x27;s Cramp&quot;.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Beer, bossing and &quot;intelligent&quot; robots added to Hallemeier&#x27;s catechism</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Hallemeier: Aha. Mají snad hlasovat? Nemají dokonce dostávat mzdu? ... Jsou to jen Roboti. Bez vlastní vůle. Bez vášní. Bez dějin. Bez duše.</blockquote><p class="gloss">“Aha. Are they supposed to vote? Shouldn&#x27;t they even get wages? ... They are only Robots. Without a will of their own. Without passions. Without history. Without a soul.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HALLEMEIER. Aha! I suppose they&#x27;re to vote. To drink beer. To order us about? / HELENA. Why shouldn&#x27;t they drink beer? ... They are only workmen. / HELENA. Oh, but they&#x27;re so intelligent.</blockquote></div>
+  </div>
+  <p class="note">The beer joke and &quot;order us about&quot; are new, and they make the gag a class joke about workers getting above themselves. &quot;Only Robots&quot; becomes &quot;only workmen&quot;, which ties robots to the working class, and the striking &quot;without history&quot; is dropped.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;Most alien&quot; becomes &quot;hardest to like&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Fabry: Nemožno, slečno Gloryová. Nic není člověku cizejšího než Robot.</blockquote><p class="gloss">“Impossible, Miss Glory. Nothing is more alien to man than a Robot.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">FABRY. Impossible, Miss Glory! _Nothing is harder to like than a Robot._</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s claim is ontological: robots are alien to humans. The English makes it a matter of likeability, which shrinks the philosophical point to a quip.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Fabry&#x27;s &quot;birth by machine&quot; cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Fabry: Prosím za odpuštění. Je to veliký pokrok rodit strojem. Je to pohodlnější a rychlejší. Každé zrychlení je pokrok, slečno.</blockquote><p class="gloss">“I beg your pardon. It is great progress to give birth by machine. It is more convenient and faster. Every acceleration is progress, miss.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">The English keeps the remark about childhood but drops the sentence on reproduction, and with it Fabry&#x27;s embarrassed &quot;pardon&quot; before saying it in front of a lady. The theme of sterility that drives the later acts is muted here.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The &quot;Robotka&quot; exchange and the insults cut from the proposal</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: To je hrrozné! Vemte si nějakou Robotku. / Domin: Není žena. ... Helena: Vy jste surovec! / Domin: To nic není. Muž má být trochu surovec.</blockquote><p class="gloss">“That&#x27;s terrrible! Marry some Robotess. / Domin: She&#x27;s not a woman. ... Helena: You&#x27;re a brute! / Domin: That&#x27;s nothing. A man should be a bit of a brute.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Both cuts lose Czech wordplay. &quot;Robotka&quot; is the feminine of Robot, and Domin&#x27;s flat &quot;she&#x27;s not a woman&quot; answers it. The brute/madman parallel is cut down to the madman line alone, which softens Domin&#x27;s coercive edge.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Helena&#x27;s comic rolled r&#x27;s flattened</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Oh, to je--hrrozné! ... Ne, ne! Prosím vás, pusťte! Vždyť mne rrrozmačkáte!</blockquote><p class="gloss">“Oh, that&#x27;s--terrrible! ... No, no! Please, let go! You&#x27;ll crrrush me!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. Oh, that&#x27;s terrible. ... HELENA. Don&#x27;t, you&#x27;re hurting me!</blockquote></div>
+  </div>
+  <p class="note">Čapek spells Helena&#x27;s affected, girlish trill into the text. The English drops it, and &quot;you&#x27;ll crush me&quot; (playful protest) becomes &quot;you&#x27;re hurting me&quot;, which on the page reads more darkly.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Kiss and congratulations written in by stage directions</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: (brání se) Za nic na světě--Ale Harry! / (Zaklepání. ...)</blockquote><p class="gloss">“Helena: (resisting) Not for anything in the world--But Harry!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. But--but-- (_He embraces her; kisses her. She embraces him. KNOCKING at R. door._) ... (_He embraces her. The MEN rush around them and offer congratulations._)</blockquote></div>
+  </div>
+  <p class="note">In the Czech, Helena gives in only by blurting his first name while still resisting. The acting edition spells it out with a mutual embrace, &quot;(_Not meaning it_)&quot;, a &quot;WARN Curtain&quot; cue and an ensemble congratulation tableau.</p>
+</article><article class="move" data-type="other">
+  <header><span class="tag">other</span><h3>Busman&#x27;s numbers and idioms adjusted</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Sto dvacet dolarů ošacený kus ... Můj ty Tondo ... všechny továrny praskají jako žaludy ... vy nevíte, co to je příliš drahý krajíc. Pro kulturu a tak dále.</blockquote><p class="gloss">“A hundred and twenty dollars a clothed piece ... My dear Tonda [folk exclamation] ... all factories are bursting like acorns ... you don&#x27;t know what a too-expensive slice of bread is. For culture and so on.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">a hundred and fifty dollars each, fully dressed ... Good gracious ... All factories will go pop like chestnuts ... Miss Glory, you don&#x27;t realize that even _that&#x27;s_ too expensive.</blockquote></div>
+  </div>
+  <p class="note">The price changes from $120 to $150 for no clear reason. The Czech idioms are naturalised (acorns become chestnuts). Busman&#x27;s sneer that cheap bread matters &quot;for culture&quot; is lost, so his line now says nearly the opposite of the Czech.</p>
+</article>
+</section>
+<section class="sec" id="s04">
+  <div class="sec-head"><span class="num">04</span><div><h2>Section 04: Dějství první part 1/3 ↔ English Act Two</h2><p class="cov">Czech from the act&#x27;s opening stage direction (&quot;Helenin salón&quot;) to Helena calling Alquist up and going to meet him; English Act Two from the opening SCENE to Helena&#x27;s &quot;You look very nice in your mason&#x27;s overalls.&quot;</p></div></div>
+  <p class="overall">The English follows the scene&#x27;s order closely but systematically removes its religious and procreative charge: Nana&#x27;s sermons, the curse of barrenness, and Helena&#x27;s own childlessness all vanish. In their place the acting edition adds stage business, political headlines and a line in which Helena excuses the firm, making the scene more about war news and less about a sin against God.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Helena&#x27;s childlessness cut entirely</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nána: (s velikým gestem) Nerouhat se!--Von dobře ví, proč vám nedal dítě! (odejde vlevo) / Helena: (u okna) Proč mně nedal--Bože můj, copak já za to mohu?</blockquote><p class="gloss">“Nana: (with a grand gesture) Don&#x27;t blaspheme! He knows well why He didn&#x27;t give you a child! / Helena: (at the window) Why didn&#x27;t He give me--My God, is it my fault?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">NANA. (_Standing up_) That&#x27;s the end of the world. (_Repeat until off. Picks paper up from floor. She exits L.1._)</blockquote></div>
+  </div>
+  <p class="note">Nana&#x27;s parting blow and Helena&#x27;s anguished soliloquy at the mirror (&quot;Proč mně nedal? Mně?&quot;) are gone. Without them Helena has no personal stake in the birth-rate news, which weakens her motive for burning Rossum&#x27;s manuscript later in the act.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Nana&#x27;s theology of the Robots reduced to an interrupted phrase</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Já říkám, to je proti Pánubohu, to je ďáblovo vňuknuti, dělat ty maškary mašinou. Rouhání je proti Stvořiteli, (zvedne ruku) je to urážka Pána, kterej nás stvořil k v obrazu svýmu</blockquote><p class="gloss">“I say it&#x27;s against the Lord God, it&#x27;s the devil&#x27;s prompting, making those freaks by machine. It&#x27;s blasphemy against the Creator, an insult to the Lord who made us in His image”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">NANA. I say it&#x27;s against God&#x27;s will to-- / HELENA. What is it that smells so nice?</blockquote></div>
+  </div>
+  <p class="note">The Czech gives Nana a full Genesis-based sermon ending in a prophecy of &quot;a terrible punishment from heaven&quot;. The English has Helena cut her off mid-sentence, so the play&#x27;s main religious voice is reduced to a comic grumble.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>The curse of barrenness and the expulsion from Eden cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">To je trest, to je trest! Hospodin poranil ženský neplodností. ... Z ďábelský pejchy ste se opovážili tvořit jako Pámbů. Bezbožnost je to a rouhání, jako bohové chcete bejt.</blockquote><p class="gloss">“It&#x27;s a punishment! The Lord has struck women with barrenness. ... Out of devilish pride you dared to create like God. It&#x27;s godlessness and blasphemy, you want to be like gods.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">NANA. No more people are being born. That&#x27;s a punishment, that&#x27;s a punishment. / HELENA. Nana! / NANA. (_Standing up_) That&#x27;s the end of the world.</blockquote></div>
+  </div>
+  <p class="note">The &quot;punishment&quot; survives but without its object: neither women&#x27;s barrenness nor the Promethean charge of playing God is spoken. Also cut is Helena&#x27;s retort about &quot;tvému zlému Pánubohu&quot; (&quot;that wicked God of yours&quot;), which a 1923 audience might have found blasphemous.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Helena&#x27;s dream of marriages and children cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist nám postaví dům, všichni se ožení a budou mít děti, a pak-- / Domin: Co pak? / Helena: Pak budeme žít od začátku, Harry.</blockquote><p class="gloss">“Alquist will build us a house, everyone will marry and have children, and then-- / What then? / Then we&#x27;ll live from the beginning, Harry.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Alquist will build us a house, and then we&#x27;ll begin life all over again.</blockquote></div>
+  </div>
+  <p class="note">Helena&#x27;s plan to &quot;begin again&quot; is explicitly about having children. Cutting the clause matches the removal of all procreation material from the scene and leaves &quot;begin life all over again&quot; vague.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Helena made to defend the firm&#x27;s arms trade</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nána: Jakpak by nebyly! Copak neprodáváte pořád tisíce tisíce těch pohanu za vojáky?--Oh, Kriste Pane, to je dopuštění! / Helena: Ne, nečti! Nechci nic vědět!</blockquote><p class="gloss">“Nana: Of course there are! Don&#x27;t you keep selling thousands upon thousands of those heathens as soldiers?--O Lord Christ, what a calamity! / Helena: No, don&#x27;t read! I don&#x27;t want to know anything!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. I suppose it can&#x27;t be helped, Nana. We can&#x27;t know--Domin can&#x27;t know what they&#x27;re to be used for. When an order comes for them he must just send them. / NANA. He shouldn&#x27;t make them.</blockquote></div>
+  </div>
+  <p class="note">In the Czech Helena refuses to hear about it. The English gives her an arms-dealer&#x27;s excuse (&quot;he must just send them&quot;) and gives Nana a blunt moral verdict, so a religious lament becomes an argument about the company&#x27;s responsibility.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Extra war headlines added, the exculpating line cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">&quot;Vyvraždili přes sedm set tisíc lidí patrně na rozkaz velitele. Tento čin, příčící se&quot; Tak vidíš, Náno, to jim poručili lidé!</blockquote><p class="gloss">“&quot;They massacred over seven hundred thousand people, apparently on their commander&#x27;s orders. This act, contrary to&quot; So you see, Nana, people ordered them to do it!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">“Re-bell-ion in Ma-drid a-gainst the gov-ern-ment. Rob-ot in-fant-ry fires on the crowd. Nine thou-sand killed and wounded.”</blockquote></div>
+  </div>
+  <p class="note">Helena&#x27;s point that humans gave the order is cut, and a new Madrid massacre headline is added. The Havre item also gains a sentence about Robot workers, sailors and soldiers issuing &quot;a manifesto to all Robots throughout the world.&quot; The English makes the revolution&#x27;s approach louder and more political than Čapek&#x27;s terse &quot;To nic není.&quot;</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;Get married again?&quot; becomes &quot;marry me&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Proboha, slečno Gloryová, jaképak! Snad se nechcete zase vdát?</blockquote><p class="gloss">“Good heavens, Miss Glory, what sort? Surely you don&#x27;t want to get married again?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Good gracious, Miss Glory. Perhaps she doesn&#x27;t want to marry me.</blockquote></div>
+  </div>
+  <p class="note">In the Czech, Domin jokes about the marriage proposal she got on her first visit (&quot;zase&quot;, &quot;again&quot;). The English turns this into a muddled line about marrying him, and her denial (&quot;She never dreamt of such a thing&quot;) then becomes a denial that she wanted to marry Domin.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Hallemeier&#x27;s mock benediction and the Latin name</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Hallemeier: Uf! Složí své břímě a žehná velkým křížem dveře napravo. Spi, spi! Kdo spí, neví aspoň o ničem. ... Nový druh, můj poslední--Cyclamen Helenae.</blockquote><p class="gloss">“Hallemeier: Phew! Puts down his burden and blesses the door on the right with a big sign of the cross. Sleep, sleep! At least whoever sleeps knows nothing.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HALLEMEIER. (_Putting down his flowers on L.C. table and indicates the door R._) Still asleep? ... A new sort, my latest--Cyclamen Helena.</blockquote></div>
+  </div>
+  <p class="note">The sign of the cross becomes a pointing gesture, another religious gesture removed. The botanical Latin genitive &quot;Helenae&quot; (&quot;of Helena&quot;) is flattened to the plain name.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Name day, flirtation and stage business</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Můj svátek? Ne! Narozeniny? ... Helena: Ale když poprosí mladá, trochu hezká dívka--</blockquote><p class="gloss">“My name day? No! Birthday? ... But if a young, rather pretty girl asks nicely--”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. Well, it&#x27;s not my _birthday_! ... HELENA. But to oblige the young lady who has come a long way.</blockquote></div>
+  </div>
+  <p class="note">The Czech name day (svátek) disappears, and Helena&#x27;s self-mocking flirtation (&quot;a rather pretty girl&quot;) becomes a dull &quot;come a long way&quot;. Meanwhile the acting edition adds business such as the comic &quot;If you want to turn _around_, then turn around, but I shan&#x27;t fasten you up&quot;, &quot;She watches him suspiciously&quot;, and Domin&#x27;s new stalling line &quot;Impossible, Helena! That is, at this particular moment--&quot;. Nana&#x27;s broad Moravian-colloquial dialect (&quot;vošklivím&quot;, &quot;Šmarjájozef&quot;) becomes plain standard English.</p>
+</article>
+</section>
+<section class="sec" id="s05">
+  <div class="sec-head"><span class="num">05</span><div><h2>Section 05: Dějství první part 2/3 ↔ English Act Two</h2><p class="cov">Czech from &quot;(Pauza)&quot; / Helena returning with Alquist &quot;jako zedník&quot; to Helena kneeling at the fire with the yellowed papers; English from &quot;Oh, Mr. Alquist. … come just as you are&quot; to &quot;Is it burning, Nana? All this has got to be burned.&quot;</p></div></div>
+  <p class="overall">The acting edition roughly halves this stretch. It cuts nearly all of its philosophy and lyricism: Alquist&#x27;s bricklaying-as-therapy, his &quot;Sodom&quot; tirade on why women stopped bearing children, the &quot;hluchý květ&quot; (barren flower) motif, and Gall&#x27;s lament over the Robot Helena. In their place it adds plot machinery and stage business: a melodramatic fear test on Radius, an exposition speech about universities, governments and shareholders, and a pointer to Rossum&#x27;s manuscript in the strong box, so that the burning that follows has an obvious motive.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The &quot;barren flower&quot; motif is cut entirely</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: (u květin Hallemeierových) Galle, jsou tyhle květiny také hluché? Dr. Gall: (prohlíží je) Ovšem, jsou to květy neplodné. Rozumíte, jsou kulturní, uměle rychlené--</blockquote><p class="gloss">“Helena: (by Hallemeier&#x27;s flowers) Gall, are these flowers barren too? Gall: (examining them) Of course, they are sterile flowers. You see, they&#x27;re cultivated, artificially forced--”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Čapek builds Helena&#x27;s decision to burn the manuscript on this image, which runs from Alquist&#x27;s &quot;Opadá jako hluchý květ&quot; through her soliloquy to her plucking petals and whispering &quot;tedy ano!&quot; (&quot;so, yes!&quot;). English removes every instance, including both soliloquies, so her &quot;sudden resolution&quot; comes without the poetic logic that drives it.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Alquist&#x27;s &quot;Dominova Sodoma&quot; tirade on sterility removed</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Proč ženy přestaly rodit? Protože se celý svět stal Dominovou Sodomou! … všechno je jediná bláznivá, hovadská orgie! … Heleno, mužům, kteří jsou zbyteční, nebudou ženy rodit!</blockquote><p class="gloss">“Why have women stopped giving birth? Because the whole world has become Domin&#x27;s Sodom! … everything is one mad, bestial orgy! … Helena, women will not bear children to men who are superfluous!”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Alquist&#x27;s sharpest speech, a sexual and moral diagnosis that names Domin as the author of a &quot;Sodom&quot;, is gone, along with Helena&#x27;s whispered &quot;Proč přestaly ženy mít děti?&quot; to him. The English hands the question of the birthrate to Gall alone and gives it a clinical, economic answer, which takes most of the play&#x27;s sexual and religious heat out of the scene.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Gall&#x27;s lament for the Robot Helena drastically trimmed</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">nikdy tedy tvé tělo neoživne, nebudeš milenkou, nebudeš matkou; tyhle dokonalé ruce si nebudou hrát se zrozeňátkem … do těch strojů tady, které rodí Roboty a zabíjejí ženství</blockquote><p class="gloss">“so your body will never come alive, you will not be a lover, you will not be a mother; these perfect hands will not play with a newborn … at these machines here, which give birth to Robots and kill womanhood”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Sometimes I think to myself: “If you were to wake up only for a moment you would _kill_ me for having _made_ you.”</blockquote></div>
+  </div>
+  <p class="note">The English keeps only the &quot;you would kill me&quot; kernel. It drops the erotic and maternal language (&quot;lover&quot;, &quot;mother&quot;, &quot;kills womanhood&quot;) and Helena&#x27;s echo &quot;Nešťastná Heleno!&quot;, and adds &quot;I watch and wait for a miracle&quot;, a phrase that belongs to Alquist in the Czech.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Added: Gall&#x27;s stamping-mill fear test on Radius</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Dr. Gall: Jen tak. (bodne Radia do ruky, jež prudce ucukne) Pomalu, hochu. Můžete jít.</blockquote><p class="gloss">“Gall: Just because. (pricks Radius&#x27;s hand, which jerks back) Easy, boy. You can go.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Radius, you are going into the stamping mill, do you understand? There they’ll kill you-- (_Takes glasses off and cleans them_) --and grind you to powder. … That’s terribly painful. It will make you scream aloud.</blockquote></div>
+  </div>
+  <p class="note">Čapek has a quick pupil-and-pinprick check. The acting edition invents a cruel lie-detector scene: Gall listens to Radius&#x27;s heart while threatening him with death, then &quot;relents&quot;. It adds the line &quot;I don’t believe the rascal is a Robot _at all_ any longer&quot;, which makes the Robots&#x27; humanity explicit and dramatic where Čapek left it ambiguous (&quot;Má něco ošklivého&quot;).</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Added: exposition on universities, governments, shareholders and the manuscript</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Dr. Gall: Odpusťte, Domin má své ideje. Lidem, kteří mají ideje, by se neměl dávat vliv na věci tohoto světa.</blockquote><p class="gloss">“Gall: Forgive me, Domin has his ideas. People who have ideas shouldn&#x27;t be given influence over the affairs of this world.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">All the universities are sending in long petitions to restrict their production. … But the R. U. R. shareholders, of course, won’t hear of it. All the governments … clamoring for an increase in production, to raise the standards of their armies.</blockquote></div>
+  </div>
+  <p class="note">Gall&#x27;s aphorism about dangerous idealists is replaced with a block of public-affairs exposition (petitions, shareholders, armies) and an added cue, &quot;we still have old Rossum’s manuscript … In that strong box&quot;, which sets up the burning for the audience. The politics become institutional and explicit, and the blame moves from Domin&#x27;s &quot;ideas&quot; onto capital and militarism.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Alquist&#x27;s prayer: &quot;thank you for tiring me&quot; becomes &quot;for giving me toil&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">&quot;Pane Bože, děkuji ti, žes mne unavil. … zadrž před zkázou pokolení lidské; nedopusť, aby vzali škody na duši a těle; zbav nás Robotů, a chraň paní Helenu, amen&quot;.</blockquote><p class="gloss">“&quot;Lord God, I thank you that you have made me tired. … hold back the human race from destruction; do not let them suffer harm in soul and body; rid us of Robots, and protect Mrs. Helena, amen.&quot;”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">“Oh, Lord, I thank thee for having given me toil; … let them not suffer harm in soul or body; deliver us from the Robots, and protect Helena. Amen.”</blockquote></div>
+  </div>
+  <p class="note">The odd, bodily gratitude for fatigue is normalised into the stock pious formula &quot;given me toil&quot;. The petition &quot;hold back the human race from destruction&quot; is silently dropped, and &quot;paní Helenu&quot; loses its honorific.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Alquist the mason: from hobby-therapy to &quot;experimenting with cement&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Svléknu kabát šéfa staveb a vylezu na lešení-- … Vy nevíte, jak to dělá dlaním dobře, potěžkat cihlu, položit a přiklepnout--</blockquote><p class="gloss">“I take off the coat of the head of construction and climb up onto the scaffolding-- … You don&#x27;t know how good it feels to the palms, to weigh a brick, lay it and tap it down--”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">My hands are soiled. I’ve been _experimenting_ with that new cement.</blockquote></div>
+  </div>
+  <p class="note">The whole exchange about laying bricks for peace of mind (&quot;Je to lepší než přemýšlet&quot;, &quot;Pro pokoj duše&quot;) is cut, along with Helena&#x27;s &quot;chtěla bych být maličká&quot; (&quot;I&#x27;d like to be little&quot;, so his rough hands could stroke her face). The added cement line turns his masonry into technical work, which loses the anti-progress, almost monastic sense of manual labour that the Czech establishes.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Endings softened and given ironic stage business</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Pro pokoj duše... to může stačit. … Pak budu klást cihly, modlit se a čekat na zázrak. … Neplodnost, paní Heleno, se stává poslední vymožeností lidské rasy.</blockquote><p class="gloss">“For peace of mind... it may be enough. … Then I&#x27;ll lay bricks, pray and wait for a miracle. … Sterility, Mrs. Helena, is becoming the latest achievement of the human race.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. (_Ironically_) It _has_ to be.</blockquote></div>
+  </div>
+  <p class="note">Alquist&#x27;s sincere, quiet resignation gets an added &quot;(Ironically)&quot; direction, and his epigram on sterility as humanity&#x27;s &quot;last achievement&quot; is cut. He exits with a pat on the shoulder and &quot;Goodbye&quot; instead of his line about dressing up as head of construction &quot;na vaši počest&quot; (in your honour) for the eleven o&#x27;clock gathering.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Nana&#x27;s Czech vernacular flattened</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nána: Ten pominutej? Eště ho nevodvezli. … Nána: Bodejť! Spíš zteklýho psa.</blockquote><p class="gloss">“That loony one? They ain&#x27;t carted him off yet. … Nana: Like heck! I&#x27;d sooner fetch a rabid dog.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">NANA. (_L.C._) The one who went mad? They haven’t come for him yet. … NANA. What?</blockquote></div>
+  </div>
+  <p class="note">Nána&#x27;s colloquial forms (&quot;pominutej&quot;, &quot;vodvezli&quot;, &quot;de&quot;, &quot;Dyť vona&quot;) and her retort that she&#x27;d rather fetch a mad dog become neutral standard English and a bare &quot;What?&quot;. Her fireside monologue survives, but without its dialect and the pauses Čapek marks.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Radius: &quot;Byl byste jako my&quot; and the unease of the note cut; a threat added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Nikdo by vám neporoučel. Byl byste jako my. Radius: Chci být pánem jiných.</blockquote><p class="gloss">“Helena: No one would give you orders. You would be like us. Radius: I want to be master over others.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">RADIUS. (_Turns his head uneasily_) What are you going to do? What are you going to do? (_Starts for her._)</blockquote></div>
+  </div>
+  <p class="note">Helena&#x27;s offer of equality (&quot;you&#x27;d be like us&quot;) is cut. The acting edition adds a menacing moment in which Radius lunges at her while she writes the note, and choreographs his &quot;pride&quot; with directions (&quot;Head up&quot;, &quot;Opens and closes fists&quot;). The result is a more conventional stage-villain Robot.</p>
+</article>
+</section>
+<section class="sec" id="s06">
+  <div class="sec-head"><span class="num">06</span><div><h2>Section 06: Dějství první part 3/3 ↔ English Act Two</h2><p class="cov">Czech from &quot;Nána: (vstane) Co je to?&quot; (burning of Rossum&#x27;s manuscript) to &quot;OPONA&quot; after &quot;Poplach Robotů. Útok.&quot;; English Act Two from NANA &quot;What&#x27;s that?&quot; through the final *Curtain*.</p></div></div>
+  <p class="overall">The English keeps the plot beats and most of the dialogue but trims Čapek&#x27;s verbal play (the drinking song, Nana&#x27;s proverbs, Hallemeier&#x27;s tipsy riffs) and cuts Alquist from the scene entirely. In their place it adds expository and ironic lines (the Robots&#x27; seizure of arms and radio, Gall&#x27;s boast that the Robots could never win, Domin&#x27;s &quot;So humanity will be safe&quot;) and much more stage business, ending on a staged tableau with steel shutters and Helena in Domin&#x27;s arms.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Alquist written out of the scene, &quot;Dokonáno&quot; lost</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(Vejde Hallemeier, Gall, Alquist, všichni v redingotech s vysokými řády en miniature a na stuhách. Za nimi Domin.) ... Alquist: Dokonáno.</blockquote><p class="gloss">“(Enter Hallemeier, Gall, Alquist, all in frock coats with high orders in miniature on ribbons. Domin behind them.) ... Alquist: It is finished.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(_Enter HALLEMEIER and DR. GALL._) ... FABRY. Evidently.</blockquote></div>
+  </div>
+  <p class="note">Alquist never enters in the English, so all his lines go: the refused drink, &quot;Jste bledá, paní Heleno,&quot; and above all &quot;Dokonáno,&quot; the Czech Bible&#x27;s wording of Christ&#x27;s last words (John 19:30). The scene loses its one sober, religious voice, and the comment that turns the manifesto into an apocalypse. The frock coats and decorations go too.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Gall&#x27;s boast that the Robots could never win (added)</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Dr. Gall: Haha, paní Heleno, to byla poslední karta.</blockquote><p class="gloss">“Ha ha, Mrs. Helena, that was the last card.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DR. GALL. (_Rises_) Madame Domin, that was our trump card. I never had the least fear the Robots would win. How could they against people like us?</blockquote></div>
+  </div>
+  <p class="note">The English adds a line of hubris just before the manifesto arrives, which makes the irony obvious for the audience. Turning &quot;poslední karta&quot; (last card, a last resort) into &quot;trump card&quot; also makes it sound like a winning hand, when the manuscript was meant only as a fallback.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>National Robots: Italians and Chinese become Czechoslovaks, and a moral is added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Hallemeier: Hrome, budeme dělat černochy Roboty a Švédy Roboty a Taliány Roboty a Číňany Roboty, a pak ať jim někdo vtluče do kokosů organizaci, bratrství, (škytá) hup, pardon</blockquote><p class="gloss">“Thunder, we&#x27;ll make Negro Robots and Swede Robots and Eye-tie Robots and Chinese Robots, and then let someone knock organisation, brotherhood into their coconuts, (hiccups) hup, pardon”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HALLEMEIER. (_To each of them_) By Jove, we&#x27;ll make Negro Robots and Swedish Robots and Czechoslovakian Robots, and then--</blockquote></div>
+  </div>
+  <p class="note">The English swaps Čapek&#x27;s Italians and Chinese for &quot;Czechoslovakian&quot;, a nod to the author&#x27;s nationality, and drops the punchline about knocking &quot;brotherhood&quot; into their skulls along with the drunken hiccup. Domin&#x27;s speech also gains a moral the Czech leaves unspoken: &quot;_So humanity will be safe._&quot; Hallemeier then gets an added toast &quot;to the hundred new factories.&quot;</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Domin&#x27;s &quot;hundred years for the new man&quot; turned into a doom deadline</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Heleno, jen sto let ještě udržet lidstvo u vesla za každou cenu! Jen sto let mu nechat, aby dorostlo, aby dosáhlo, čeho teď konečně může--Chci sto let pro nového člověka!</blockquote><p class="gloss">“Helena, just keep humanity at the helm (lit. &quot;at the oar&quot;) a hundred years more, at any price! Just give it a hundred years to grow up, to reach what it finally can now. I want a hundred years for the new man!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DOMIN. Helena, mankind can only keep things going for another hundred years at the outside. For a hundred years man _must_ be allowed to develop and achieve the most he can.</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s Domin is making a utopian demand at any cost (&quot;za každou cenu&quot;), to buy time for the &quot;new man.&quot; The English reads it as a forecast that mankind has a hundred years left &quot;at the outside&quot;, which inverts the meaning. It also cuts the utopian slogan &quot;nového člověka&quot;.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>&quot;National&quot; and &quot;International&quot; added to the Robot organisation</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">&quot;V Havru se ustavila první organizace Robotů&quot; ... &quot;My, první organizace Rossumových Univerzálních Robotů, prohlašujeme člověka nepřítelem&quot;</blockquote><p class="gloss">“&quot;At Havre the first organisation of Robots has been founded&quot; ... &quot;We, the first organisation of Rossum&#x27;s Universal Robots, declare man an enemy&quot;”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">&quot;The first National Robot organization has been founded at Havre&quot; ... &quot;We, the first International organization of Rossum&#x27;s Universal Robots, proclaim man our enemy&quot;</blockquote></div>
+  </div>
+  <p class="note">The Czech has just &quot;první organizace&quot; both times. The English adds &quot;National&quot; and then &quot;International&quot;, loaded political words in 1923. These echo Domin&#x27;s &quot;National Robots&quot; and hint at the Communist International, which sharpens the political reading of the manifesto.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Added exposition: the Robots seize the arms and the radio</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Ještě nepřišly zprávy? / Domin: Ne. Zatím víme jen tohle, ale to stačí, víš?</blockquote><p class="gloss">“Helena: Has no news come yet? / Domin: No. So far we know only this, but it&#x27;s enough, you know?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. What did they do? / DOMIN. They got possession of all firearms, telegraphs, radio stations, railways and ships. / HALLEMEIER. And don&#x27;t forget that these rascals outnumbered us by at least a thousand to one.</blockquote></div>
+  </div>
+  <p class="note">In the Czech the men know almost nothing, and the danger comes from not knowing. The English hands the audience concrete facts about the revolt and adds &quot;radio&quot; in several places (Czech has only &quot;telegrafy&quot; and &quot;kabel&quot;). It also adds a later exchange in which Domin wonders how Europe &quot;tackled this business&quot; and Hallemeier says &quot;To think we weren&#x27;t in it.&quot;</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Nana&#x27;s oaths and proverb neutralised</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nána: Řekla bych--Spalte to. Moc velký peníze sou špatný pes. ... Jezus, nespalte se! ... Ježíši Kriste, co ste to spálila! ... Pro živýho boha, Heleno!</blockquote><p class="gloss">“I&#x27;d say: burn it. Too much money is a bad dog. ... Jesus, don&#x27;t burn yourself! ... Jesus Christ, what have you burned! ... For the living God, Helena!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">NANA. Good gracious, what is it you&#x27;ve burned? ... NANA. Good gracious, what a place!</blockquote></div>
+  </div>
+  <p class="note">Nana&#x27;s dialect proverb (great wealth is a &quot;bad dog&quot;) and three religious oaths are cut or turned into a mild &quot;Good gracious&quot;. Her piety is kept only in the speech about inventions offending the Lord. The English also cuts Helena&#x27;s line &quot;Všechno musí shořet!&quot; (&quot;Everything must burn!&quot;).</p>
+</article><article class="move" data-type="wordplay/names">
+  <header><span class="tag">wordplay/names</span><h3>The drinking song loses its rhyme and voice parts</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(Točí se s nimi dokolečka a spustí basem) Už je po ní! ... Dr. Gall: (baryton) Už je po ní! / Domin: (tenor) Už je po ní! / Hallemeier: Už nás nikdy nedohoní</blockquote><p class="gloss">“(Whirls round with them and strikes up in a bass) It&#x27;s all over with her! ... (baritone) ... (tenor) ... She&#x27;ll never catch up with us!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HALLEMEIER. (_Crosses to DOMIN. Embracing DOMIN_) It&#x27;s all over now. It&#x27;s all over now. (_They dance around DR. GALL in a circle._) It&#x27;s all over now.</blockquote></div>
+  </div>
+  <p class="note">Čapek writes a three-part song (bass, baritone, tenor) with a rhyme (&quot;po ní / nedohoní&quot;), and the feminine &quot;ní&quot; refers to &quot;revolta&quot;. The English flattens it to a repeated chant. Other festive wordplay is cut too: &quot;Den jako poupě, den jako svátek, den jako pěkná holka&quot;, Gall&#x27;s &quot;Třeba vitriol&quot;, and Busman&#x27;s &quot;už máte nadělení?&quot; (got your Christmas presents?), which becomes &quot;the glad news&quot;. Whisky also becomes Brandy.</p>
+</article><article class="move" data-type="mistranslation">
+  <header><span class="tag">mistranslation</span><h3>&quot;No power&quot; becomes &quot;static in the air&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Busman: Fabry, drahoušku, nedělejte to. Jsme bez proudu.</blockquote><p class="gloss">“Fabry, darling, don&#x27;t do that. We&#x27;re without current (the power is cut).”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">BUSMAN. No use, my boy. They&#x27;ve charged the air with static.</blockquote></div>
+  </div>
+  <p class="note">The Czech means simply that the power is off. The English invents a pseudo-scientific sabotage that the Czech doesn&#x27;t have. Busman&#x27;s affectionate diminutives (&quot;drahoušku&quot;, &quot;holenku&quot;, &quot;lidičky&quot;) become a generic &quot;my boy&quot;.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Acting-edition business: a lying Fabry, the ashes, the final tableau</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Fabry: (vyndá z kapsy potištěný list) Přečtěte si tohle, Domine. ... Domin: Poplach Robotů. Útok. / OPONA</blockquote><p class="gloss">“Fabry: (takes a printed sheet from his pocket) Read this, Domin. ... Domin: The Robots&#x27; alarm. Attack. / CURTAIN”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">FABRY. (_Falsely_) Well, everything is all right--comparatively. ... (_HELENA clings to DOMIN. FABRY and GALL close the steel shutters on window C. ... The Curtain falls quickly with HELENA in DOMIN&#x27;S arms._)</blockquote></div>
+  </div>
+  <p class="note">The English adds a whole spoken lie for Fabry, a &quot;pink handbill&quot;, a cue where Helena &quot;sees the ashes&quot; at the fireplace, mob voices, and a melodramatic curtain with steel shutters and an embrace. Čapek&#x27;s bare &quot;OPONA&quot; becomes a staged tableau. Small Czech touches go: Busman&#x27;s &quot;Boží poledne&quot; (&quot;God&#x27;s noon&quot;) becomes &quot;Noon?&quot;, and Helena&#x27;s &quot;Harry, pamatuješ se? Ted právě je tomu deset let&quot; is cut.</p>
+</article>
+</section>
+<section class="sec" id="s07">
+  <div class="sec-head"><span class="num">07</span><div><h2>Section 07: Dějství druhé part 1/2 ↔ English Act Three</h2><p class="cov">Czech from the act&#x27;s opening (&quot;Nebesa, to jich přibylo!&quot;) to Busman&#x27;s &quot;takový starý, žlutý, špinavý papír--&quot;; English Act Three from &quot;Any more of them?&quot; to &quot;a dirty old yellow scrap of paper--&quot;.</p></div></div>
+  <p class="overall">The English keeps the scene&#x27;s skeleton but strips out its big set-speeches (Alquist&#x27;s indictment of science, Busman&#x27;s avalanche-of-demand philosophy, Helena&#x27;s &quot;Nána is the voice of the people&quot;) and the men&#x27;s colloquial banter. In their place it adds stage business, melodramatic ghost lines for Domin and a love-scene for Domin and Helena. Several small additions and reversals shift the politics toward a plainer &quot;the Robots are to blame&quot; reading.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Alquist&#x27;s indictment of science cut, and Hallemeier&#x27;s answer reversed</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Hallemeier: Hlouposti. Nikdo není vinen. Zkrátka Roboti--Inu, Roboti se nějak změnili. Copak někdo může za Roboty? ... Alquist: Já žaluju vědu! žaluju techniku! Domina! sebe! nás všechny!</blockquote><p class="gloss">“Nonsense. Nobody is to blame. The Robots just--well, the Robots somehow changed. Can anyone help what the Robots do? ... I accuse science! I accuse technology! Domin! myself! all of us!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HALLEMEIER. Nobody is to blame except the Robots. / ALQUIST. No, it is _we_ are to blame. You, Domin, myself--all of us.</blockquote></div>
+  </div>
+  <p class="note">The English drops Alquist&#x27;s &quot;rivulets of blood on every threshold&quot; vision, his indictment of science and technology, and the line about a burial mound of human bones bigger than any Genghis Khan built. It also flips Hallemeier&#x27;s &quot;nobody is to blame&quot; into &quot;nobody except the Robots&quot;. Čapek&#x27;s charge against technical progress itself shrinks to a vaguer &quot;selfish ends&quot;.</p>
+</article><article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>Domin&#x27;s dream gains &quot;mechanical slaves&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Chtěl jsem, abychom z celého lidstva udělali aristokracii světa. Neomezené, svobodné ~ svrchované lidi. A třeba víc než lidi.</blockquote><p class="gloss">“I wanted us to make the whole of mankind into an aristocracy of the world. Unlimited, free and sovereign people. And perhaps more than people.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">I wanted to turn the whole of mankind into an aristocracy of the world. An aristocracy nourished by millions of mechanical slaves. Unrestricted, free and consummated in man. And maybe more than man.</blockquote></div>
+  </div>
+  <p class="note">The added sentence states outright the slave-owning logic that Čapek leaves implicit, which hardens Domin&#x27;s utopia. &quot;Svrchované&quot; (sovereign, supreme) also becomes the muddled &quot;consummated in man&quot;.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Nána as &quot;the voice of the people&quot; and the stoning line cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Nána je hlas lidu. Z Nány mluví tisíc let a z vás všech jenom dnešek. ... Udělej kameny lidmi, a ukamenují nás!</blockquote><p class="gloss">“Nana is the voice of the people. A thousand years speak through Nana, and through all of you only today. ... Make stones into people and they&#x27;ll stone us!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DOMIN. Nobody can hate man more than man.</blockquote></div>
+  </div>
+  <p class="note">Both pointed aphorisms disappear: Helena&#x27;s defence of folk wisdom against the engineers, and Domin&#x27;s grim &quot;make stones human and they will stone us&quot;. Only the bare &quot;Nobody can hate man more than man&quot; is left, so the exchange loses its bite on both sides.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>&quot;The dead [judge] the dead&quot; replaced by ghost melodrama</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Mrtví mrtvého.</blockquote><p class="gloss">“The dead [judging] the dead.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DOMIN. Perhaps we&#x27;re only phantoms. / FABRY. Stop, Harry. We haven&#x27;t much time, Doctor Gall. / DOMIN. Fabry, Fabry, how your forehead bleeds where the shot pierced it.</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s terse three-word quip on Gall&#x27;s demand to be judged becomes a run of invented spectral lines and an interruption by Fabry. The adaptation also has Domin hand out everyone&#x27;s death in one speech (&quot;shot in the head&quot; is added) instead of Čapek&#x27;s one-word answers to each man&#x27;s question.</p>
+</article><article class="move" data-type="reassignment">
+  <header><span class="tag">reassignment</span><h3>Domin and Helena: love-scene added, reproach cut, line reassigned</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Promiň, Gall měl své povinnosti. ... Domin: Byla to velká--- lehkomyslnost, Heleno.</blockquote><p class="gloss">“Excuse me, Gall had his duties. ... It was a great--recklessness, Helena.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DOMIN. No, no, Helena, don&#x27;t leave me now. You are _life_ itself. / HELENA. No, dear, I won&#x27;t leave you. ... FABRY. Excuse me. Gall was under certain obligations.</blockquote></div>
+  </div>
+  <p class="note">Domin&#x27;s cool line about Gall&#x27;s duties goes to Fabry, and his rebuke of Helena&#x27;s &quot;recklessness&quot; is cut. Invented endearments and stage directions (&quot;crushes her in his arms&quot;, &quot;takes her in his arms&quot;) make Domin a romantic lead rather than a manager reproaching his wife.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Busman&#x27;s &quot;avalanche of demand&quot; and &quot;Ecce homo&quot; speeches cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">historii nedělají veliké sny, ale maličké potřeby všech počestných, mírně zlodějských a sobeckých lidiček ... aby se tím dal člověk vycpat pro muzeum Vesmíru, s nápisem Ejhle, člověk.</blockquote><p class="gloss">“history isn&#x27;t made by great dreams but by the tiny needs of all the honest, mildly thieving and selfish little people ... so that man can be stuffed for the museum of the Universe, labelled &quot;Behold, the man&quot;.”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">The English keeps only &quot;It&#x27;s the demand that controls the output&quot;. It loses Busman&#x27;s image of the avalanche of orders, his own &quot;Busmanish dream&quot; of a new world economy, and the bitter Ecce homo. The cynical financier&#x27;s one philosophical speech is gone, and filler lines take its place (&quot;Oh, stop it, Busman.&quot; / &quot;Seriously, Harry, I think we might try it.&quot;).</p>
+</article><article class="move" data-type="wordplay/names">
+  <header><span class="tag">wordplay/names</span><h3>Hallemeier&#x27;s &quot;twilight of men&quot; and new hedonism cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Ten soumrak lidí, u všech čertů! Mládenci, ze mne se stává požitkář.</blockquote><p class="gloss">“The twilight of men, damn it all! Lads, I&#x27;m turning into a sensualist [pleasure-seeker].”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">&quot;Soumrak lidí&quot; plays on Götterdämmerung (soumrak bohů). Along with Hallemeier&#x27;s remark that music &quot;spiritualises, refines&quot; a man, it goes, leaving only &quot;What a fine thing music is&quot;. His &quot;člověk se nesmí dát!&quot; (a man mustn&#x27;t give in) becomes the defiant &quot;Who says we must give in?&quot;</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Helena&#x27;s piano gets a named piece; Alquist made pious</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Co to hraje paní Helena? ... Alquist: Ah, ještě cvičí?</blockquote><p class="gloss">“What is Mrs Helena playing? ... Ah, she&#x27;s still practising?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. Thank God Madame Helena can still play. ... (_HELENA is playing Rachmaninoff&#x27;s Elegie off L.1._)</blockquote></div>
+  </div>
+  <p class="note">Čapek leaves the music unnamed (&quot;practising something new&quot;), and Alquist&#x27;s wry wonder that she is still practising at the end of the world becomes a pious &quot;Thank God&quot;. The acting edition specifies Rachmaninoff&#x27;s Elegie and a &quot;MUSIC stops&quot; cue, typical of its production-ready directions.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Ledger sums, voltage and &quot;trained for war&quot; quietly changed</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Roboti jsou na vojnu cvičeni. ... Pustili jsme do mříží dvacet set volt ... Tři sta šestnáct miliónů.</blockquote><p class="gloss">“The Robots are trained for war. ... We&#x27;ve put two thousand volts into the railings ... Three hundred and sixteen million.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">The Robots are practised marksmen. ... I can put twelve hundred volts into that railing. ... Three hundred sixty million.</blockquote></div>
+  </div>
+  <p class="note">Busman&#x27;s running total changes throughout (316 / 370 / 452 / 520 million become 360 / 420 / 520 million), and his cry &quot;half a milliard!&quot; is cut. 2,000 volts becomes 1,200. &quot;Trained for war&quot; narrows to &quot;marksmen&quot;. None of these changes serves a clear purpose, which suggests carelessness or a misreading.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Gall&#x27;s relief &quot;at least they&#x27;re unarmed&quot; flattened; Domin&#x27;s panic added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Dr. Gall: Nebyl by to tak děsný pohled. (odvrátí se od okna) Ještěže nejsou ozbrojeni! ... Dr. Gall: Jenom když ne zbraně.</blockquote><p class="gloss">“It wouldn&#x27;t be such a dreadful sight. (turns from window) Thank goodness they aren&#x27;t armed! ... As long as it isn&#x27;t weapons.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">DR. GALL. They aren&#x27;t armed. / DOMIN. (_Puzzled_) We couldn&#x27;t hold our own for five minutes. Man alive, they overwhelm us like an avalanche.</blockquote></div>
+  </div>
+  <p class="note">Gall&#x27;s anxious hopes become flat statements (&quot;Not firearms&quot;), which reads as if Gall knows something. Domin gets new lines of panic (&quot;snap like a match&quot;, &quot;in a vise&quot;) that are not in Čapek&#x27;s opening.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Busman&#x27;s familiar address and short sight dropped</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Hlavní knihy, dětičky. ... Ne, jenom velikou modrou plochu, jako když mák rozseje. ... Ah tak. Škoda, že na ně nevidím.</blockquote><p class="gloss">“The ledgers, little children. ... No, just a great blue expanse, as if poppies had been sown. ... Oh, I see. A pity I can&#x27;t see them.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">The ledger, my boy. ... Nothing but blue--blue everywhere.</blockquote></div>
+  </div>
+  <p class="note">Busman&#x27;s avuncular diminutives (dětičky, holenku, lidičky, &quot;chlapík Busman&quot;) are flattened to &quot;my boy&quot; or dropped. So are the poppy-field simile and the hint that he is short-sighted. In return, &quot;Páni Roboti, vaše blahorodí&quot; is neatly rendered as the mock-formal &quot;Worthy and Worshipful Robots&quot;.</p>
+</article>
+</section>
+<section class="sec" id="s08">
+  <div class="sec-head"><span class="num">08</span><div><h2>Section 08: Dějství druhé part 2/2 ↔ English Act Three</h2><p class="cov">Czech from &quot;Domlela [Domin]: Rossumův rukopis?&quot; to the curtain (&quot;Roboti, do práce! Marš! OPONA&quot;); English Act Three from &quot;DOMIN. Rossum&#x27;s manuscript?&quot; to the final &quot;*Curtain*&quot;.</p></div></div>
+  <p class="overall">The acting edition keeps the plot beats (the vote, the burnt manuscript, Busman&#x27;s death, the last stand, Radius&#x27;s proclamation) but cuts the act&#x27;s lyrical and metaphysical speeches almost entirely, above all the lamp litany, Nana&#x27;s Judgement Day, and Radius&#x27;s will-to-power coda. In their place it adds explanatory or theatrical material: a Busman sabotage plot, a Radius &quot;gratitude&quot; exchange, and a march to the footlights. Religion goes, and so does most of the play&#x27;s large claim about humanity&#x27;s future.</p>
+  <article class="move" data-type="politics/religion">
+  <header><span class="tag">politics/religion</span><h3>The lamp litany secularised into &quot;Man&#x27;s power&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Fabry: (rozsvítí žárovku na krbu) Sviť, hromničko lidstva! ... Alquist: Věčná lampo boží, ohnivý voze, svatá svíce víry, modli se! Oltáři obětní--</blockquote><p class="gloss">“Fabry: (lights the bulb on the fireplace) Shine, little death-candle of mankind! ... Alquist: Eternal lamp of God, fiery chariot, holy candle of faith, pray! Sacrificial altar--”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">FABRY. (_Facing the lamp_) From man&#x27;s thought and man&#x27;s power came this light, our last hope. ... ALQUIST. (_Facing lamp_) Man&#x27;s power.</blockquote></div>
+  </div>
+  <p class="note">Čapek wrote a six-voice litany. &quot;Hromnička&quot; is the blessed Candlemas candle lit for the dying, and each man and Helena hails the lamp in his own idiom (science, faith, the cave-fire, the torch, the family&#x27;s evening lamp). The English cuts Gall&#x27;s cave-fire, Helena&#x27;s &quot;Večerní lampa rodiny. Děti, děti, musíte už spát&quot; and the death-candle image. It makes the devout Alquist echo a humanist slogan, &quot;Man&#x27;s power&quot;, the opposite of his speech.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Busman&#x27;s double-cross scheme added (and the ship named)</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Domin: Busmane, žádný podvod! / Busman: (vyskočí) Nesmysl! V zájmu lidstva je--</blockquote><p class="gloss">“Domin: Busman, no cheating! / Busman: (jumps up) Nonsense! In the interest of humanity it is--”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">When we&#x27;re on board the _Ultimus_ I&#x27;ll stop up my ears with cotton wool, lie down somewhere in the hold, and you&#x27;ll train the guns on the factory and blow it to smithereens, and _with_ it Rossum&#x27;s secret.</blockquote></div>
+  </div>
+  <p class="note">The English adds a whole plan to blow up the factory once they are aboard, names the ship (Ultimus does not appear in this Czech text), and gives Fabry a &quot;No!&quot; and Domin &quot;Busman, you&#x27;re no--gentleman&quot;. The insertion gives Busman&#x27;s later &quot;I may not be a gentleman&quot; (Czech &quot;Já nejsem džentlmen&quot;) an antecedent. It may come from a different Czech edition rather than from Playfair.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>The dilemma reframed as &quot;enslaving mankind&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Máme prodat výrobu a zachránit lidské duše?, nebo máme ji zničit a--a--a nás všechny s sebou?</blockquote><p class="gloss">“Are we to sell the production and save human souls?, or are we to destroy it and--and--and all of us with it?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Are we to sell the secret? And save that many souls at the risk of enslaving mankind--</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s choice is between selling and destroying everyone, themselves included. The English swaps the self-destruction for a political stake, &quot;enslaving mankind&quot;, that the Czech states only later and more grandly (&quot;kdo bude mít v rukou výrobu, bude pánem světa&quot;). The escalating crescendo that follows (&quot;Nikdy už lidstvo nebude s Roboty hotovo... Konec dějin lidstva, konec civilizace&quot;, each line answered by a shouted &quot;Prodejte!&quot;) is cut.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;Barren flower&quot; and Nana&#x27;s &quot;punishment&quot; replaced by an economic explanation</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">To... to, že se lidé stali hluchým květem! ... Nána říkala, že to je trest--Všichni, všichni říkali, že se nemohou rodit lidé, protože se dělá tolik Robotů</blockquote><p class="gloss">“That... that people had become a barren flower! ... Nana said it is a punishment--Everyone, everyone said people can&#x27;t be born because so many Robots are being made”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">That children had stopped being born. Because human beings were not needed to do the work of the world. That&#x27;s why--</blockquote></div>
+  </div>
+  <p class="note">The botanical metaphor (&quot;hluchý květ&quot;, a flower that sets no fruit) and Nana&#x27;s providential reading are both dropped for a rationalised, labour-market cause. Domin&#x27;s bitter self-indictment &quot;My jsme to myslili... příliš dobře, my lidé&quot; (We meant it... too well, we humans) becomes the conciliatory &quot;Well, perhaps in your own way you are right.&quot; The relay of speeches that follows, on the Robots dying out in twenty years and humanity restarting from &quot;a few savages&quot;, is cut too.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Fabry&#x27;s utopia: &quot;a few years&quot; becomes &quot;a few hundred years&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">A bůh ví, já věřím, že by za pár let zas mohlo dobývat světa. ... že zplodí bezpočtu hrdin, kteří ponesou svou hořící duši v čele lidí ... znovu snít o dobytí planet a sluncí.</blockquote><p class="gloss">“And God knows, I believe that in a few years it could conquer the world again. ... that it will beget countless heroes who will carry their burning soul at the head of men ... dream again of conquering planets and suns.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">Why, in a few hundred years we could conquer the world again.</blockquote></div>
+  </div>
+  <p class="note">The timescale is multiplied by a hundred. Fabry&#x27;s heroic, cosmic vision (heroes, planets, suns) is cut, along with Busman&#x27;s Old Testament pastoral wish (&quot;starozákonně, po pastýřsku&quot;). Busman&#x27;s line becomes the English idiom &quot;That suits me right down to the ground.&quot;</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Radius spared: gratitude exchange added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Fabry: (skloní revolver) Budiž. / Hallemeier: (hrozí pěstí) Ty pacholku!</blockquote><p class="gloss">“Fabry: (lowers the revolver) So be it. / Hallemeier: (shakes his fist) You scoundrel!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">FABRY. (_Pause. Lowering the revolver_) Very well. / DOMIN. It was Radius&#x27; life I spared. / DR. GALL. Do you think that a Robot can be grateful? (_Pause._)</blockquote></div>
+  </div>
+  <p class="note">Hallemeier&#x27;s curse at Radius is replaced by a new exchange that makes a moral point out loud and ties back to the earlier sparing of Radius. Domin&#x27;s line is odd, since in this scene Helena is the one who stops the shot. The English also adds Domin&#x27;s &quot;Radius! Radius!&quot; and turns Hallemeier&#x27;s &quot;trefil byste na sto kroků škopek?&quot; (could you hit a tub/noggin at a hundred paces?) into the neutral &quot;Could you get him from here&quot;.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Busman&#x27;s elegy cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Vidíš, Busmane, žádný král neměl větší mohyly než ty. Půl miliardy na srdci--Ach, vždyť je to jako hrst suchého listí na zabité veverce, ubohý Busmane!</blockquote><p class="gloss">“You see, Busman, no king ever had a greater burial mound than you. Half a billion on your heart--Ah, it&#x27;s like a handful of dry leaves on a killed squirrel, poor Busman!”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Gall&#x27;s grotesque-tender epitaph, Domin&#x27;s &quot;byl to svým způsobem hrdina... Plač, Heleno!&quot; (he was a hero in his way... Weep, Helena!) and Fabry&#x27;s ironic &quot;génius financí&quot; all go. Only Hallemeier&#x27;s &quot;All honor to him&quot; remains, so Busman&#x27;s death becomes a plot event rather than a mourned one. &quot;S půl miliardou na srdci&quot; (on his heart) is also flattened to &quot;by his side&quot;.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Nana&#x27;s Judgement Day and Helena&#x27;s farewell cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(zleva se otevřou dveře, v nich stojí Nána) Nána: Na kolena! Přišla hodina soudu! ... Dělejte pokání, nevěřící! Je konec světa! Modlete se!</blockquote><p class="gloss">“(door opens on the left; Nana stands in it) Nana: On your knees! The hour of judgement has come! ... Repent, unbelievers! It is the end of the world! Pray!”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">Nana&#x27;s apocalyptic cameo, the only voice that frames the fall as divine judgement, is removed, and so are Helena&#x27;s &quot;Sbohem, vy všichni&quot; and Fabry plucking a flower from the bouquet as he leaves. With the litany also gone, the act loses nearly all its religious register.</p>
+</article><article class="move" data-type="wordplay/names">
+  <header><span class="tag">wordplay/names</span><h3>Radius&#x27;s coda trimmed; &quot;robit&quot; pun and &quot;Je to Robot&quot; lost</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Robot: Je to člověk. / Radius: Je to Robot. Pracuje rukama jako Roboti. ... Budeš robit. Budeš stavět.</blockquote><p class="gloss">“Robot: He is a human. / Radius: He is a Robot. He works with his hands like the Robots. ... You will drudge [robit]. You will build.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ROBOT. He is a man! / RADIUS. He works with his hands like the Robots. ... RADIUS. You will work! You will build for us!</blockquote></div>
+  </div>
+  <p class="note">Radius&#x27;s paradoxical reclassification &quot;He is a Robot&quot; is cut, and &quot;robit&quot; (archaic/dialect &quot;to do forced labour&quot;, the root of &quot;robot&quot;) becomes plain &quot;work&quot;. Radius&#x27;s will-to-power peroration (&quot;Svět patří silnějším. Kdo chce žít, musí vládnout... Vláda nad hvězdami! ... Místo, místo, víc místa pro Roboty!&quot;) and Alquist&#x27;s warning &quot;Zahynete bez lidí!&quot; (You will perish without humans!) are also gone.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>The Robots march on the audience</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Radius: Není lidí. Roboti, do práce! Marš! / OPONA</blockquote><p class="gloss">“Radius: There are no humans. Robots, to work! March! / CURTAIN”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">They form in two lines, turn to audience and march mechanically to the footlights. As they are about to step over the footlights, as if into the audience, all LIGHTS go out.</blockquote></div>
+  </div>
+  <p class="note">Čapek&#x27;s &quot;Marš!&quot; sends the Robots to work. The acting edition turns it into a military &quot;march&quot;, with arms &quot;vibrating high in the air&quot; and a blackout as they seem to invade the stalls. That is a spectacular ending of its own that the Czech does not have. Elsewhere it adds cues such as &quot;WIND machine begin&quot; and &quot;WARN Curtain&quot;.</p>
+</article>
+</section>
+<section class="sec" id="s09">
+  <div class="sec-head"><span class="num">09</span><div><h2>Section 09: Dějství třetí part 1/2 ↔ English Epilogue</h2><p class="cov">Czech from the act&#x27;s opening stage direction and Alquist&#x27;s monologue (&quot;Nenajdu? -Nepochopím?&quot;) to his hand-washing (&quot;Jak se jmenuješ?&quot;); English from the Epilogue&#x27;s opening through Alquist falling asleep and Primus and Helena entering (&quot;Oh, Lord, let not mankind perish from the earth&quot;).</p></div></div>
+  <p class="overall">The English keeps the argument (the Robots demand Rossum&#x27;s formula, Alquist is pushed into vivisection) and cuts away almost everything else: Alquist&#x27;s lyrical despair, the Robots&#x27; claim to have souls, and the whole offstage vivisection with its screams and blood. Damon is removed and Radius absorbs his role, the horror is turned into choreographed stage business, and a few lines are added that make the Robots&#x27; collapse statistical and Alquist&#x27;s conscience explicit (&quot;murder&quot;).</p>
+  <article class="move" data-type="reassignment">
+  <header><span class="tag">reassignment</span><h3>Damon removed; Radius becomes spokesman and vivisection victim</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Kdo je to? / 5. Robot: Já, Damon. ... Alquist: Cože, ty to tedy chceš? -- Do pitevny s tebou! ... Damon: Já--proč právě já?</blockquote><p class="gloss">“Alquist: Who is that? / 5th Robot: I, Damon. ... Alquist: So that is what you want? Into the dissecting room with you! ... Damon: I... why me in particular?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">RADIUS. Through me, the governments of the Robots of the world commands you to deliver up Rossum&#x27;s formula. ... RADIUS. I? Why should I be chosen?</blockquote></div>
+  </div>
+  <p class="note">Damon &quot;from Le Havre&quot;, the new Robot government&#x27;s envoy, is dropped (the servant&#x27;s &quot;přijel Damon z Havru&quot; becomes &quot;just arrived from abroad&quot;), and all his lines, his &quot;read history&quot; speech included, go to Radius, who is then the one dissected. The English Radius, leader of the revolt, is the one who suffers for it; in the Czech the vivisected Robot is an anonymous functionary.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The offstage vivisection and its aftermath cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Křik Damonův: Aááá! / Hlas Alquistův: Držte! držte! / Křik Damonův: Aááá! / Hlas Alquistův: Nemohu! / Křik Damonův: Řež! Řež rychle!</blockquote><p class="gloss">“Damon&#x27;s scream: Aaah! / Alquist&#x27;s voice: Hold him! hold him! / Damon&#x27;s scream: Aaah! / Alquist&#x27;s voice: I can&#x27;t! / Damon&#x27;s scream: Cut! Cut quickly!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. (_Off R._) God, give me strength. (_Comes on, horrified_) No, no. I will not. I cannot. (_Sits R.C._)</blockquote></div>
+  </div>
+  <p class="note">About two pages of Grand Guignol are gone: the screams, the victim begging to be cut, Alquist&#x27;s bloody coat, Damon staggering out in a bloody sheet saying &quot;je lépe žít&quot; (it is better to live), and Alquist&#x27;s speech to his &quot;krvavé pařáty&quot; (bloody claws). This also removes Damon&#x27;s discovery that a Robot wants to live, which in the Czech is the first sign of what Primus and Helena will show.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Primus and Helena&#x27;s entrance moved, and Alquist falls asleep</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(Roboti Primus a Helena vběhnou středem) / Helena: Prime, Prime, co se děje? Kdo to křičí? ... Helena: Ne, ne, ne! (zakrývá si oči) Je to hrrozné!</blockquote><p class="gloss">“(The Robots Primus and Helena run in through the centre) / Helena: Primus, Primus, what&#x27;s happening? Who is screaming? ... Helena: No, no, no! (covers her eyes) It&#x27;s horrible!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(_Falls asleep, and after the count of ten, PRIMUS and HELENA, hand in hand, enter L. and go to R.C.; look at ALQUIST._) / HELENA. The man has fallen asleep, Primus.</blockquote></div>
+  </div>
+  <p class="note">In the Czech the couple burst in during the vivisection and Helena nearly faints at the screams, so her feelings show first as horror and nausea. The acting edition invents a sleep with a timed pause (&quot;count of ten&quot;) and brings them in &quot;hand in hand&quot;, so they are a romantic couple from their first moment. Alquist&#x27;s hand-washing scene with Helena fetching water is cut too.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Alquist&#x27;s lyrical opening monologue reduced to a few lines</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Ochlaď, ach ochlaď mi čelo, stará noci! ... noci, co tu chceš? Není milenců, není snů; ... Není lásky. Heleno, Heleno, Heleno!</blockquote><p class="gloss">“Cool, oh cool my brow, old night! ... night, what do you want here? There are no lovers, no dreams; ... There is no love. Helena, Helena, Helena!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">If I could only sleep. Dare I sleep before life has been renewed? Night again. Are the stars still there? Of what use are the stars?</blockquote></div>
+  </div>
+  <p class="note">The address to the night, the cry for the dead Helena Glory, and the long mirror scene (&quot;Tváři, ubohá tváři! Podobo člověka posledního!&quot; / Face, poor face! Image of the last man!) are all cut. What&#x27;s left is plain prose; the added &quot;Dare I sleep before life has been renewed?&quot; makes Alquist driven rather than broken.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The Robots&#x27; claim to souls and human parentage cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">2. Robot: Stali jsme se dušemi. ... 3. Robot: Slyšte, ó, slyšte, lidé jsou naši otcové! ... to je jejich hlas! Jsme jejich synové!</blockquote><p class="gloss">“2nd Robot: We have become souls. ... 3rd Robot: Hear, oh hear, people are our fathers! ... that is their voice! We are their sons!”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">The play&#x27;s central metaphysical claim, that the Robots became souls &quot;z hrůzy a bolesti&quot; (out of horror and pain), is gone, along with Alquist&#x27;s reply &quot;Roboti nejsou život. Roboti jsou stroje.&quot; (Robots are not life. Robots are machines.) and his &quot;nic není člověku cizejšího než jeho obraz&quot; (nothing is more alien to man than his own image). The English Robots want only a production formula, and their move toward humanity is left entirely to the Primus–Helena love scene.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Industrial statistics and a death toll added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">3. Robot: Znásobili jsme práci. Nemáme už kam dát, co jsme vyrobili.</blockquote><p class="gloss">“3rd Robot: We have multiplied our work. We no longer have anywhere to put what we have made.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">1ST ROBOT. ... We have obtained a billion tons of coal from the earth. Nine million spindles are running by day and by night. There is no longer room for all we have made.</blockquote></div>
+  </div>
+  <p class="note">The English adds figures (coal, spindles, &quot;This we have accomplished in one year&quot;) and a countdown that isn&#x27;t in this Czech text: &quot;Eight million Robots have died this year. Within twenty years none will be left.&quot; These may come from another edition of the Czech than the Gutenberg one, but here they make the Robots&#x27; crisis a matter of numbers rather than of the &quot;Padá na nás hrůza&quot; (horror is falling on us) and &quot;měj slitování&quot; (have mercy) the Czech gives them.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Alquist recast as an unlearned builder</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: ... Neudržím skalpel. Vidíš, jak mi slzí oči? Neviděl bych na vlastní ruce. Ne, ne, já nemohu!</blockquote><p class="gloss">“Alquist: ... I can&#x27;t hold the scalpel. Do you see how my eyes water? I couldn&#x27;t see my own hands. No, no, I can&#x27;t!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. I tell you I cannot. I am only a builder. I work with my hands. I have never been a learned man. I cannot create life.</blockquote></div>
+  </div>
+  <p class="note">The Czech Alquist refuses because he is too old and tearful, and because &quot;ze zkumavek předpis života nevyjde&quot; (the formula of life won&#x27;t come out of test tubes). The English adds a statement of class and craft (&quot;only a builder&quot;, &quot;never been a learned man&quot;) that points ahead to the ending&#x27;s humanism, and it drops his tears and blurred sight.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Conscience made explicit: &quot;murder&quot; added</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Živá těla? Cože, já je mám zabíjet? Já, který jsem nikdy-- ... Bože, aby to nebylo nadarmo!</blockquote><p class="gloss">“Alquist: Living bodies? What, I am to kill them? I, who have never-- ... God, let it not be in vain!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. Am I to commit murder? ... If only this murder is not in vain.</blockquote></div>
+  </div>
+  <p class="note">The Czech uses &quot;zabíjet&quot; (to kill) and the half-sentence &quot;I, who have never--&quot;; the English twice says &quot;murder&quot;, the word for killing a person, so the dissection becomes a moral crime against a person. An added closing prayer, &quot;Oh, Lord, let not mankind perish from the earth&quot;, makes the scene more piously Christian, though the Czech&#x27;s religious passage, about the dead reaching out &quot;z onoho světa&quot; (from the other world) with hands full of life, is cut.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>Threats and sexuality made blunter</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">3. Robot: Nepovíš-li, zahyneš. Máme uloženo zabít tě. ... 3. Robot: Lidé nám nedali plemeniti se.</blockquote><p class="gloss">“3rd Robot: If you don&#x27;t tell, you will perish. We have been instructed to kill you. ... 3rd Robot: People did not let us breed.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">RADIUS. Silence is punishable with death. ... 1ST ROBOT. You made us sterile. We cannot beget children.</blockquote></div>
+  </div>
+  <p class="note">The Czech threat is a plain order passed on; the English turns it into the formula of a state legal code. &quot;Didn&#x27;t let us breed&quot; becomes the clinical and biblical &quot;sterile ... beget children&quot;. Alquist&#x27;s contemptuous &quot;Jakže, věci, jakže, otroci&quot; (What, things, what, slaves) is cut, so his &quot;breed like animals&quot; loses its scorn.</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Choreographed Robot movement in the stage directions</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">(vejde výbor pěti Robotů)</blockquote><p class="gloss">“(a committee of five Robots enters)”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(_Other ROBOTS remain two abreast at L.C., right foot forward._) ... (_Right hand up over ALQUIST. All ROBOTS&#x27; left arms still back._)</blockquote></div>
+  </div>
+  <p class="note">The Czech gives no movement. The Samuel French edition writes a mechanical choreography (&quot;open hands, close when stopped&quot;, &quot;ALL draw back one step in consternation&quot;), which records how Playfair&#x27;s production staged the Robots as machine-like, while the text that would have shown their inner life is cut.</p>
+</article>
+</section>
+<section class="sec" id="s10">
+  <div class="sec-head"><span class="num">10</span><div><h2>Section 10: Dějství třetí part 2/2 ↔ English Epilogue</h2><p class="cov">Czech from &quot;Helena: Robotka Helena.&quot; (Alquist naming the servant Helena) to &quot;OPONA&quot;; English from &quot;(Falls asleep, and after the count of ten, PRIMUS and HELENA...)&quot; to &quot;Adam--Eve. *Curtain*&quot;, with Alquist&#x27;s dawn/sleep monologue partly folded into the Epilogue&#x27;s opening speech.</p></div></div>
+  <p class="overall">The English keeps the skeleton of the Primus–Helena love scene and the dissection test but strips almost everything lyrical, religious and tender from it, ending the play on a two-word cue instead of Alquist&#x27;s Genesis reading and Nunc dimittis. Helena&#x27;s childlike strangeness (the spilled test tube, the birds, the mirror, her rolled &quot;hrrozné&quot;) is flattened, and Alquist&#x27;s motives are made explicit while his compassion is cut.</p>
+  <article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The Genesis reading and Alquist&#x27;s Nunc dimittis are cut; the play ends on &quot;Adam--Eve.&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Jdi, Adame. Jdi, Evo; budeš mu ženou. Bud jí mužem, Prime. ... &quot;A stvořil Bůh člověka k obrazu svému ...&quot; ... Nyní propustíš, Pane, služebníka svého v pokoji</blockquote><p class="gloss">“Go, Adam. Go, Eve; you shall be his wife. Be her husband, Primus. ... &quot;And God created man in his own image ...&quot; ... Lord, now lettest thou thy servant depart in peace”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. Go. (_Exit PRIMUS and HELENA L._) Adam--Eve. *Curtain*</blockquote></div>
+  </div>
+  <p class="note">The Czech ends with a marriage blessing, Alquist pouring out his test tubes, reading Genesis 1:27–31 (&quot;the sixth day&quot;) and a long Simeon-style hymn that life &quot;will not perish&quot; through love. The acting edition drops all of it, including the religious frame and the explicit thesis of the play, leaving only the Adam/Eve allusion.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Opening exchange and Alquist&#x27;s dawn lament cut; sleep moved earlier</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Helena? Proč Helena? Kdo ti tak dal říkat? / Helena: Paní Dominová. ... Proč ještě svítá! Ó-ó-ó, co chce nový den na hřbitově života?</blockquote><p class="gloss">“Helena? Why Helena? Who told you to call yourself that? / Mrs Domin. ... Why does day still dawn! Oh, what does a new day want in the graveyard of life?”</p></div>
+    <div class="en is-cut"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">(cut)</blockquote></div>
+  </div>
+  <p class="note">The English never shows Alquist learning that the robot is named after Helena Domin, so the link between the two Helenas is lost; his despairing dawn speech is reduced to &quot;If I could only sleep&quot; in the Epilogue&#x27;s first speech and he simply &quot;Falls asleep&quot; after the dissection of Radius (itself compressed from earlier Czech material).</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>Helena&#x27;s naive business with the test tube, the &quot;secret&quot;, and the birds cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Nesahej na mne! (porazí zkumavku) Ach, teď jsem to vylila! ... Primus: Na to se nesmíš dívat, Heleno. To je tajemství. ... Ach, Prime, já bych chtěla být ptákem!</blockquote><p class="gloss">“Don&#x27;t touch me! (knocks over a test tube) Oh, now I&#x27;ve spilled it! ... You mustn&#x27;t look at that, Helena. It&#x27;s a secret. ... Oh, Primus, I&#x27;d like to be a bird!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. I&#x27;ve seen him looking into this. ... PRIMUS. (_Examining the book_) That is the book the old man is always reading.</blockquote></div>
+  </div>
+  <p class="note">The Czech Helena is clumsy, flirtatious and impulsive (she spills Alquist&#x27;s experiment, quarrels about whose fault it is, wants to be a bird). The English makes her a polite observer, and the &quot;secret of life&quot; becomes something Primus discovers on his own rather than a forbidden thing he warns her off.</p>
+</article><article class="move" data-type="cut">
+  <header><span class="tag">cut</span><h3>The mirror monologue cut; &quot;hrrozné&quot; lisp lost</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Ach, ty hrrozné vlasy ... (nakloní se k zrcadlu) Ty že jsi krásná? Proč krásná? Jsou krásné vlasy, které tě jenom tíží?</blockquote><p class="gloss">“Oh, this awful (rolled &quot;hrr&quot;) hair ... (leans to the mirror) You, beautiful? Why beautiful? Is hair beautiful that only weighs you down?”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. Am I beautiful? Of what _use_ is it to be beautiful?</blockquote></div>
+  </div>
+  <p class="note">Helena&#x27;s speech to her own reflection, about hair, eyes, and lips &quot;you only bite so it hurts&quot;, is condensed to one line, and the stage mirror vanishes. The doubled &quot;rr&quot; in &quot;hrrozné / hrrozně&quot;, a mark of her girlish emphasis (and an echo of the human Helena&#x27;s speech), has no equivalent.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>&quot;I&#x27;m good for nothing&quot; turned into &quot;What am I for?&quot;</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Ne, jistě, já nejsem k ničemu; každý říká, že nejsem k žádné práci. Já nevím, jaká jsem.</blockquote><p class="gloss">“No, surely, I&#x27;m good for nothing; everyone says I&#x27;m no use for any work. I don&#x27;t know what I am like.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">and when I am there in the garden I feel there may be something-- What am I for, Primus?</blockquote></div>
+  </div>
+  <p class="note">The Czech says Helena is a defective worker robot who doesn&#x27;t know her own nature. The English turns this into an existential question about purpose and adds the half-line &quot;I feel there may be something&quot;.</p>
+</article><article class="move" data-type="addition">
+  <header><span class="tag">addition</span><h3>Alquist&#x27;s motive spelled out; his tenderness and bluff cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Kdy byla udělána? / Primus: Přede dvěma roky. / Alquist: Od doktora Galla? ... Alquist: (zazvoní) Ach, Prime, jak je dávno, co jsem byl mladým člověkem! Neboj se, Heleně se nic nestane.</blockquote><p class="gloss">“When was she made? / Two years ago. / By Dr Gall? ... (rings) Ah, Primus, how long ago it is that I was a young man! Don&#x27;t worry, nothing will happen to Helena.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">ALQUIST. What, you would protect her? Laughter--timidity--protection--I must test you further. Take the girl into the dissecting room.</blockquote></div>
+  </div>
+  <p class="note">Čapek leaves Alquist&#x27;s purpose implicit (Gall&#x27;s robots, &quot;everything depends on it&quot;) and lets him reveal the bluff to the audience with a nostalgic aside. The English adds a line that tells the audience it is a test and cuts the aside, the stroking of Helena&#x27;s hair, the memory of Mrs Domin&#x27;s hair and &quot;Jsi krásná, Heleno. Bylo by tě škoda&quot; (&quot;You are beautiful, Helena. It would be a pity&quot;).</p>
+</article><article class="move" data-type="stage direction">
+  <header><span class="tag">stage direction</span><h3>Primus&#x27;s threats and offer toned down</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Primus: (uchopí těžkou třecí paličku) Hneš-li se, rozbiju ti hlavu! ... (rozhaluje kazajku) Řež tady, tady! ... řež do těchhle prsou, ani nevykřiknu</blockquote><p class="gloss">“(seizes a heavy pestle) If you move, I&#x27;ll smash your head in! ... (opens his jacket) Cut here, here! ... cut into this chest, I won&#x27;t cry out”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">PRIMUS. If you do, I will kill you. (_Steps toward ALQUIST._) ... PRIMUS. Sir, take me. I am made on the same day as she is. Take my life, sir.</blockquote></div>
+  </div>
+  <p class="note">The pestle, the bared chest and the physical offer to be cut are dropped, along with Alquist&#x27;s &quot;Pomalu, hochu. Ne tak marnotratně&quot; (&quot;Easy, boy. Not so extravagantly&quot;) and &quot;Je těžko umírat&quot; (&quot;It is hard to die&quot;). The violence becomes a generic line, and the acting edition adds blocking (&quot;Step to ALQUIST&quot;) and a &quot;WARN Curtain&quot; cue in the middle of the scene.</p>
+</article><article class="move" data-type="tone/register">
+  <header><span class="tag">tone/register</span><h3>&quot;Starý&quot; becomes &quot;Man&quot;; robots&#x27; &quot;ty&quot; to Alquist lost</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Primus: (zadrží ji) Nepustím! (k Alquistovi) Nikoho, starý, nezabiješ!</blockquote><p class="gloss">“I won&#x27;t let you! (to Alquist) You&#x27;ll kill nobody, old man!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">PRIMUS. (_To ALQUIST_) I will not let you. Man you shall kill neither of us.</blockquote></div>
+  </div>
+  <p class="note">Throughout, the robots say &quot;pane&quot; but use the informal &quot;ty&quot; with Alquist, and here Primus drops &quot;sir&quot; for the blunt &quot;starý&quot;, a turn toward equality. The English &quot;Man&quot; (unpunctuated in the edition) reads as a formal, almost biblical address and inverts the point: the robot now calls the last human &quot;Man&quot;.</p>
+</article><article class="move" data-type="meaning shift">
+  <header><span class="tag">meaning shift</span><h3>Helena&#x27;s suicide threat changed</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Helena: Já skočím z okna, Prime! Půjdeš-li tam, skočím z okna!</blockquote><p class="gloss">“I&#x27;ll jump out of the window, Primus! If you go in there, I&#x27;ll jump out of the window!”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. If you go in there and I do not, I will kill myself.</blockquote></div>
+  </div>
+  <p class="note">The concrete, impulsive image (the window she watched the sunrise from) is abstracted to &quot;kill myself&quot;, and the condition is lawyered (&quot;and I do not&quot;). The scene loses some of its rawness.</p>
+</article><article class="move" data-type="wordplay/names">
+  <header><span class="tag">wordplay/names</span><h3>&quot;Robotka&quot; → &quot;Robotess&quot;; &quot;snoubenci&quot; cut</h3></header>
+  <div class="pair">
+    <div class="cs"><span class="lab">Čapek, 1920</span><blockquote lang="cs">Alquist: Vy jste snoubenci? Lidé? Odkud se vracíte? ... Helena: Robotka Helena.</blockquote><p class="gloss">“Are you an engaged couple? People? Where are you returning from? ... Robot-girl (feminine &quot;Robotka&quot;) Helena.”</p></div>
+    <div class="en"><span class="lab">Selver &amp; Playfair, 1923</span><blockquote lang="en">HELENA. The Robotess Helena. (_Shies away L._)</blockquote></div>
+  </div>
+  <p class="note">The ordinary Czech feminine suffix (-ka) becomes the coinage &quot;Robotess&quot;, which sounds archaic or comic. Alquist&#x27;s sleepy first guess that they are &quot;snoubenci&quot; (a betrothed couple), which looks ahead to the final marriage blessing, is cut along with that blessing.</p>
+</article>
+</section>
+<footer>Sources: Czech text, <a href="https://www.gutenberg.org/ebooks/13083">Project Gutenberg #13083</a>; English, <a href="https://www.gutenberg.org/ebooks/59112">Project Gutenberg #59112</a> (Samuel French acting edition, 1923). Readings and glosses by Claude subagents. Check the quotations against the texts before citing them.</footer>
+</main>
+<script>
+const chips=[...document.querySelectorAll('.chip')];
+chips.forEach(c=>c.onclick=()=>{const t=c.dataset.type;chips.forEach(x=>x.setAttribute('aria-pressed',x===c));
+document.querySelectorAll('.move').forEach(m=>m.classList.toggle('hidden',t!=='*'&&m.dataset.type!==t));
+document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('hidden',t!=='*'&&!s.querySelector('.move:not(.hidden)')));});
+</script></body></html>

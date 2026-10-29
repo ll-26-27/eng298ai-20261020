@@ -1,4 +1,6 @@
 /* The home page / Today (TodayPage.jsx) */
+/* Hot pink ground for this page only, header and footer included; dark ink so the text reads on it. */
+body:has(.today) { --paper: #ff69b4; --ink: #1f0a14; --muted: #4a1a30; --line: #e04b98; --wash: #ff85c2; --hover: #ffa3d1; --brass: #1f0a14; --accent: #6b0f3a; --accent-ink: #ffffff; background: var(--paper); background-image: none; color: var(--ink); }
 .today { max-width: 980px; padding: 48px var(--gutter) 80px; }
 .today h1 { margin: 14px 0 0; font-size: clamp(48px, 7vw, 88px); font-weight: 800; letter-spacing: -.055em; line-height: .95; }
 .today-steps { margin: 44px 0 0; padding: 0; list-style: none; counter-reset: step; }
