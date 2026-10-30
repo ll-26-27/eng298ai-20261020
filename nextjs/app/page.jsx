@@ -22,9 +22,6 @@ export default function HomePage() {
       <main id="main" className="home">
         <p className="eyebrow">ENG 298AI · The AI Humanities Lab</p>
         <h1>Where the assistant came from</h1>
-        <p className="home-deck">
-          The helpful assistant in every chat window is a character that was written, trained, and staged. Talk to the first chatbot, watch a bare model turn into an assistant when it is handed a script, then see what a custom bot of 2023 is made of and build one yourself.
-        </p>
 
         <ol className="home-cards">
           {CARDS.map(({ href, Glyph, year, title, text }) => (
